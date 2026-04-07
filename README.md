@@ -58,3 +58,4 @@ color: var(--accent-lite);   /* Replace "--accent-lite" with a HEX colour of you
 </div>
 
 * Filter Background Colour on Mobile (Doesn't match theme/desktop version)
+* On a fic page, the buttons "Chapter Index," "Mark For Later," and "Download" are not in theme
