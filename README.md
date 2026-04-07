@@ -1,10 +1,8 @@
 ---
-<div align="center">
-  
-# AO3 Skins 
-Custom AO3 site skins made by me!!
-
-</div>
+<p align="center">
+  <strong>AO3 Skins</strong><br>
+  Custom AO3 site skins made by me!!
+</p>
 
 ### Welcome!
 This repository contains the CSS code for an AO3 skin I created.  
