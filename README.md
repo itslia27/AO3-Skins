@@ -50,6 +50,6 @@ To increase contrast, you can edit their colour value in the TAGS section (line 
 color: var(--accent-lite);   /* Replace "--accent-lite" with a HEX colour of your choice!
                                 I recommend #97A3C2 to stay on theme! */
 ```
-
+---
 ## ⚠️ To Be Fixed ⚠️
 * Filter Background Colour on Mobile (Doesn't match theme/desktop version)
