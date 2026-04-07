@@ -1,3 +1,10 @@
+/*=======================================================================
+Starfall - AO3 Skin By Lia
+=========================================================================*/
+
+/*===========================
+Variables
+===========================*/
 :root {
   --bg-dark: #0d0e1f;
   --bg-deep: #151726;
@@ -9,6 +16,9 @@
   --glow-sm: 0px 0px 3px #a8c7f7;
 }
 
+/*===========================
+Base Site
+===========================*/
 #outer.wrapper {
   background: var(--bg-dark);
   color: var(--accent);
@@ -136,6 +146,9 @@ form.search input[type=submit],
   border-radius: 5px;
 }
 
+/*===========================
+Buttons & Input
+===========================*/
 .actions a,
 .actions a:focus,
 .actions a:link,
@@ -224,6 +237,9 @@ fieldset fieldset.listbox {
   box-shadow: var(--glow);
 }
 
+/*===========================
+AO3 Filter Section
+===========================*/
 .filters {
   border: 1px solid var(--accent) !important;
   box-shadow: var(--glow) !important;
@@ -249,6 +265,10 @@ fieldset fieldset.listbox {
   background: url("https://64.media.tumblr.com/bc4316019f28c4f7319fdda9fa5ef6e3/b069339f02afb632-6b/s75x75_c1/ed512a784a5845c4981c2bfcb6b711126ba7504e.png") left center no-repeat;
 }
 
+/*===========================
+Tags
+===========================*/
+/*-----Archive Warnings Tag-----*/
 .warnings .tag,
 .work .warning a.tag,
 dd.warning.tags a {
@@ -261,6 +281,7 @@ dd.warning.tags a {
   box-shadow: var(--glow-sm);
 }
 
+/*-----Relationships Tag-----*/
 .relationships .tag,
 .work .relationships a.tag,
 dd.relationship.tags a {
@@ -270,6 +291,7 @@ dd.relationship.tags a {
   text-shadow: 0px 0px 3px var(--accent);
 }
 
+/*-----Freeform Tags-----*/
 .freeforms .tag,
 .work .freeform a.tag,
 dd.freeform.tags a,
@@ -278,6 +300,7 @@ dd.character.tags a,
   color: var(--accent-lite) !important;
 }
 
+/*-----Other Tag Cosmetics-----*/
 .tag:hover,
 a.tag:hover {
   color: var(--accent) !important;
@@ -316,6 +339,9 @@ dl.meta {
   box-shadow: var(--glow);
 }
 
+/*===========================
+Comments
+===========================*/
 li.comment {
   border: 1px solid var(--accent);
 }
