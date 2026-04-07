@@ -441,9 +441,10 @@ dd.warning.tags a {
 .relationships .tag,
 .work .relationships a.tag,
 dd.relationship.tags a {
+  background: none;
   color: var(--accent) !important;
   font-weight: bold;
-  text-shadow: 0px 0px 3px var(--accent);   /* increase last number for stronger glow */
+  text-shadow: 0px 0px 3px var(--accent);   /* increase number for more or less glow
 }
 
 /* freeform + character tags — dimmer so they don't overwhelm */
