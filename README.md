@@ -1,6 +1,6 @@
 ---
 <p align="center">
-  <strong>AO3 Skins</strong><br>
+  # AO3 Skins <br>
   Custom AO3 site skins made by me!!
 </p>
 
