@@ -1,51 +1,13 @@
-/* ============================================================
-   Starfall — AO3 Site Skin
-   ============================================================
-
-   TABLE OF CONTENTS
-   1.  Variables               ← change overall skin colours & glow here
-   2.  Base
-   3.  Header
-   4.  Navigation & Dropdowns
-   5.  Search
-   6.  Dashboard
-   7.  Buttons & Actions
-   8.  Work Page Buttons        ← most recent fix: not all buttons in theme
-   9.  Forms & Inputs
-   10. Filters                  
-   11. Tags                     ← tag colours/glow can be changed here
-   12. Work Blurbs
-   13. Comments
-   14. Notices & Alerts
-   15. Splash Page
-   16. Stats & Reading History
-   17. Draft
-   18. Footer
-   19. Modal
-   ============================================================ */
-
-
-/* ============================================================
-   1. VARIABLES
-   Edit these to change the colour scheme and glow intensity.
-   --glow should always be a larger value than --glow-sm.
-   ============================================================ */
-
 :root {
-  --bg-dark:    #0d0e1f;   /* main page background */
-  --bg-deep:    #151726;   /* slightly lighter background */
-  --bg-mid:     #424c5e;   /* used for footer + comment threading */
-  --accent:     #a8c7f7;   /* main accent colour */
-  --accent-dim: #76859b;   /* dimmer accent, used for links */
-  --accent-lite: #677487;  /* dimmest accent, used for freeform tags */
-  --glow:       0px 0px 7px #a8c7f7;   /* larger glow */
-  --glow-sm:    0px 0px 3px #a8c7f7;   /* smaller glow */
+  --bg-dark: #0d0e1f;
+  --bg-deep: #151726;
+  --bg-mid: #424c5e;
+  --accent: #a8c7f7;
+  --accent-dim: #76859b;
+  --accent-lite: #677487;
+  --glow: 0px 0px 7px #a8c7f7;
+  --glow-sm: 0px 0px 3px #a8c7f7;
 }
-
-
-/* ============================================================
-   2. BASE
-   ============================================================ */
 
 #outer.wrapper {
   background: var(--bg-dark);
@@ -56,12 +18,6 @@
   color: var(--accent-dim);
 }
 
-
-/* ============================================================
-   3. HEADER
-   Change the background-image URL to swap the header image.
-   ============================================================ */
-
 #header {
   background-image: url("https://i.pinimg.com/736x/93/5a/33/935a33b7fe78da207ed8fc3ca90fdcc4.jpg");
   background-repeat: no-repeat;
@@ -71,7 +27,7 @@
 }
 
 #header .heading {
-  height: 15em;   /* controls how tall the header image area is */
+  height: 15em;
 }
 
 #header .primary {
@@ -79,7 +35,6 @@
   box-shadow: var(--glow);
 }
 
-/* keeps the AO3 logo and sup tag visible */
 #header .logo,
 #header .heading sup {
   visibility: visible;
@@ -103,20 +58,13 @@
   text-shadow: 0px 0px 15px var(--accent);
 }
 
-/* hides the user icon in the greeting bar */
 #greeting img.icon {
   display: none;
 }
 
-/* hides the redundant submit button in the header */
 span.submit.actions input.button {
   display: none;
 }
-
-
-/* ============================================================
-   4. NAVIGATION & DROPDOWNS
-   ============================================================ */
 
 #header .primary .actions a,
 #header .primary .actions li a,
@@ -136,15 +84,6 @@ span.submit.actions input.button {
   box-shadow: var(--glow);
 }
 
-.dropdown {
-  background: var(--bg-dark);
-}
-
-
-/* ============================================================
-   5. SEARCH
-   ============================================================ */
-
 #header #search .text,
 .search [role="tooltip"] {
   background: var(--bg-dark);
@@ -163,11 +102,6 @@ form.search input[type=submit],
   color: var(--accent);
   display: block;
 }
-
-
-/* ============================================================
-   6. DASHBOARD
-   ============================================================ */
 
 #dashboard.own {
   border-top: 5px solid var(--accent);
@@ -194,7 +128,6 @@ form.search input[type=submit],
   text-decoration: none;
 }
 
-/* highlighted/active dashboard item */
 .current,
 #dashboard .current {
   background: var(--accent) !important;
@@ -202,12 +135,6 @@ form.search input[type=submit],
   box-shadow: var(--glow) !important;
   border-radius: 5px;
 }
-
-
-/* ============================================================
-   7. BUTTONS & ACTIONS
-   Styles most buttons and action links sitewide.
-   ============================================================ */
 
 .actions a,
 .actions a:focus,
@@ -233,7 +160,6 @@ a.action {
   text-decoration: none !important;
 }
 
-/* delete buttons are filled rather than outlined */
 span.delete {
   background: var(--accent);
   box-shadow: var(--glow);
@@ -244,64 +170,16 @@ span.delete a {
   font-weight: bold;
 }
 
+.dropdown {
+  background: var(--bg-dark);
+}
+
 .ui-sortable li,
 .dynamic form,
 div.dynamic {
   background: var(--bg-dark);
   border: 1px solid var(--accent);
 }
-
-
-/* ============================================================
-   8. WORK PAGE BUTTONS
-   Targets buttons on fic pages that use <button> elements
-   instead of <a> tags — e.g. Chapter Index, Mark for Later,
-   Download. Also styles the chapter index dropdown panel.
-   ============================================================ */
-
-ul.work.navigation.actions button,
-ul.work.navigation.actions button.collapsed,
-li.chapter button,
-li.mark button[type="submit"],
-li.download button,
-li.bookmark button {
-  background: transparent !important;
-  border: 1px solid var(--accent) !important;
-  color: var(--accent) !important;
-  box-shadow: var(--glow-sm) !important;
-  border-radius: 5px !important;
-  font-size: 1em !important;
-  padding: 0.25em 0.75em !important;
-  cursor: pointer !important;
-}
-
-/* chapter index dropdown panel */
-ul#chapter_index.expandable.secondary {
-  background: var(--bg-dark) !important;
-  border: 1px solid var(--accent) !important;
-  box-shadow: var(--glow) !important;
-  padding: 0.5em !important;
-}
-
-ul#chapter_index select {
-  background: var(--bg-dark) !important;
-  color: var(--accent) !important;
-  border: 1px solid var(--accent) !important;
-  box-shadow: var(--glow-sm) !important;
-}
-
-ul#chapter_index button {
-  background: transparent !important;
-  border: 1px solid var(--accent) !important;
-  color: var(--accent) !important;
-  box-shadow: var(--glow-sm) !important;
-  border-radius: 5px !important;
-}
-
-
-/* ============================================================
-   9. FORMS & INPUTS
-   ============================================================ */
 
 form dl,
 fieldset,
@@ -346,18 +224,11 @@ fieldset fieldset.listbox {
   box-shadow: var(--glow);
 }
 
-
-/* ============================================================
-   10. FILTERS
-   Includes a mobile fix for the filter panel background.
-   ============================================================ */
-
 .filters {
   border: 1px solid var(--accent) !important;
   box-shadow: var(--glow) !important;
 }
 
-/* reset inner filter elements so they don't double-border */
 .filters fieldset,
 .filters .group,
 .filters dl,
@@ -368,63 +239,16 @@ fieldset fieldset.listbox {
   background: transparent !important;
 }
 
-/* collapsed filter expander arrow */
 .filters .expander {
   background: url("https://64.media.tumblr.com/55bf0c446ff42c1e540e284f3053c838/96ac613e2494df28-fa/s75x75_c1/8ca02eec81402fcafe2b9706f27c478e46e50b8b.png") left center no-repeat;
   color: var(--accent) !important;
   font-weight: bold;
 }
 
-/* expanded filter expander arrow */
 .filters .expanded .expander {
   background: url("https://64.media.tumblr.com/bc4316019f28c4f7319fdda9fa5ef6e3/b069339f02afb632-6b/s75x75_c1/ed512a784a5845c4981c2bfcb6b711126ba7504e.png") left center no-repeat;
 }
 
-/* mobile filter panel fix */
-#main .filters,
-#main .filters fieldset,
-#main .filters .group,
-#main .filters dl,
-#main .filters dd,
-#main .filters dt,
-#main .filters legend,
-#main .filters label,
-#main .filters input,
-#main .filters select,
-#main #filters,
-.filters-head,
-.sort-and-filter,
-#sort-and-filter {
-  background: var(--bg-dark) !important;
-  color: var(--accent) !important;
-  border-color: var(--accent) !important;
-}
-
-#main #filters,
-.sort-and-filter,
-#sort-and-filter {
-  border: 1px solid var(--accent) !important;
-  box-shadow: var(--glow) !important;
-}
-
-#main .filters select option {
-  background: var(--bg-dark) !important;
-  color: var(--accent) !important;
-}
-
-#main .filters input[type="text"] {
-  background: var(--bg-deep) !important;
-  border: 1px solid var(--accent) !important;
-}
-
-
-/* ============================================================
-   11. TAGS
-   Three tiers: warning (filled), relationship (glowing text),
-   freeform/character (dimmer). All share the same hover state.
-   ============================================================ */
-
-/* warning tags — filled accent pill */
 .warnings .tag,
 .work .warning a.tag,
 dd.warning.tags a {
@@ -437,26 +261,23 @@ dd.warning.tags a {
   box-shadow: var(--glow-sm);
 }
 
-/* relationship tags — bold with glow */
 .relationships .tag,
 .work .relationships a.tag,
 dd.relationship.tags a {
   background: none;
   color: var(--accent) !important;
   font-weight: bold;
-  text-shadow: 0px 0px 3px var(--accent);   /* increase number for more or less glow
+  text-shadow: 0px 0px 3px var(--accent);
 }
 
-/* freeform + character tags — dimmer so they don't overwhelm */
 .freeforms .tag,
 .work .freeform a.tag,
 dd.freeform.tags a,
 dd.character.tags a,
 .characters .tag {
-  color: var(--accent-lite) !important;   /* swap with a hex code for a different colour */
+  color: var(--accent-lite) !important;
 }
 
-/* hover state for all tags */
 .tag:hover,
 a.tag:hover {
   color: var(--accent) !important;
@@ -464,11 +285,6 @@ a.tag:hover {
   border-color: var(--accent) !important;
   text-decoration: none !important;
 }
-
-
-/* ============================================================
-   12. WORK BLURBS
-   ============================================================ */
 
 li.blurb {
   border: 1px solid var(--accent);
@@ -490,7 +306,6 @@ li.blurb h4 {
   text-decoration: none;
 }
 
-/* author byline — filled bar */
 h4.heading.byline {
   background: var(--accent);
   color: var(--bg-deep) !important;
@@ -501,11 +316,6 @@ dl.meta {
   box-shadow: var(--glow);
 }
 
-
-/* ============================================================
-   13. COMMENTS
-   ============================================================ */
-
 li.comment {
   border: 1px solid var(--accent);
 }
@@ -515,7 +325,6 @@ li.comment {
   box-shadow: var(--glow);
 }
 
-/* alternating thread background */
 .thread .even {
   background: var(--bg-mid);
 }
@@ -540,11 +349,6 @@ span.replied {
 span.indicator::before {
   box-shadow: var(--glow);
 }
-
-
-/* ============================================================
-   14. NOTICES & ALERTS
-   ============================================================ */
 
 .notice,
 .comment_notice,
@@ -574,17 +378,11 @@ ul.notes a,
   font-weight: bold;
 }
 
-
-/* ============================================================
-   15. SPLASH PAGE
-   ============================================================ */
-
 .splash .module h3 {
   color: var(--accent);
   border-bottom: 2px solid var(--accent);
 }
 
-/* alternating fandom list items */
 .splash .favorite li:nth-of-type(2n+1) a {
   background: var(--accent);
   box-shadow: var(--glow);
@@ -607,11 +405,6 @@ ul.notes a,
   font-weight: bold;
   font-variant: small-caps;
 }
-
-
-/* ============================================================
-   16. STATS & READING HISTORY
-   ============================================================ */
 
 #stat_chart svg rect:first-of-type {
   opacity: 60%;
@@ -637,11 +430,6 @@ dt.child {
   background: var(--bg-dark);
 }
 
-
-/* ============================================================
-   17. DRAFT
-   ============================================================ */
-
 .draft {
   background: var(--bg-dark);
   color: var(--accent);
@@ -658,11 +446,6 @@ dt.child {
   background: var(--accent);
   border: 1px solid var(--accent);
 }
-
-
-/* ============================================================
-   18. FOOTER
-   ============================================================ */
 
 #footer {
   background: var(--bg-mid);
@@ -681,14 +464,83 @@ dt.child {
   border-radius: 0 !important;
 }
 
-
-/* ============================================================
-   19. MODAL
-   ============================================================ */
-
 #modal {
   background: var(--bg-dark);
   color: var(--accent);
   border: 2px solid var(--accent);
   box-shadow: var(--glow);
+}
+
+#main .filters,
+#main .filters fieldset,
+#main .filters .group,
+#main .filters dl,
+#main .filters dd,
+#main .filters dt,
+#main .filters legend,
+#main .filters label,
+#main .filters input,
+#main .filters select {
+  background: var(--bg-dark) !important;
+  color: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+
+#main #filters,
+.filters-head,
+.sort-and-filter,
+#sort-and-filter {
+  background: var(--bg-dark) !important;
+  color: var(--accent) !important;
+  border: 1px solid var(--accent) !important;
+  box-shadow: var(--glow) !important;
+}
+
+#main .filters select option {
+  background: var(--bg-dark) !important;
+  color: var(--accent) !important;
+}
+
+#main .filters input[type="text"] {
+  background: var(--bg-deep) !important;
+  color: var(--accent) !important;
+  border: 1px solid var(--accent) !important;
+}
+
+ul.work.navigation.actions button,
+ul.work.navigation.actions button.collapsed,
+li.chapter button,
+li.mark button[type="submit"],
+li.download button,
+li.bookmark button {
+  background: transparent !important;
+  border: 1px solid var(--accent) !important;
+  color: var(--accent) !important;
+  box-shadow: var(--glow-sm) !important;
+  border-radius: 5px !important;
+  font-size: 1em !important;
+  padding: 0.25em 0.75em !important;
+  cursor: pointer !important;
+}
+
+ul#chapter_index.expandable.secondary {
+  background: var(--bg-dark) !important;
+  border: 1px solid var(--accent) !important;
+  box-shadow: var(--glow) !important;
+  padding: 0.5em !important;
+}
+
+ul#chapter_index select {
+  background: var(--bg-dark) !important;
+  color: var(--accent) !important;
+  border: 1px solid var(--accent) !important;
+  box-shadow: var(--glow-sm) !important;
+}
+
+ul#chapter_index button {
+  background: transparent !important;
+  border: 1px solid var(--accent) !important;
+  color: var(--accent) !important;
+  box-shadow: var(--glow-sm) !important;
+  border-radius: 5px !important;
 }
