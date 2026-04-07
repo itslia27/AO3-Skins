@@ -5,8 +5,7 @@ Custom AO3 site skins made by me!!
 
 </div>
 
-## Hello!
-
+# Welcome!
 This repository contains the CSS code for an AO3 skin I created.  
 It is heavily inspired by *Constellations* by thevalkyrieflies on Tumblr.
 
