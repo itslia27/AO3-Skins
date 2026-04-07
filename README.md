@@ -1,5 +1,5 @@
 # AO3 Skins
-Custom AO3 site skins made by me ✨
+Custom AO3 site skins made by me!!
 
 ## Hello!
 
@@ -11,11 +11,9 @@ AO3 automatically strips these comments when applied — lucky us!
 
 
 ## Customization Notes
-
 Below are a few elements you may want to tweak to better suit your preferences.
 
 ### ✦ Relationship Tag Glow
-
 You can adjust the glow effect by changing the last value in this line:
 
 ```css
