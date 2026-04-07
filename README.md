@@ -28,7 +28,7 @@ Below are a few elements you may want to tweak to better suit your preferences.
 (These are things I mostly couldn’t decide on!)
 
 ### ✦ Relationship Tag Glow
-You can adjust the glow effect by changing the last value here (line 348):
+You can adjust the glow effect by changing the last value here (line 390):
 
 ```css
 text-shadow: 0px 0px 3px var(--accent);   /* last number changes intensity (higher # = higher glow, lower # = less glow) */
@@ -44,7 +44,7 @@ You can also customize the glow used throughout the skin! This can be changed in
 
 ### ✦ Freeform Tag Colour
 Currently, the freeform tags are slightly darker so they aren’t overwhelming. However, this can make them harder to read.
-To increase contrast, you can edit their colour value in the TAGS section (line 357):
+To increase contrast, you can edit their colour value in the TAGS section (line 399):
 
 ```css
 color: var(--accent-lite);   /* Replace "--accent-lite" with a HEX colour of your choice!
