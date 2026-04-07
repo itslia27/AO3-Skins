@@ -52,6 +52,7 @@ color: var(--accent-lite);   /* Replace "--accent-lite" with a HEX colour of you
 ```
 ---
 <div align="center">
+  
 ## ⚠️ To Be Fixed ⚠️
 </div>
 * Filter Background Colour on Mobile (Doesn't match theme/desktop version)
