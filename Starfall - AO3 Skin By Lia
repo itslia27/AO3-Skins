@@ -1,20 +1,48 @@
-/* ============================================
-   Starfall — AO3 Skin By Lia
-   ============================================ */
+/* ============================================================
+   Starfall - AO3 Skin By Lia
+   ============================================================
+   TABLE OF CONTENTS
+   1.  Variables
+   2.  Base / Wrapper
+   3.  Header
+   4.  Header — Navigation & Actions
+   5.  Header — Search
+   6.  Dashboard
+   7.  Actions & Buttons
+   8.  Forms & Inputs
+   9.  Filters
+   10. Tags
+   11. Work Blurbs
+   12. Comments
+   13. Notices & Alerts
+   14. Splash Page
+   15. Stats & Reading History
+   16. Draft
+   17. Footer
+   18. Modal
+   ============================================================ */
+
+
+/* ============================================================
+   1. VARIABLES
+   ============================================================ */
+
 :root {
-  --bg-dark: #0d0e1f;      /* main background */
-  --bg-deep: #151726;      /* deeper background */
-  --bg-mid: #424c5e;       /* mid-tone surfaces */
-  --accent: #a8c7f7;       /* main light blue */
-  --accent-dim: #76859b;   /* dimmed blue for links */
-  --accent-lite: #677487;  /* lighter blue for tags */
-  --glow: 0px 0px 7px #a8c7f7;      /* standard glow */
-  --glow-sm: 0px 0px 3px #a8c7f7;   /* subtle glow */
+  --bg-dark:    #0d0e1f;
+  --bg-deep:    #151726;
+  --bg-mid:     #424c5e;
+  --accent:     #a8c7f7;
+  --accent-dim: #76859b;
+  --accent-lite: #677487;
+  --glow:       0px 0px 7px #a8c7f7;
+  --glow-sm:    0px 0px 3px #a8c7f7;
 }
 
-/* ============================================
-   BASE — page background and default link colour
-   ============================================ */
+
+/* ============================================================
+   2. BASE / WRAPPER
+   ============================================================ */
+
 #outer.wrapper {
   background: var(--bg-dark);
   color: var(--accent);
@@ -24,9 +52,11 @@
   color: var(--accent-dim);
 }
 
-/* ============================================
-   HEADER — banner image and nav bar
-   ============================================ */
+
+/* ============================================================
+   3. HEADER
+   ============================================================ */
+
 #header {
   background-image: url("https://i.pinimg.com/736x/93/5a/33/935a33b7fe78da207ed8fc3ca90fdcc4.jpg");
   background-repeat: no-repeat;
@@ -44,7 +74,6 @@
   box-shadow: var(--glow);
 }
 
-/* site logo and title */
 #header .logo,
 #header .heading sup {
   visibility: visible;
@@ -68,7 +97,19 @@
   text-shadow: 0px 0px 15px var(--accent);
 }
 
-/* header nav links — no button boxes */
+#greeting img.icon {
+  display: none;
+}
+
+span.submit.actions input.button {
+  display: none;
+}
+
+
+/* ============================================================
+   4. HEADER — NAVIGATION & ACTIONS
+   ============================================================ */
+
 #header .primary .actions a,
 #header .primary .actions li a,
 #header ul.navigation.actions li a,
@@ -80,7 +121,6 @@
   color: var(--accent) !important;
 }
 
-/* dropdown menus */
 #greeting .menu,
 #header .dropdown .menu,
 #header .dropdown:hover a {
@@ -88,18 +128,11 @@
   box-shadow: var(--glow);
 }
 
-/* hide user icon and redundant submit button */
-#greeting img.icon {
-  display: none;
-}
 
-span.submit.actions input.button {
-  display: none;
-}
+/* ============================================================
+   5. HEADER — SEARCH
+   ============================================================ */
 
-/* ============================================
-   SEARCH BAR
-   ============================================ */
 #header #search .text,
 .search [role="tooltip"] {
   background: var(--bg-dark);
@@ -119,9 +152,11 @@ form.search input[type=submit],
   display: block;
 }
 
-/* ============================================
-   DASHBOARD — sidebar navigation
-   ============================================ */
+
+/* ============================================================
+   6. DASHBOARD
+   ============================================================ */
+
 #dashboard.own {
   border-top: 5px solid var(--accent);
   border-bottom: 5px solid var(--accent);
@@ -132,7 +167,6 @@ form.search input[type=submit],
   color: var(--accent);
 }
 
-/* dashboard links — no button boxes */
 #dashboard ul li a {
   border: none !important;
   box-shadow: none !important;
@@ -148,9 +182,19 @@ form.search input[type=submit],
   text-decoration: none;
 }
 
-/* ============================================
-   BUTTONS — action buttons sitewide
-   ============================================ */
+.current,
+#dashboard .current {
+  background: var(--accent) !important;
+  color: var(--bg-dark) !important;
+  box-shadow: var(--glow) !important;
+  border-radius: 5px;
+}
+
+
+/* ============================================================
+   7. ACTIONS & BUTTONS
+   ============================================================ */
+
 .actions a,
 .actions a:focus,
 .actions a:link,
@@ -175,18 +219,32 @@ a.action {
   text-decoration: none !important;
 }
 
-/* currently selected/active button */
-.current,
-#dashboard .current {
-  background: var(--accent) !important;
-  color: var(--bg-dark) !important;
-  box-shadow: var(--glow) !important;
-  border-radius: 5px;
+span.delete {
+  background: var(--accent);
+  box-shadow: var(--glow);
 }
 
-/* ============================================
-   FORMS AND FIELDS — posting, editing, filtering
-   ============================================ */
+span.delete a {
+  color: var(--bg-dark) !important;
+  font-weight: bold;
+}
+
+.dropdown {
+  background: var(--bg-dark);
+}
+
+.ui-sortable li,
+.dynamic form,
+div.dynamic {
+  background: var(--bg-dark);
+  border: 1px solid var(--accent);
+}
+
+
+/* ============================================================
+   8. FORMS & INPUTS
+   ============================================================ */
+
 form dl,
 fieldset,
 fieldset fieldset,
@@ -230,30 +288,26 @@ fieldset fieldset.listbox {
   box-shadow: var(--glow);
 }
 
-.ui-sortable li,
-.dynamic form,
-div.dynamic {
-  background: var(--bg-dark);
-  border: 1px solid var(--accent);
+
+/* ============================================================
+   9. FILTERS
+   ============================================================ */
+
+.filters {
+  border: 1px solid var(--accent) !important;
+  box-shadow: var(--glow) !important;
 }
 
-.dropdown {
-  background: var(--bg-dark);
+.filters fieldset,
+.filters .group,
+.filters dl,
+.filters dd,
+.filters dt {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
 }
 
-span.delete {
-  background: var(--accent);
-  box-shadow: var(--glow);
-}
-
-span.delete a {
-  color: var(--bg-dark) !important;
-  font-weight: bold;
-}
-
-/* ============================================
-   FILTERS — sort and filter panel arrows
-   ============================================ */
 .filters .expander {
   background: url("https://64.media.tumblr.com/3c89981f933f9f57157d6dcec6fd85a7/94c6737c6db9ad60-e5/s1280x1920/f7557e617a5439c506721bd326580a0cb4c1f8d8.png") left center no-repeat;
   color: var(--accent) !important;
@@ -264,11 +318,12 @@ span.delete a {
   background: url("https://64.media.tumblr.com/dab095a2fd9387bc1e0c57747ba6b13f/94c6737c6db9ad60-ad/s1280x1920/c1a4e14e0565cdcac5d3e20bebac3ab440f2d607.png") left center no-repeat;
 }
 
-/* ============================================
-   TAGS — warning, relationship, freeform, character
-   ============================================ */
 
-/* warning tags — filled blue pill */
+/* ============================================================
+   10. TAGS
+   ============================================================ */
+
+/* Warning tags — filled accent pill */
 .warnings .tag,
 .work .warning a.tag,
 dd.warning.tags a {
@@ -281,17 +336,17 @@ dd.warning.tags a {
   box-shadow: var(--glow-sm);
 }
 
-/* relationship tags — glowing blue text */
+/* Relationship tags — bold accent text */
 .relationships .tag,
 .work .relationships a.tag,
 dd.relationship.tags a {
   background: none;
   color: var(--accent) !important;
   font-weight: bold;
-  text-shadow: 0px 0px 2px var(--accent);
+  text-shadow: 0px 0px 0px var(--accent);
 }
 
-/* freeform and character tags — dimmer blue */
+/* Freeform / character tags — dimmer */
 .freeforms .tag,
 .work .freeform a.tag,
 dd.freeform.tags a,
@@ -300,7 +355,7 @@ dd.character.tags a,
   color: var(--accent-lite) !important;
 }
 
-/* all tags on hover */
+/* Hover state for all tags */
 .tag:hover,
 a.tag:hover {
   color: var(--accent) !important;
@@ -309,9 +364,11 @@ a.tag:hover {
   text-decoration: none !important;
 }
 
-/* ============================================
-   FIC LISTINGS — blurbs, titles, metadata
-   ============================================ */
+
+/* ============================================================
+   11. WORK BLURBS
+   ============================================================ */
+
 li.blurb {
   border: 1px solid var(--accent);
   box-shadow: var(--glow);
@@ -322,7 +379,6 @@ li.blurb .group {
   background: var(--bg-dark) !important;
 }
 
-/* fic titles */
 .blurb h4 a,
 .blurb h4,
 .blurb h3 a,
@@ -343,9 +399,11 @@ dl.meta {
   box-shadow: var(--glow);
 }
 
-/* ============================================
-   COMMENTS — comment threads and indicators
-   ============================================ */
+
+/* ============================================================
+   12. COMMENTS
+   ============================================================ */
+
 li.comment {
   border: 1px solid var(--accent);
 }
@@ -380,9 +438,11 @@ span.indicator::before {
   box-shadow: var(--glow);
 }
 
-/* ============================================
-   NOTICES AND ALERTS — kudos, errors, flash messages
-   ============================================ */
+
+/* ============================================================
+   13. NOTICES & ALERTS
+   ============================================================ */
+
 .notice,
 .comment_notice,
 .kudos_notice,
@@ -411,9 +471,11 @@ ul.notes a,
   font-weight: bold;
 }
 
-/* ============================================
-   SPLASH / HOME PAGE — featured works and collections
-   ============================================ */
+
+/* ============================================================
+   14. SPLASH PAGE
+   ============================================================ */
+
 .splash .module h3 {
   color: var(--accent);
   border-bottom: 2px solid var(--accent);
@@ -442,29 +504,11 @@ ul.notes a,
   font-variant: small-caps;
 }
 
-/* ============================================
-   DRAFTS AND EVENTS
-   ============================================ */
-.draft {
-  background: var(--bg-dark);
-  color: var(--accent);
-  border: 2px dashed var(--accent);
-  box-shadow: var(--glow);
-}
 
-.draft .wrapper {
-  background: var(--bg-dark);
-  border: 1px solid var(--accent);
-}
+/* ============================================================
+   15. STATS & READING HISTORY
+   ============================================================ */
 
-.event .userstuff {
-  background: var(--accent);
-  border: 1px solid var(--accent);
-}
-
-/* ============================================
-   STATS AND TABLES
-   ============================================ */
 #stat_chart svg rect:first-of-type {
   opacity: 60%;
 }
@@ -489,9 +533,33 @@ dt.child {
   background: var(--bg-dark);
 }
 
-/* ============================================
-   FOOTER — links and site info
-   ============================================ */
+
+/* ============================================================
+   16. DRAFT
+   ============================================================ */
+
+.draft {
+  background: var(--bg-dark);
+  color: var(--accent);
+  border: 2px dashed var(--accent);
+  box-shadow: var(--glow);
+}
+
+.draft .wrapper {
+  background: var(--bg-dark);
+  border: 1px solid var(--accent);
+}
+
+.event .userstuff {
+  background: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+
+/* ============================================================
+   17. FOOTER
+   ============================================================ */
+
 #footer {
   background: var(--bg-mid);
   color: var(--accent);
@@ -509,9 +577,11 @@ dt.child {
   border-radius: 0 !important;
 }
 
-/* ============================================
-   MODAL — popup windows
-   ============================================ */
+
+/* ============================================================
+   18. MODAL
+   ============================================================ */
+
 #modal {
   background: var(--bg-dark);
   color: var(--accent);
