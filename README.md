@@ -26,28 +26,24 @@ Below are a few elements you may want to tweak to better suit your preferences.
 You can adjust the glow effect by changing the last value here (line 348):
 
 ```css
-text-shadow: 0px 0px 3px var(--accent);
+text-shadow: 0px 0px 3px var(--accent);     /* last number changes intensity (higher # = higher glow, lower # = less glow)
 ```
-Increasing the last number will increase the glow, while decreasing the value softens the effect
 
 ### ✦ Overall Glow Intensity
 You can also customize the glow used throughout the skin! This can be changed in lines 39-40 by increasing/reducing the last value in the line.
 
 ```css
---glow:    0px 0px 7px #a8c7f7;
---glow-sm: 0px 0px 3px #a8c7f7;
+--glow:    0px 0px 7px #a8c7f7;     /* Just make sure that --glow is a larger value than --glow-sm
+--glow-sm: 0px 0px 3px #a8c7f7;       
 ```
-Just make sure that --glow stays a **larger** value than --glow-sm
 
 ### ✦ Freeform Tag Colour
 Currently, the freeform tags are slightly darker so they aren’t overwhelming. However, this can make them harder to read.
 To increase contrast, you can edit their colour value in the TAGS section (line 357):
 
 ```css
-color: var(--accent-lite);
+color: var(--accent-lite);   /* Replace "--accent-lite" with a HEX colour of your choice! I recommend #97A3C2 to stay on theme!
 ```
-Replace "--accent-lite" with a HEX Code colour of your choosing!
-I reccommend #97A3C2.
 
-## TO BE FIXED
-* Filter Background Colour on Mobile
+## ⚠️ To Be Fixed
+* Filter Background Colour on Mobile (Doesn't match theme/desktop version)
