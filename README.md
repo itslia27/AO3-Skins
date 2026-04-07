@@ -51,5 +51,7 @@ color: var(--accent-lite);   /* Replace "--accent-lite" with a HEX colour of you
                                 I recommend #97A3C2 to stay on theme! */
 ```
 ---
+<div align="center">
 ## ⚠️ To Be Fixed ⚠️
+</div>
 * Filter Background Colour on Mobile (Doesn't match theme/desktop version)
