@@ -26,14 +26,14 @@ Below are a few elements you may want to tweak to better suit your preferences.
 You can adjust the glow effect by changing the last value here (line 348):
 
 ```css
-text-shadow: 0px 0px 3px var(--accent);     /* last number changes intensity (higher # = higher glow, lower # = less glow)
+text-shadow: 0px 0px 3px var(--accent);     /* last number changes intensity (higher # = higher glow, lower # = less glow) */
 ```
 
 ### ✦ Overall Glow Intensity
 You can also customize the glow used throughout the skin! This can be changed in lines 39-40 by increasing/reducing the last value in the line.
 
 ```css
---glow:    0px 0px 7px #a8c7f7;     /* Just make sure that --glow is a larger value than --glow-sm
+--glow:    0px 0px 7px #a8c7f7;     /* Just make sure that --glow is a larger value than --glow-sm */
 --glow-sm: 0px 0px 3px #a8c7f7;       
 ```
 
@@ -43,7 +43,7 @@ To increase contrast, you can edit their colour value in the TAGS section (line 
 
 ```css
 color: var(--accent-lite);   /* Replace "--accent-lite" with a HEX colour of your choice!
-                                I recommend #97A3C2 to stay on theme!
+                                I recommend #97A3C2 to stay on theme! */
 ```
 
 ## ⚠️ To Be Fixed
