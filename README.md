@@ -14,9 +14,9 @@ To make customization easier, I’ve added comments throughout the code.
 AO3 automatically removes these comments when applied (lucky us!!), so don't worry about removing them.
 
 **NOTE:** When mentioning line numbers, these are as they appear in GitHub before AO3 removes comments.  
-Keep in mind that the numbers will decrease when added to AO3.
+Keep in mind that the numbers will significantly decrease when added to AO3.
 
----
+-----
 
 ## Customization Notes
 Below are a few elements you may want to tweak to better suit your preferences.  
