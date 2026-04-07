@@ -343,7 +343,7 @@ dd.relationship.tags a {
   background: none;
   color: var(--accent) !important;
   font-weight: bold;
-  text-shadow: 0px 0px 3px var(--accent);
+  text-shadow: 0px 0px 3px var(--accent); /* Can be edited to your liking by changing the last number */
 }
 
 /* Freeform / character tags — dimmer */
