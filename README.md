@@ -26,7 +26,7 @@ Below are a few elements you may want to tweak to better suit your preferences.
 You can adjust the glow effect by changing the last value here (line 348):
 
 ```css
-text-shadow: 0px 0px 3px var(--accent);     /* last number changes intensity (higher # = higher glow, lower # = less glow) */
+text-shadow: 0px 0px 3px var(--accent);   /* last number changes intensity (higher # = higher glow, lower # = less glow) */
 ```
 
 ### ✦ Overall Glow Intensity
