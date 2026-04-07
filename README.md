@@ -16,9 +16,10 @@ AO3 automatically removes these comments when applied (lucky us!!), so don't wor
 Keep in mind that the numbers will significantly decrease when added to AO3.
 
 
+
 <div align="center">
 
-# Customization Notes
+## Customization Notes
 
 </div>
 
