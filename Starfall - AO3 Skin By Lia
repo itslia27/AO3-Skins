@@ -1,48 +1,50 @@
 /* ============================================================
-   Starfall - AO3 Skin By Lia
+   Starfall — AO3 Site Skin
    ============================================================
-   VIEW READ ME FILE FOR INFO ON HOW TO CUSTOMIZE TO YOUR LIKING
 
    TABLE OF CONTENTS
-   1.  Variables
-   2.  Base / Wrapper
+   1.  Variables               ← change overall skin colours & glow here
+   2.  Base
    3.  Header
-   4.  Header — Navigation & Actions
-   5.  Header — Search
+   4.  Navigation & Dropdowns
+   5.  Search
    6.  Dashboard
-   7.  Actions & Buttons
-   8.  Forms & Inputs
-   9.  Filters
-   10. Tags
-   11. Work Blurbs
-   12. Comments
-   13. Notices & Alerts
-   14. Splash Page
-   15. Stats & Reading History
-   16. Draft
-   17. Footer
-   18. Modal
+   7.  Buttons & Actions
+   8.  Work Page Buttons        ← most recent fix: not all buttons in theme
+   9.  Forms & Inputs
+   10. Filters                  
+   11. Tags                     ← tag colours/glow can be changed here
+   12. Work Blurbs
+   13. Comments
+   14. Notices & Alerts
+   15. Splash Page
+   16. Stats & Reading History
+   17. Draft
+   18. Footer
+   19. Modal
    ============================================================ */
 
 
 /* ============================================================
    1. VARIABLES
+   Edit these to change the colour scheme and glow intensity.
+   --glow should always be a larger value than --glow-sm.
    ============================================================ */
 
 :root {
-  --bg-dark:    #0d0e1f;
-  --bg-deep:    #151726;
-  --bg-mid:     #424c5e;
-  --accent:     #a8c7f7;
-  --accent-dim: #76859b;
-  --accent-lite: #677487;
-  --glow:       0px 0px 7px #a8c7f7;
-  --glow-sm:    0px 0px 3px #a8c7f7;
+  --bg-dark:    #0d0e1f;   /* main page background */
+  --bg-deep:    #151726;   /* slightly lighter background */
+  --bg-mid:     #424c5e;   /* used for footer + comment threading */
+  --accent:     #a8c7f7;   /* main accent colour */
+  --accent-dim: #76859b;   /* dimmer accent, used for links */
+  --accent-lite: #677487;  /* dimmest accent, used for freeform tags */
+  --glow:       0px 0px 7px #a8c7f7;   /* larger glow */
+  --glow-sm:    0px 0px 3px #a8c7f7;   /* smaller glow */
 }
 
 
 /* ============================================================
-   2. BASE / WRAPPER
+   2. BASE
    ============================================================ */
 
 #outer.wrapper {
@@ -57,6 +59,7 @@
 
 /* ============================================================
    3. HEADER
+   Change the background-image URL to swap the header image.
    ============================================================ */
 
 #header {
@@ -68,7 +71,7 @@
 }
 
 #header .heading {
-  height: 15em;
+  height: 15em;   /* controls how tall the header image area is */
 }
 
 #header .primary {
@@ -76,6 +79,7 @@
   box-shadow: var(--glow);
 }
 
+/* keeps the AO3 logo and sup tag visible */
 #header .logo,
 #header .heading sup {
   visibility: visible;
@@ -99,17 +103,19 @@
   text-shadow: 0px 0px 15px var(--accent);
 }
 
+/* hides the user icon in the greeting bar */
 #greeting img.icon {
   display: none;
 }
 
+/* hides the redundant submit button in the header */
 span.submit.actions input.button {
   display: none;
 }
 
 
 /* ============================================================
-   4. HEADER — NAVIGATION & ACTIONS
+   4. NAVIGATION & DROPDOWNS
    ============================================================ */
 
 #header .primary .actions a,
@@ -130,9 +136,13 @@ span.submit.actions input.button {
   box-shadow: var(--glow);
 }
 
+.dropdown {
+  background: var(--bg-dark);
+}
+
 
 /* ============================================================
-   5. HEADER — SEARCH
+   5. SEARCH
    ============================================================ */
 
 #header #search .text,
@@ -184,6 +194,7 @@ form.search input[type=submit],
   text-decoration: none;
 }
 
+/* highlighted/active dashboard item */
 .current,
 #dashboard .current {
   background: var(--accent) !important;
@@ -194,7 +205,8 @@ form.search input[type=submit],
 
 
 /* ============================================================
-   7. ACTIONS & BUTTONS
+   7. BUTTONS & ACTIONS
+   Styles most buttons and action links sitewide.
    ============================================================ */
 
 .actions a,
@@ -221,6 +233,7 @@ a.action {
   text-decoration: none !important;
 }
 
+/* delete buttons are filled rather than outlined */
 span.delete {
   background: var(--accent);
   box-shadow: var(--glow);
@@ -229,10 +242,6 @@ span.delete {
 span.delete a {
   color: var(--bg-dark) !important;
   font-weight: bold;
-}
-
-.dropdown {
-  background: var(--bg-dark);
 }
 
 .ui-sortable li,
@@ -244,7 +253,54 @@ div.dynamic {
 
 
 /* ============================================================
-   8. FORMS & INPUTS
+   8. WORK PAGE BUTTONS
+   Targets buttons on fic pages that use <button> elements
+   instead of <a> tags — e.g. Chapter Index, Mark for Later,
+   Download. Also styles the chapter index dropdown panel.
+   ============================================================ */
+
+ul.work.navigation.actions button,
+ul.work.navigation.actions button.collapsed,
+li.chapter button,
+li.mark button[type="submit"],
+li.download button,
+li.bookmark button {
+  background: transparent !important;
+  border: 1px solid var(--accent) !important;
+  color: var(--accent) !important;
+  box-shadow: var(--glow-sm) !important;
+  border-radius: 5px !important;
+  font-size: 1em !important;
+  padding: 0.25em 0.75em !important;
+  cursor: pointer !important;
+}
+
+/* chapter index dropdown panel */
+ul#chapter_index.expandable.secondary {
+  background: var(--bg-dark) !important;
+  border: 1px solid var(--accent) !important;
+  box-shadow: var(--glow) !important;
+  padding: 0.5em !important;
+}
+
+ul#chapter_index select {
+  background: var(--bg-dark) !important;
+  color: var(--accent) !important;
+  border: 1px solid var(--accent) !important;
+  box-shadow: var(--glow-sm) !important;
+}
+
+ul#chapter_index button {
+  background: transparent !important;
+  border: 1px solid var(--accent) !important;
+  color: var(--accent) !important;
+  box-shadow: var(--glow-sm) !important;
+  border-radius: 5px !important;
+}
+
+
+/* ============================================================
+   9. FORMS & INPUTS
    ============================================================ */
 
 form dl,
@@ -292,7 +348,8 @@ fieldset fieldset.listbox {
 
 
 /* ============================================================
-   9. FILTERS
+   10. FILTERS
+   Includes a mobile fix for the filter panel background.
    ============================================================ */
 
 .filters {
@@ -300,6 +357,7 @@ fieldset fieldset.listbox {
   box-shadow: var(--glow) !important;
 }
 
+/* reset inner filter elements so they don't double-border */
 .filters fieldset,
 .filters .group,
 .filters dl,
@@ -310,22 +368,63 @@ fieldset fieldset.listbox {
   background: transparent !important;
 }
 
+/* collapsed filter expander arrow */
 .filters .expander {
   background: url("https://64.media.tumblr.com/55bf0c446ff42c1e540e284f3053c838/96ac613e2494df28-fa/s75x75_c1/8ca02eec81402fcafe2b9706f27c478e46e50b8b.png") left center no-repeat;
   color: var(--accent) !important;
   font-weight: bold;
 }
 
+/* expanded filter expander arrow */
 .filters .expanded .expander {
   background: url("https://64.media.tumblr.com/bc4316019f28c4f7319fdda9fa5ef6e3/b069339f02afb632-6b/s75x75_c1/ed512a784a5845c4981c2bfcb6b711126ba7504e.png") left center no-repeat;
 }
 
+/* mobile filter panel fix */
+#main .filters,
+#main .filters fieldset,
+#main .filters .group,
+#main .filters dl,
+#main .filters dd,
+#main .filters dt,
+#main .filters legend,
+#main .filters label,
+#main .filters input,
+#main .filters select,
+#main #filters,
+.filters-head,
+.sort-and-filter,
+#sort-and-filter {
+  background: var(--bg-dark) !important;
+  color: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+
+#main #filters,
+.sort-and-filter,
+#sort-and-filter {
+  border: 1px solid var(--accent) !important;
+  box-shadow: var(--glow) !important;
+}
+
+#main .filters select option {
+  background: var(--bg-dark) !important;
+  color: var(--accent) !important;
+}
+
+#main .filters input[type="text"] {
+  background: var(--bg-deep) !important;
+  border: 1px solid var(--accent) !important;
+}
+
 
 /* ============================================================
-   10. TAGS
+   11. TAGS
+   Three tiers: warning (filled), relationship (glowing text),
+   freeform/character (dimmer). All share the same hover state.
    ============================================================ */
 
-/* Warning tags — filled accent pill */
+/* warning tags — filled accent pill */
 .warnings .tag,
 .work .warning a.tag,
 dd.warning.tags a {
@@ -338,26 +437,25 @@ dd.warning.tags a {
   box-shadow: var(--glow-sm);
 }
 
-/* Relationship tags — bold accent text */
+/* relationship tags — bold with glow */
 .relationships .tag,
 .work .relationships a.tag,
 dd.relationship.tags a {
-  background: none;
   color: var(--accent) !important;
   font-weight: bold;
-  text-shadow: 0px 0px 3px var(--accent); /* Can be edited to your liking by changing the last number */
+  text-shadow: 0px 0px 3px var(--accent);   /* increase last number for stronger glow */
 }
 
-/* Freeform / character tags — dimmer */
+/* freeform + character tags — dimmer so they don't overwhelm */
 .freeforms .tag,
 .work .freeform a.tag,
 dd.freeform.tags a,
 dd.character.tags a,
 .characters .tag {
-  color: var(--accent-lite) !important;
+  color: var(--accent-lite) !important;   /* swap with a hex code for a different colour */
 }
 
-/* Hover state for all tags */
+/* hover state for all tags */
 .tag:hover,
 a.tag:hover {
   color: var(--accent) !important;
@@ -368,7 +466,7 @@ a.tag:hover {
 
 
 /* ============================================================
-   11. WORK BLURBS
+   12. WORK BLURBS
    ============================================================ */
 
 li.blurb {
@@ -391,6 +489,7 @@ li.blurb h4 {
   text-decoration: none;
 }
 
+/* author byline — filled bar */
 h4.heading.byline {
   background: var(--accent);
   color: var(--bg-deep) !important;
@@ -403,7 +502,7 @@ dl.meta {
 
 
 /* ============================================================
-   12. COMMENTS
+   13. COMMENTS
    ============================================================ */
 
 li.comment {
@@ -415,6 +514,7 @@ li.comment {
   box-shadow: var(--glow);
 }
 
+/* alternating thread background */
 .thread .even {
   background: var(--bg-mid);
 }
@@ -442,7 +542,7 @@ span.indicator::before {
 
 
 /* ============================================================
-   13. NOTICES & ALERTS
+   14. NOTICES & ALERTS
    ============================================================ */
 
 .notice,
@@ -475,7 +575,7 @@ ul.notes a,
 
 
 /* ============================================================
-   14. SPLASH PAGE
+   15. SPLASH PAGE
    ============================================================ */
 
 .splash .module h3 {
@@ -483,6 +583,7 @@ ul.notes a,
   border-bottom: 2px solid var(--accent);
 }
 
+/* alternating fandom list items */
 .splash .favorite li:nth-of-type(2n+1) a {
   background: var(--accent);
   box-shadow: var(--glow);
@@ -508,7 +609,7 @@ ul.notes a,
 
 
 /* ============================================================
-   15. STATS & READING HISTORY
+   16. STATS & READING HISTORY
    ============================================================ */
 
 #stat_chart svg rect:first-of-type {
@@ -537,7 +638,7 @@ dt.child {
 
 
 /* ============================================================
-   16. DRAFT
+   17. DRAFT
    ============================================================ */
 
 .draft {
@@ -559,7 +660,7 @@ dt.child {
 
 
 /* ============================================================
-   17. FOOTER
+   18. FOOTER
    ============================================================ */
 
 #footer {
@@ -581,7 +682,7 @@ dt.child {
 
 
 /* ============================================================
-   18. MODAL
+   19. MODAL
    ============================================================ */
 
 #modal {
