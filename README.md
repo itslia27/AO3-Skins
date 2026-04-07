@@ -5,7 +5,7 @@ Custom AO3 site skins made by me!!
 
 </div>
 
-# Welcome!
+### Welcome!
 This repository contains the CSS code for an AO3 skin I created.  
 It is heavily inspired by *Constellations* by thevalkyrieflies on Tumblr.
 
@@ -18,7 +18,7 @@ Keep in mind that the numbers will significantly decrease when added to AO3.
 
 <div align="center">
 
-## Customization Notes
+# Customization Notes
 
 </div>
 
