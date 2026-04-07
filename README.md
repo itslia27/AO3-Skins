@@ -1,6 +1,6 @@
 ---
-<h1 align="center">AO3 Skins</h1>
-<p align="center">Custom AO3 site skins made by me!!</p>
+<h1 align="center" style="margin-bottom: 0;">AO3 Skins</h1>
+<p align="center" style="margin-top: 0;">Custom AO3 site skins made by me!!</p>
 
 ### Welcome!
 This repository contains the CSS code for an AO3 skin I created.  
