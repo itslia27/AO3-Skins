@@ -9,6 +9,9 @@ It is heavily inspired by *Constellations* by thevalkyrieflies on Tumblr.
 To make customization easier, I’ve added comments throughout the code.  
 AO3 automatically removes these comments when applied (lucky us!!) so don't worry about removing them.
 
+**NOTE:** When mentioning line numbers, this is as they appear in GitHub before AO3 removes comments. Please keep in mind that these
+numbers will significantly decrease when added to AO3
+
 
 ## Customization Notes
 Below are a few elements you may want to tweak to better suit your preferences.  
@@ -29,14 +32,16 @@ You can also customize the glow used throughout the skin! This can be changed in
 --glow:    0px 0px 7px #a8c7f7;
 --glow-sm: 0px 0px 3px #a8c7f7;
 ```
-Just make sure that --glow stays smaller than --glow-sm
+Just make sure that --glow stays a **larger** value than --glow-sm
 
 ### ✦ Freeform Tag Colour
-Currently, the freform tags are slightly dark so they aren't overwhelming, however I cunderstand that this makes it harder to read! To increase the contrast between the tags and the background, edit their colour value in the tags section (line ---)
+Currently, the freeform tags are slightly darker so they aren’t overwhelming. However, this can make them harder to read.
+To increase contrast, you can edit their colour value in the TAGS section (line 357):
 
 ```css
 color: var(--accent-lite);
 ```
+Replace "--accent-lite" with a HEX Code colour of your choosing! I reccommend #97A3C2
 
 ## TO BE FIXED
 * Filter Background Colour on Mobile
