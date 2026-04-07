@@ -14,7 +14,7 @@ AO3 automatically removes these comments when added to their CSS reader (lucky u
 Below are a few elements you may want to tweak to better suit your preferences.  
 (Honestly, it's things I couldn't decide on)
 
-#### ✦ Relationship Tag Glow
+### ✦ Relationship Tag Glow
 You can adjust the glow effect by changing the last value in this (line 346):
 
 ```css
