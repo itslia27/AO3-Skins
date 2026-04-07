@@ -17,8 +17,12 @@ AO3 automatically removes these comments when applied (lucky us!!), so don't wor
 Keep in mind that the numbers will significantly decrease when added to AO3.
 
 ---
+<div align="center">
 
 ## Customization Notes
+
+</div>
+
 Below are a few elements you may want to tweak to better suit your preferences.  
 (These are things I mostly couldn’t decide on!)
 
