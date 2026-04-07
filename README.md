@@ -53,7 +53,7 @@ color: var(--accent-lite);   /* Replace "--accent-lite" with a HEX colour of you
 ---
 <div align="center">
   
-## ⚠️ To Be Fixed ⚠️
+## To Be Fixed 
 All up to date!! (April 7th, 2026 @ 6:39pm)
 </div>
 
