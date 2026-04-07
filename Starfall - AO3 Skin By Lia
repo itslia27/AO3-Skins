@@ -309,13 +309,13 @@ fieldset fieldset.listbox {
 }
 
 .filters .expander {
-  background: url("https://64.media.tumblr.com/3c89981f933f9f57157d6dcec6fd85a7/94c6737c6db9ad60-e5/s1280x1920/f7557e617a5439c506721bd326580a0cb4c1f8d8.png") left center no-repeat;
+  background: url("https://64.media.tumblr.com/55bf0c446ff42c1e540e284f3053c838/96ac613e2494df28-fa/s75x75_c1/8ca02eec81402fcafe2b9706f27c478e46e50b8b.png") left center no-repeat;
   color: var(--accent) !important;
   font-weight: bold;
 }
 
 .filters .expanded .expander {
-  background: url("https://64.media.tumblr.com/dab095a2fd9387bc1e0c57747ba6b13f/94c6737c6db9ad60-ad/s1280x1920/c1a4e14e0565cdcac5d3e20bebac3ab440f2d607.png") left center no-repeat;
+  background: url("https://64.media.tumblr.com/bc4316019f28c4f7319fdda9fa5ef6e3/b069339f02afb632-6b/s75x75_c1/ed512a784a5845c4981c2bfcb6b711126ba7504e.png") left center no-repeat;
 }
 
 
