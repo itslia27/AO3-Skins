@@ -42,7 +42,8 @@ Currently, the freeform tags are slightly darker so they aren’t overwhelming. 
 To increase contrast, you can edit their colour value in the TAGS section (line 357):
 
 ```css
-color: var(--accent-lite);   /* Replace "--accent-lite" with a HEX colour of your choice! I recommend #97A3C2 to stay on theme!
+color: var(--accent-lite);   /* Replace "--accent-lite" with a HEX colour of your choice!
+                                I recommend #97A3C2 to stay on theme!
 ```
 
 ## ⚠️ To Be Fixed
