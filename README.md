@@ -15,7 +15,7 @@ Below are a few elements you may want to tweak to better suit your preferences.
 (Honestly, it's things I couldn't decide on)
 
 ### ✦ Relationship Tag Glow
-You can adjust the glow effect by changing the last value in this line:
+You can adjust the glow effect by changing the last value in this (line 346):
 
 ```css
 text-shadow: 0px 0px 3px var(--accent);
