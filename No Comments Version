@@ -84,10 +84,6 @@ span.submit.actions input.button {
   box-shadow: var(--glow);
 }
 
-.dropdown {
-  background: var(--bg-dark);
-}
-
 #header #search .text,
 .search [role="tooltip"] {
   background: var(--bg-dark);
@@ -174,49 +170,15 @@ span.delete a {
   font-weight: bold;
 }
 
+.dropdown {
+  background: var(--bg-dark);
+}
+
 .ui-sortable li,
 .dynamic form,
 div.dynamic {
   background: var(--bg-dark);
   border: 1px solid var(--accent);
-}
-
-ul.work.navigation.actions button,
-ul.work.navigation.actions button.collapsed,
-li.chapter button,
-li.mark button[type="submit"],
-li.download button,
-li.bookmark button {
-  background: transparent !important;
-  border: 1px solid var(--accent) !important;
-  color: var(--accent) !important;
-  box-shadow: var(--glow-sm) !important;
-  border-radius: 5px !important;
-  font-size: 1em !important;
-  padding: 0.25em 0.75em !important;
-  cursor: pointer !important;
-}
-
-ul#chapter_index.expandable.secondary {
-  background: var(--bg-dark) !important;
-  border: 1px solid var(--accent) !important;
-  box-shadow: var(--glow) !important;
-  padding: 0.5em !important;
-}
-
-ul#chapter_index select {
-  background: var(--bg-dark) !important;
-  color: var(--accent) !important;
-  border: 1px solid var(--accent) !important;
-  box-shadow: var(--glow-sm) !important;
-}
-
-ul#chapter_index button {
-  background: transparent !important;
-  border: 1px solid var(--accent) !important;
-  color: var(--accent) !important;
-  box-shadow: var(--glow-sm) !important;
-  border-radius: 5px !important;
 }
 
 form dl,
@@ -285,42 +247,6 @@ fieldset fieldset.listbox {
 
 .filters .expanded .expander {
   background: url("https://64.media.tumblr.com/bc4316019f28c4f7319fdda9fa5ef6e3/b069339f02afb632-6b/s75x75_c1/ed512a784a5845c4981c2bfcb6b711126ba7504e.png") left center no-repeat;
-}
-
-#main .filters,
-#main .filters fieldset,
-#main .filters .group,
-#main .filters dl,
-#main .filters dd,
-#main .filters dt,
-#main .filters legend,
-#main .filters label,
-#main .filters input,
-#main .filters select,
-#main #filters,
-.filters-head,
-.sort-and-filter,
-#sort-and-filter {
-  background: var(--bg-dark) !important;
-  color: var(--accent) !important;
-  border-color: var(--accent) !important;
-}
-
-#main #filters,
-.sort-and-filter,
-#sort-and-filter {
-  border: 1px solid var(--accent) !important;
-  box-shadow: var(--glow) !important;
-}
-
-#main .filters select option {
-  background: var(--bg-dark) !important;
-  color: var(--accent) !important;
-}
-
-#main .filters input[type="text"] {
-  background: var(--bg-deep) !important;
-  border: 1px solid var(--accent) !important;
 }
 
 .warnings .tag,
@@ -543,4 +469,78 @@ dt.child {
   color: var(--accent);
   border: 2px solid var(--accent);
   box-shadow: var(--glow);
+}
+
+#main .filters,
+#main .filters fieldset,
+#main .filters .group,
+#main .filters dl,
+#main .filters dd,
+#main .filters dt,
+#main .filters legend,
+#main .filters label,
+#main .filters input,
+#main .filters select {
+  background: var(--bg-dark) !important;
+  color: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+
+#main #filters,
+.filters-head,
+.sort-and-filter,
+#sort-and-filter {
+  background: var(--bg-dark) !important;
+  color: var(--accent) !important;
+  border: 1px solid var(--accent) !important;
+  box-shadow: var(--glow) !important;
+}
+
+#main .filters select option {
+  background: var(--bg-dark) !important;
+  color: var(--accent) !important;
+}
+
+#main .filters input[type="text"] {
+  background: var(--bg-deep) !important;
+  color: var(--accent) !important;
+  border: 1px solid var(--accent) !important;
+}
+
+ul.work.navigation.actions button,
+ul.work.navigation.actions button.collapsed,
+li.chapter button,
+li.mark button[type="submit"],
+li.download button,
+li.bookmark button {
+  background: transparent !important;
+  border: 1px solid var(--accent) !important;
+  color: var(--accent) !important;
+  box-shadow: var(--glow-sm) !important;
+  border-radius: 5px !important;
+  font-size: 1em !important;
+  padding: 0.25em 0.75em !important;
+  cursor: pointer !important;
+}
+
+ul#chapter_index.expandable.secondary {
+  background: var(--bg-dark) !important;
+  border: 1px solid var(--accent) !important;
+  box-shadow: var(--glow) !important;
+  padding: 0.5em !important;
+}
+
+ul#chapter_index select {
+  background: var(--bg-dark) !important;
+  color: var(--accent) !important;
+  border: 1px solid var(--accent) !important;
+  box-shadow: var(--glow-sm) !important;
+}
+
+ul#chapter_index button {
+  background: transparent !important;
+  border: 1px solid var(--accent) !important;
+  color: var(--accent) !important;
+  box-shadow: var(--glow-sm) !important;
+  border-radius: 5px !important;
 }
