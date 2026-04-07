@@ -9,7 +9,6 @@ It is heavily inspired by *Constellations* by thevalkyrieflies on Tumblr.
 To make customization easier, I’ve added comments throughout the code.  
 AO3 automatically strips these comments when applied — lucky us!
 
----
 
 ## Customization Notes
 
