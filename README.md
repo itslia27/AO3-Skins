@@ -1,18 +1,23 @@
-# AO3-Skins
-Site Skins by Me!!
+# AO3 Skins
+Custom AO3 site skins made by me ✨
 
-Hello Reader!
+## Hello!
 
-The other file in this repository features the CSS code for an AO3 Skin I made! <br>
-(Heavily inspired by the original constellations by thevalkyrieflies on tumblr)
+This repository contains the CSS code for an AO3 skin I created.  
+It is heavily inspired by *Constellations* by thevalkyrieflies on Tumblr.
 
-To make it easiest to customize the code as you would like, I added comments to the code which are 
-automatically removed by AO3s system (lucky us!!)
+To make customization easier, I’ve added comments throughout the code.  
+AO3 automatically strips these comments when applied — lucky us!
 
-Below I listed some things that I couldn't decide how I wanted it to look, so you want to change/adjust to your liking. Happy Coding/Reading!! <br>
-**this is constantly being updated as I find bugs/clean things up!
+---
 
+## Customization Notes
 
-RELATIONSHIPS TAG GLOW: <br>
-can be edited to your liking by adjusting the last number in this line of code: <br>
+Below are a few elements you may want to tweak to better suit your preferences.
+
+### ✦ Relationship Tag Glow
+
+You can adjust the glow effect by changing the last value in this line:
+
+```css
 text-shadow: 0px 0px 3px var(--accent);
