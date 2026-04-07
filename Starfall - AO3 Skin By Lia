@@ -120,7 +120,7 @@ span.submit.actions input.button {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  color: #a8c7f7 !important;
+  color: var(--accent) !important;
 }
 
 #greeting .menu,
