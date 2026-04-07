@@ -288,7 +288,7 @@ dd.relationship.tags a {
   background: none;
   color: var(--accent) !important;
   font-weight: bold;
-  text-shadow: 0px 0px 3px var(--accent);
+  text-shadow: 0px 0px 3px var(--accent); /* can be adjusted to your liking by changing last value */
 }
 
 /*-----Freeform Tags-----*/
@@ -297,7 +297,7 @@ dd.relationship.tags a {
 dd.freeform.tags a,
 dd.character.tags a,
 .characters .tag {
-  color: var(--accent-lite) !important;
+  color: var(--accent-lite) !important; /*  colour of freeform tags can be changed here for better contrast  */
 }
 
 /*-----Other Tag Cosmetics-----*/
