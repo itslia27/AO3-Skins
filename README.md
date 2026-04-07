@@ -16,7 +16,7 @@ AO3 automatically removes these comments when applied (lucky us!!), so don't wor
 **NOTE:** When mentioning line numbers, these are as they appear in GitHub before AO3 removes comments.  
 Keep in mind that the numbers will significantly decrease when added to AO3.
 
------
+--
 
 ## Customization Notes
 Below are a few elements you may want to tweak to better suit your preferences.  
@@ -46,7 +46,8 @@ To increase contrast, you can edit their colour value in the TAGS section (line 
 ```css
 color: var(--accent-lite);
 ```
-Replace "--accent-lite" with a HEX Code colour of your choosing! I reccommend #97A3C2
+Replace "--accent-lite" with a HEX Code colour of your choosing!
+I reccommend #97A3C2.
 
 ## TO BE FIXED
 * Filter Background Colour on Mobile
