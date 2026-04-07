@@ -21,3 +21,7 @@ You can adjust the glow effect by changing the last value in this (line 346):
 text-shadow: 0px 0px 3px var(--accent);
 ```
 Increasing the last number will increase the glow, while the opposite is true for decreasing
+
+
+## TO BE FIXED
+* Filter Background Colour on Mobile
