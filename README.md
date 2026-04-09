@@ -64,4 +64,7 @@ As Of April 8th, 2026 @ 10:41pm
 </div>
 - Custom Archive Icons <br />
 - Replacement Icons for default profiles (someone who did that: https://archiveofourown.org/works/74722626/chapters/195165221)
+- Custom Stat Icons (Hits, Kudos, Language, etc - Pink Reversi does this)
+- Custom rating/warning/pairing icons??
+
 
