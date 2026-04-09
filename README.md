@@ -57,3 +57,11 @@ color: var(--accent-lite);   /* Replace "--accent-lite" with a HEX colour of you
 As Of April 8th, 2026 @ 10:41pm
 </div>
 - Comment Section ("Freeze Thread" Button is not in theme)
+
+<div align="center">
+
+## To Impliment (Maybe??)
+</div>
+- Custom Archive Icons
+- Replacement Icons for default profiles (someone who did that: https://archiveofourown.org/works/74722626/chapters/195165221)
+
