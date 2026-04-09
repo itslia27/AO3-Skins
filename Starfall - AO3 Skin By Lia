@@ -16,9 +16,6 @@ Variables
   --glow-sm: 0px 0px 3px #a8c7f7;
 }
 
-/*===========================
-Base Site
-===========================*/
 #outer.wrapper {
   background: var(--bg-dark);
   color: var(--accent);
@@ -146,9 +143,6 @@ form.search input[type=submit],
   border-radius: 5px;
 }
 
-/*===========================
-Buttons & Input
-===========================*/
 .actions a,
 .actions a:focus,
 .actions a:link,
@@ -339,9 +333,6 @@ dl.meta {
   box-shadow: var(--glow);
 }
 
-/*===========================
-Comments
-===========================*/
 li.comment {
   border: 1px solid var(--accent);
 }
@@ -569,4 +560,16 @@ ul#chapter_index button {
   color: var(--accent) !important;
   box-shadow: var(--glow-sm) !important;
   border-radius: 5px !important;
+}
+
+/* targets the mark as read button - since it only pops up when a fic is marked for later */
+form[action*="mark_as_read"] button[type="submit"] {
+  background: transparent !important;
+  border: 1px solid var(--accent) !important;
+  color: var(--accent) !important;
+  box-shadow: var(--glow-sm) !important;
+  border-radius: 5px !important;
+  font-size: 1em !important;
+  padding: 0.25em 0.75em !important;
+  cursor: pointer !important;
 }
