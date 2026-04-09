@@ -10,7 +10,7 @@
 This repository contains the CSS code for an AO3 skin I created.  
 It is heavily inspired by *Constellations* by thevalkyrieflies on Tumblr.
 
-To make customization easier, I’ve added comments throughout the code.  
+To make customization easier, I’ve added comments for the variables, filter, and tags so you can customize it as you please!
 AO3 automatically removes these comments when applied (lucky us!!), so don't worry about removing them.
 
 **NOTE:** When mentioning line numbers, these are as they appear in GitHub before AO3 removes comments.  
