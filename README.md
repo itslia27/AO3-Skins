@@ -54,7 +54,7 @@ color: var(--accent-lite);   /* Replace "--accent-lite" with a HEX colour of you
 <div align="center">
   
 ## To Be Fixed 
-All up to date!! (April 7th, 2026 @ 6:39pm)
+As Of April 8th, 2026 @ 10:41pm
 </div>
-
+*On "Marked for Later" fics, the "Mark as Read" Button is not in theme (this is only an issue with fics that are marked for later, otherwise this button doesnt exist and is therefore not an issue)
 
