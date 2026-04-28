@@ -1,0 +1,35 @@
+/*==============================================================
+                        Hang Painting Here?
+                       An AO3 Skin By im_lia
+
+- Skin:         Hang Painting Here?
+- File:         siteSkin_hangPaintingHere.css
+- Author:       Lia
+- AO3:          im_lia
+- Tumblr:       itslia27
+- GitHub:       itslia27
+- Updated:      TBD
+
+- Repository:   TBD 
+- Instructions: TBD
+
+- Inspired By:  "Art Heist Baby!" By bizzarestars on AO3
+                "Gathering Storm" By Ivan Konstantinovich Aivazovsky, 1899
+==============================================================*/
+
+/*=========   VARIABLES   =========*/
+:root{
+    /* --- background colours --- */
+    --bg1:      /* page bg colour, dark */
+    --bg2:      /* search field, hover state, deep */
+    --bg3:      /* alternating row colour (light), mid* /
+    --bg4:      /* accent colour - dim */
+    --bg5:      /* main accent colour */
+    
+
+    /* --- text --- */
+    --txt1:     /* */
+    --txt2:     /* */
+    --txt3:     /* */
+}
+
