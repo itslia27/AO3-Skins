@@ -2,75 +2,72 @@
 Starfall - AO3 Skin By Lia
 =========================================================================*/
 
-/*===========================
-Variables
-===========================*/
 :root {
-  --bg-dark: #0d0e1f;
-  --bg-deep: #151726;
-  --bg-mid: #424c5e;
-  --accent: #a8c7f7;
-  --accent-dim: #76859b;
-  --accent-lite: #677487;
-  --glow: 0px 0px 7px #a8c7f7;
-  --glow-sm: 0px 0px 3px #a8c7f7;
+--bg-dark: #0d0e1f;
+--bg-deep: #151726;
+--bg-mid: #424c5e;
+--accent: #a8c7f7;
+--accent-dim: #76859b;
+--accent-lite: #677487;
+--glow: 0px 0px 7px #a8c7f7;
+--glow-sm: 0px 0px 3px #a8c7f7;
 }
 
 #outer.wrapper {
-  background: var(--bg-dark);
-  color: var(--accent);
+background: var(--bg-dark);
+color: var(--accent);
 }
 
 #main a {
-  color: var(--accent-dim);
+color: var(--accent-dim);
 }
 
 #header {
-  background-image: url("https://i.pinimg.com/736x/93/5a/33/935a33b7fe78da207ed8fc3ca90fdcc4.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-color: var(--bg-deep);
+background-image: url("https://i.pinimg.com/736x/93/5a/33/935a33b7fe78da207ed8fc3ca90fdcc4.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+background-color: var(--bg-deep);
 }
 
 #header .heading {
-  height: 15em;
+height: 15em;
 }
 
 #header .primary {
-  background: var(--bg-dark);
-  box-shadow: var(--glow);
+background: var(--bg-dark);
+box-shadow: var(--glow);
 }
 
 #header .logo,
 #header .heading sup {
-  visibility: visible;
-  filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(180deg);
+visibility: visible;
+filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(180deg);
 }
 
 #header h1,
 #header h1 a {
-  color: var(--accent) !important;
-  text-shadow: 0 0 10px rgba(168, 199, 247, 0.7);
+color: var(--accent) !important;
+text-shadow: 0 0 10px rgba(168, 199, 247, 0.7);
 }
 
 #header h2 {
-  background: var(--accent) !important;
-  color: var(--bg-dark);
-  box-shadow: var(--glow);
+background: var(--accent) !important;
+color: var(--bg-dark);
+box-shadow: var(--glow);
 }
 
 #header .heading a {
-  color: var(--bg-deep);
-  text-shadow: 0px 0px 15px var(--accent);
+color: var(--bg-deep);
+text-shadow: 0px 0px 15px var(--accent);
 }
 
 #greeting img.icon {
-  display: none;
+display: none;
 }
 
 span.submit.actions input.button {
-  display: none;
+display: none;
 }
 
 #header .primary .actions a,
@@ -78,69 +75,69 @@ span.submit.actions input.button {
 #header ul.navigation.actions li a,
 #header .actions a,
 #greeting a.dropdown-toggle {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  color: var(--accent) !important;
+background: transparent !important;
+border: none !important;
+box-shadow: none !important;
+color: var(--accent) !important;
 }
 
 #greeting .menu,
 #header .dropdown .menu,
 #header .dropdown:hover a {
-  background: var(--bg-dark);
-  box-shadow: var(--glow);
+background: var(--bg-dark);
+box-shadow: var(--glow);
 }
 
 #header #search .text,
 .search [role="tooltip"] {
-  background: var(--bg-dark);
-  box-shadow: var(--glow);
-  color: var(--accent) !important;
-  border: 1px solid var(--bg-dark);
-  width: 12em;
+background: var(--bg-dark);
+box-shadow: var(--glow);
+color: var(--accent) !important;
+border: 1px solid var(--bg-dark);
+width: 12em;
 }
 
 form.search input[type=text],
 form.search input[type=submit],
 .autocomplete div.dropdown ul {
-  background: var(--bg-dark) !important;
-  border: none;
-  box-shadow: var(--glow);
-  color: var(--accent);
-  display: block;
+background: var(--bg-dark) !important;
+border: none;
+box-shadow: var(--glow);
+color: var(--accent);
+display: block;
 }
 
 #dashboard.own {
-  border-top: 5px solid var(--accent);
-  border-bottom: 5px solid var(--accent);
-  box-shadow: var(--glow);
+border-top: 5px solid var(--accent);
+border-bottom: 5px solid var(--accent);
+box-shadow: var(--glow);
 }
 
 #dashboard a {
-  color: var(--accent);
+color: var(--accent);
 }
 
 #dashboard ul li a {
-  border: none !important;
-  box-shadow: none !important;
-  border-radius: 0;
+border: none !important;
+box-shadow: none !important;
+border-radius: 0;
 }
 
 #dashboard a:hover,
 #dashboard ul li a:hover,
 #dashboard ul li a:focus {
-  background: var(--bg-dark) !important;
-  color: var(--accent) !important;
-  box-shadow: var(--glow);
-  text-decoration: none;
+background: var(--bg-dark) !important;
+color: var(--accent) !important;
+box-shadow: var(--glow);
+text-decoration: none;
 }
 
 .current,
 #dashboard .current {
-  background: var(--accent) !important;
-  color: var(--bg-dark) !important;
-  box-shadow: var(--glow) !important;
-  border-radius: 5px;
+background: var(--accent) !important;
+color: var(--bg-dark) !important;
+box-shadow: var(--glow) !important;
+border-radius: 5px;
 }
 
 .actions a,
@@ -159,33 +156,33 @@ form.search input[type=submit],
 input[type="submit"],
 ul.navigation.actions li a,
 a.action {
-  background: transparent !important;
-  border: 1px solid var(--accent) !important;
-  color: var(--accent) !important;
-  box-shadow: var(--glow-sm) !important;
-  border-radius: 5px;
-  text-decoration: none !important;
+background: transparent !important;
+border: 1px solid var(--accent) !important;
+color: var(--accent) !important;
+box-shadow: var(--glow-sm) !important;
+border-radius: 5px;
+text-decoration: none !important;
 }
 
 span.delete {
-  background: var(--accent);
-  box-shadow: var(--glow);
+background: var(--accent);
+box-shadow: var(--glow);
 }
 
 span.delete a {
-  color: var(--bg-dark) !important;
-  font-weight: bold;
+color: var(--bg-dark) !important;
+font-weight: bold;
 }
 
 .dropdown {
-  background: var(--bg-dark);
+background: var(--bg-dark);
 }
 
 .ui-sortable li,
 .dynamic form,
 div.dynamic {
-  background: var(--bg-dark);
-  border: 1px solid var(--accent);
+background: var(--bg-dark);
+border: 1px solid var(--accent);
 }
 
 form dl,
@@ -201,42 +198,52 @@ select:focus,
 textarea,
 span.symbol.question,
 .own {
-  background: var(--bg-dark) !important;
-  color: var(--accent) !important;
-  border: 1px solid var(--accent);
-  box-shadow: var(--glow);
+background: var(--bg-dark) !important;
+color: var(--accent) !important;
+border: 1px solid var(--accent);
+box-shadow: var(--glow);
 }
 
 label,
 label.required,
 .autocomplete li.added,
 .post .meta dd ul li.added {
-  color: var(--accent);
+color: var(--accent);
 }
 
 form.verbose legend,
 .verbose form legend {
-  background: var(--accent);
-  color: var(--bg-deep) !important;
-  box-shadow: var(--glow);
+background: var(--accent);
+color: var(--bg-deep) !important;
+box-shadow: var(--glow);
 }
 
 .listbox .index {
-  background: var(--bg-dark);
+background: var(--bg-dark);
 }
 
 .listbox,
 fieldset fieldset.listbox {
-  background: var(--accent);
-  box-shadow: var(--glow);
+background: var(--accent);
+box-shadow: var(--glow);
 }
 
-/*===========================
-AO3 Filter Section
-===========================*/
 .filters {
-  border: 1px solid var(--accent) !important;
-  box-shadow: var(--glow) !important;
+border: 1px solid var(--accent) !important;
+box-shadow: var(--glow) !important;
+position: sticky;
+top: 2vh;
+max-height: 96vh;
+overflow-y: scroll;
+}
+
+.filters:not(:hover) {
+scrollbar-color: transparent transparent;
+}
+
+* {
+scrollbar-color: var(--accent) var(--bg-deep);
+scrollbar-width: thin;
 }
 
 .filters fieldset,
@@ -244,73 +251,66 @@ AO3 Filter Section
 .filters dl,
 .filters dd,
 .filters dt {
-  border: none !important;
-  box-shadow: none !important;
-  background: transparent !important;
+border: none !important;
+box-shadow: none !important;
+background: transparent !important;
 }
 
 .filters .expander {
-  background: url("https://64.media.tumblr.com/55bf0c446ff42c1e540e284f3053c838/96ac613e2494df28-fa/s75x75_c1/8ca02eec81402fcafe2b9706f27c478e46e50b8b.png") left center no-repeat;
-  color: var(--accent) !important;
-  font-weight: bold;
+background: url("https://64.media.tumblr.com/55bf0c446ff42c1e540e284f3053c838/96ac613e2494df28-fa/s75x75_c1/8ca02eec81402fcafe2b9706f27c478e46e50b8b.png") left center no-repeat;
+color: var(--accent) !important;
+font-weight: bold;
 }
 
 .filters .expanded .expander {
-  background: url("https://64.media.tumblr.com/bc4316019f28c4f7319fdda9fa5ef6e3/b069339f02afb632-6b/s75x75_c1/ed512a784a5845c4981c2bfcb6b711126ba7504e.png") left center no-repeat;
+background: url("https://64.media.tumblr.com/bc4316019f28c4f7319fdda9fa5ef6e3/b069339f02afb632-6b/s75x75_c1/ed512a784a5845c4981c2bfcb6b711126ba7504e.png") left center no-repeat;
 }
 
-/*===========================
-Tags
-===========================*/
-/*-----Archive Warnings Tag-----*/
 .warnings .tag,
 .work .warning a.tag,
 dd.warning.tags a {
-  background: var(--accent);
-  border: 1px solid var(--accent);
-  border-radius: 5px;
-  color: var(--bg-deep) !important;
-  font-weight: bold;
-  padding: 0 2px;
-  box-shadow: var(--glow-sm);
+background: var(--accent);
+border: 1px solid var(--accent);
+border-radius: 5px;
+color: var(--bg-deep) !important;
+font-weight: bold;
+padding: 0 2px;
+box-shadow: var(--glow-sm);
 }
 
-/*-----Relationships Tag-----*/
 .relationships .tag,
 .work .relationships a.tag,
 dd.relationship.tags a {
-  background: none;
-  color: var(--accent) !important;
-  font-weight: bold;
-  text-shadow: 0px 0px 3px var(--accent); /* can be adjusted to your liking by changing last value */
+background: none;
+color: var(--accent) !important;
+font-weight: bold;
+text-shadow: 0px 0px 3px var(--accent);
 }
 
-/*-----Freeform Tags-----*/
 .freeforms .tag,
 .work .freeform a.tag,
 dd.freeform.tags a,
 dd.character.tags a,
 .characters .tag {
-  color: var(--accent-lite) !important; /*  colour of freeform tags can be changed here for better contrast  */
+color: var(--accent-lite) !important;
 }
 
-/*-----Other Tag Cosmetics-----*/
 .tag:hover,
 a.tag:hover {
-  color: var(--accent) !important;
-  background: var(--bg-mid) !important;
-  border-color: var(--accent) !important;
-  text-decoration: none !important;
+color: var(--accent) !important;
+background: var(--bg-mid) !important;
+border-color: var(--accent) !important;
+text-decoration: none !important;
 }
 
 li.blurb {
-  border: 1px solid var(--accent);
-  box-shadow: var(--glow);
+border: 1px solid var(--accent);
+box-shadow: var(--glow);
 }
 
 li.blurb.group,
 li.blurb .group {
-  background: var(--bg-dark) !important;
+background: var(--bg-dark) !important;
 }
 
 .blurb h4 a,
@@ -319,52 +319,52 @@ li.blurb .group {
 .blurb h3,
 li.blurb h4 a,
 li.blurb h4 {
-  color: var(--accent) !important;
-  text-decoration: none;
+color: var(--accent) !important;
+text-decoration: none;
 }
 
 h4.heading.byline {
-  background: var(--accent);
-  color: var(--bg-deep) !important;
+background: var(--accent);
+color: var(--bg-deep) !important;
 }
 
 dl.meta {
-  border: 1px solid var(--accent);
-  box-shadow: var(--glow);
+border: 1px solid var(--accent);
+box-shadow: var(--glow);
 }
 
 li.comment {
-  border: 1px solid var(--accent);
+border: 1px solid var(--accent);
 }
 
 .comment div.icon {
-  border-bottom: 5px solid var(--accent);
-  box-shadow: var(--glow);
+border-bottom: 5px solid var(--accent);
+box-shadow: var(--glow);
 }
 
 .thread .even {
-  background: var(--bg-mid);
+background: var(--bg-mid);
 }
 
 .unread {
-  background: var(--bg-dark);
-  border: 5px dashed var(--accent) !important;
+background: var(--bg-dark);
+border: 5px dashed var(--accent) !important;
 }
 
 span.unread {
-  background: var(--accent);
-  color: var(--bg-deep) !important;
+background: var(--accent);
+color: var(--bg-deep) !important;
 }
 
 span.replied {
-  background: var(--bg-dark);
-  color: var(--accent);
-  border: 2px solid var(--accent);
-  box-shadow: var(--glow);
+background: var(--bg-dark);
+color: var(--accent);
+border: 2px solid var(--accent);
+box-shadow: var(--glow);
 }
 
 span.indicator::before {
-  box-shadow: var(--glow);
+box-shadow: var(--glow);
 }
 
 .notice,
@@ -376,10 +376,10 @@ ul.notes,
 .comment_error,
 .kudos_error,
 .alert.flash {
-  background: var(--accent);
-  box-shadow: var(--glow) !important;
-  color: var(--bg-dark);
-  border: none;
+background: var(--accent);
+box-shadow: var(--glow) !important;
+color: var(--bg-dark);
+border: none;
 }
 
 .notice a,
@@ -391,52 +391,52 @@ ul.notes a,
 .comment_error a,
 .kudos_error a,
 .alert.flash a {
-  color: var(--bg-mid) !important;
-  font-weight: bold;
+color: var(--bg-mid) !important;
+font-weight: bold;
 }
 
 .splash .module h3 {
-  color: var(--accent);
-  border-bottom: 2px solid var(--accent);
+color: var(--accent);
+border-bottom: 2px solid var(--accent);
 }
 
 .splash .favorite li:nth-of-type(2n+1) a {
-  background: var(--accent);
-  box-shadow: var(--glow);
-  color: var(--bg-dark);
-  font-weight: bold;
-  font-variant: small-caps;
+background: var(--accent);
+box-shadow: var(--glow);
+color: var(--bg-dark);
+font-weight: bold;
+font-variant: small-caps;
 }
 
 .splash .favorite li:nth-of-type(2n+2) a {
-  color: var(--accent);
-  font-weight: bold;
-  font-variant: small-caps;
-  font-size: 110%;
+color: var(--accent);
+font-weight: bold;
+font-variant: small-caps;
+font-size: 110%;
 }
 
 .splash .favorite li:nth-of-type(2n+1) a:hover,
 .splash .favorite li:nth-of-type(2n+2) a:hover {
-  background: var(--bg-mid);
-  color: var(--accent);
-  font-weight: bold;
-  font-variant: small-caps;
+background: var(--bg-mid);
+color: var(--accent);
+font-weight: bold;
+font-variant: small-caps;
 }
 
 #stat_chart svg rect:first-of-type {
-  opacity: 60%;
+opacity: 60%;
 }
 
 #stat_chart g[clip-path^=url] > g:nth-of-type(2) rect,
 #stat_chart svg g:nth-of-type(2) > g rect:last-of-type,
 #stat_chart g[clip-path^=url] > g:nth-of-type(2) rect:first-of-type {
-  filter: hue-rotate(140deg);
-  opacity: 80% !important;
+filter: hue-rotate(140deg);
+opacity: 80% !important;
 }
 
 .statistics .index li:nth-of-type(2n) {
-  background: var(--bg-dark);
-  border: 1px solid var(--accent);
+background: var(--bg-dark);
+border: 1px solid var(--accent);
 }
 
 .reading h4.viewed,
@@ -444,48 +444,48 @@ dl.index dd,
 table,
 th,
 dt.child {
-  background: var(--bg-dark);
+background: var(--bg-dark);
 }
 
 .draft {
-  background: var(--bg-dark);
-  color: var(--accent);
-  border: 2px dashed var(--accent);
-  box-shadow: var(--glow);
+background: var(--bg-dark);
+color: var(--accent);
+border: 2px dashed var(--accent);
+box-shadow: var(--glow);
 }
 
 .draft .wrapper {
-  background: var(--bg-dark);
-  border: 1px solid var(--accent);
+background: var(--bg-dark);
+border: 1px solid var(--accent);
 }
 
 .event .userstuff {
-  background: var(--accent);
-  border: 1px solid var(--accent);
+background: var(--accent);
+border: 1px solid var(--accent);
 }
 
 #footer {
-  background: var(--bg-mid);
-  color: var(--accent);
-  border-top: 3px solid var(--accent);
-  box-shadow: var(--glow);
+background: var(--bg-mid);
+color: var(--accent);
+border-top: 3px solid var(--accent);
+box-shadow: var(--glow);
 }
 
 #footer a,
 #footer .heading,
 #footer .heading a {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  color: var(--accent) !important;
-  border-radius: 0 !important;
+background: transparent !important;
+border: none !important;
+box-shadow: none !important;
+color: var(--accent) !important;
+border-radius: 0 !important;
 }
 
 #modal {
-  background: var(--bg-dark);
-  color: var(--accent);
-  border: 2px solid var(--accent);
-  box-shadow: var(--glow);
+background: var(--bg-dark);
+color: var(--accent);
+border: 2px solid var(--accent);
+box-shadow: var(--glow);
 }
 
 #main .filters,
@@ -498,30 +498,30 @@ dt.child {
 #main .filters label,
 #main .filters input,
 #main .filters select {
-  background: var(--bg-dark) !important;
-  color: var(--accent) !important;
-  border-color: var(--accent) !important;
+background: var(--bg-dark) !important;
+color: var(--accent) !important;
+border-color: var(--accent) !important;
 }
 
 #main #filters,
 .filters-head,
 .sort-and-filter,
 #sort-and-filter {
-  background: var(--bg-dark) !important;
-  color: var(--accent) !important;
-  border: 1px solid var(--accent) !important;
-  box-shadow: var(--glow) !important;
+background: var(--bg-dark) !important;
+color: var(--accent) !important;
+border: 1px solid var(--accent) !important;
+box-shadow: var(--glow) !important;
 }
 
 #main .filters select option {
-  background: var(--bg-dark) !important;
-  color: var(--accent) !important;
+background: var(--bg-dark) !important;
+color: var(--accent) !important;
 }
 
 #main .filters input[type="text"] {
-  background: var(--bg-deep) !important;
-  color: var(--accent) !important;
-  border: 1px solid var(--accent) !important;
+background: var(--bg-deep) !important;
+color: var(--accent) !important;
+border: 1px solid var(--accent) !important;
 }
 
 ul.work.navigation.actions button,
@@ -530,46 +530,45 @@ li.chapter button,
 li.mark button[type="submit"],
 li.download button,
 li.bookmark button {
-  background: transparent !important;
-  border: 1px solid var(--accent) !important;
-  color: var(--accent) !important;
-  box-shadow: var(--glow-sm) !important;
-  border-radius: 5px !important;
-  font-size: 1em !important;
-  padding: 0.25em 0.75em !important;
-  cursor: pointer !important;
+background: transparent !important;
+border: 1px solid var(--accent) !important;
+color: var(--accent) !important;
+box-shadow: var(--glow-sm) !important;
+border-radius: 5px !important;
+font-size: 1em !important;
+padding: 0.25em 0.75em !important;
+cursor: pointer !important;
 }
 
 ul#chapter_index.expandable.secondary {
-  background: var(--bg-dark) !important;
-  border: 1px solid var(--accent) !important;
-  box-shadow: var(--glow) !important;
-  padding: 0.5em !important;
+background: var(--bg-dark) !important;
+border: 1px solid var(--accent) !important;
+box-shadow: var(--glow) !important;
+padding: 0.5em !important;
 }
 
 ul#chapter_index select {
-  background: var(--bg-dark) !important;
-  color: var(--accent) !important;
-  border: 1px solid var(--accent) !important;
-  box-shadow: var(--glow-sm) !important;
+background: var(--bg-dark) !important;
+color: var(--accent) !important;
+border: 1px solid var(--accent) !important;
+box-shadow: var(--glow-sm) !important;
 }
 
 ul#chapter_index button {
-  background: transparent !important;
-  border: 1px solid var(--accent) !important;
-  color: var(--accent) !important;
-  box-shadow: var(--glow-sm) !important;
-  border-radius: 5px !important;
+background: transparent !important;
+border: 1px solid var(--accent) !important;
+color: var(--accent) !important;
+box-shadow: var(--glow-sm) !important;
+border-radius: 5px !important;
 }
 
-/* targets the mark as read button - since it only pops up when a fic is marked for later */
 form[action*="mark_as_read"] button[type="submit"] {
-  background: transparent !important;
-  border: 1px solid var(--accent) !important;
-  color: var(--accent) !important;
-  box-shadow: var(--glow-sm) !important;
-  border-radius: 5px !important;
-  font-size: 1em !important;
-  padding: 0.25em 0.75em !important;
-  cursor: pointer !important;
+background: transparent !important;
+border: 1px solid var(--accent) !important;
+color: var(--accent) !important;
+box-shadow: var(--glow-sm) !important;
+border-radius: 5px !important;
+font-size: 1em !important;
+padding: 0.25em 0.75em !important;
+cursor: pointer !important;
 }
