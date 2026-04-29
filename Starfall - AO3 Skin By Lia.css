@@ -5,12 +5,18 @@ Starfall - AO3 Skin By Lia
 :root {
 --bg-dark: #0d0e1f;
 --bg-deep: #151726;
+--bg-card: #1e2235;
 --bg-mid: #424c5e;
 --accent: #a8c7f7;
 --accent-dim: #76859b;
 --accent-lite: #677487;
 --glow: 0px 0px 7px #a8c7f7;
 --glow-sm: 0px 0px 3px #a8c7f7;
+--radius-small: 4px;
+--radius-mid: 8px;
+--radius-big: 12px;
+--radius-btn: 20px;
+--radius-tag: 6px;
 }
 
 #outer.wrapper {
@@ -86,6 +92,17 @@ color: var(--accent) !important;
 #header .dropdown:hover a {
 background: var(--bg-dark);
 box-shadow: var(--glow);
+border-radius: var(--radius-mid);
+}
+
+#header li.search {
+position: relative;
+display: flex;
+align-items: center;
+}
+
+#header li.search::before {
+display: none;
 }
 
 #header #search .text,
@@ -94,7 +111,9 @@ background: var(--bg-dark);
 box-shadow: var(--glow);
 color: var(--accent) !important;
 border: 1px solid var(--bg-dark);
+border-radius: var(--radius-btn);
 width: 12em;
+padding-left: 0.75em;
 }
 
 form.search input[type=text],
@@ -105,12 +124,13 @@ border: none;
 box-shadow: var(--glow);
 color: var(--accent);
 display: block;
+border-radius: var(--radius-mid);
 }
 
 #dashboard.own {
 border-top: 5px solid var(--accent);
 border-bottom: 5px solid var(--accent);
-box-shadow: var(--glow);
+box-shadow: none;
 }
 
 #dashboard a {
@@ -120,16 +140,18 @@ color: var(--accent);
 #dashboard ul li a {
 border: none !important;
 box-shadow: none !important;
-border-radius: 0;
+border-radius: var(--radius-small);
+transition: color 0.2s;
 }
 
 #dashboard a:hover,
 #dashboard ul li a:hover,
 #dashboard ul li a:focus {
-background: var(--bg-dark) !important;
+border-left: 2px solid var(--accent) !important;
 color: var(--accent) !important;
-box-shadow: var(--glow);
+box-shadow: none;
 text-decoration: none;
+padding-left: 0.4em;
 }
 
 .current,
@@ -137,7 +159,7 @@ text-decoration: none;
 background: var(--accent) !important;
 color: var(--bg-dark) !important;
 box-shadow: var(--glow) !important;
-border-radius: 5px;
+border-radius: var(--radius-small);
 }
 
 .actions a,
@@ -160,13 +182,14 @@ background: transparent !important;
 border: 1px solid var(--accent) !important;
 color: var(--accent) !important;
 box-shadow: var(--glow-sm) !important;
-border-radius: 5px;
+border-radius: var(--radius-btn);
 text-decoration: none !important;
 }
 
 span.delete {
 background: var(--accent);
 box-shadow: var(--glow);
+border-radius: var(--radius-small);
 }
 
 span.delete a {
@@ -176,6 +199,7 @@ font-weight: bold;
 
 .dropdown {
 background: var(--bg-dark);
+border-radius: var(--radius-mid);
 }
 
 .ui-sortable li,
@@ -183,6 +207,7 @@ background: var(--bg-dark);
 div.dynamic {
 background: var(--bg-dark);
 border: 1px solid var(--accent);
+border-radius: var(--radius-mid);
 }
 
 form dl,
@@ -196,12 +221,20 @@ input,
 select,
 select:focus,
 textarea,
-span.symbol.question,
-.own {
+span.symbol.question {
 background: var(--bg-dark) !important;
 color: var(--accent) !important;
 border: 1px solid var(--accent);
 box-shadow: var(--glow);
+border-radius: var(--radius-mid);
+}
+
+.own {
+background: var(--bg-dark) !important;
+color: var(--accent) !important;
+border: 1px solid var(--accent);
+box-shadow: none;
+border-radius: var(--radius-mid);
 }
 
 label,
@@ -216,6 +249,7 @@ form.verbose legend,
 background: var(--accent);
 color: var(--bg-deep) !important;
 box-shadow: var(--glow);
+border-radius: var(--radius-small);
 }
 
 .listbox .index {
@@ -226,24 +260,20 @@ background: var(--bg-dark);
 fieldset fieldset.listbox {
 background: var(--accent);
 box-shadow: var(--glow);
+border-radius: var(--radius-big);
 }
 
-.filters {
-border: 1px solid var(--accent) !important;
-box-shadow: var(--glow) !important;
+form.filters {
 position: sticky;
 top: 2vh;
 max-height: 96vh;
 overflow-y: scroll;
+border: none !important;
+box-shadow: none !important;
 }
 
-.filters:not(:hover) {
+form.filters:not(:hover) {
 scrollbar-color: transparent transparent;
-}
-
-* {
-scrollbar-color: var(--accent) var(--bg-deep);
-scrollbar-width: thin;
 }
 
 .filters fieldset,
@@ -266,12 +296,49 @@ font-weight: bold;
 background: url("https://64.media.tumblr.com/bc4316019f28c4f7319fdda9fa5ef6e3/b069339f02afb632-6b/s75x75_c1/ed512a784a5845c4981c2bfcb6b711126ba7504e.png") left center no-repeat;
 }
 
+#main .filters,
+#main .filters fieldset,
+#main .filters .group,
+#main .filters dl,
+#main .filters dd,
+#main .filters dt,
+#main .filters legend,
+#main .filters label,
+#main .filters input,
+#main .filters select {
+background: var(--bg-dark) !important;
+color: var(--accent) !important;
+border-color: var(--accent) !important;
+}
+
+#main #filters,
+.filters-head,
+.sort-and-filter,
+#sort-and-filter {
+background: var(--bg-dark) !important;
+color: var(--accent) !important;
+border: none !important;
+box-shadow: none !important;
+}
+
+#main .filters select option {
+background: var(--bg-dark) !important;
+color: var(--accent) !important;
+}
+
+#main .filters input[type="text"] {
+background: var(--bg-deep) !important;
+color: var(--accent) !important;
+border: 1px solid var(--accent) !important;
+border-radius: var(--radius-small);
+}
+
 .warnings .tag,
 .work .warning a.tag,
 dd.warning.tags a {
 background: var(--accent);
 border: 1px solid var(--accent);
-border-radius: 5px;
+border-radius: var(--radius-tag);
 color: var(--bg-deep) !important;
 font-weight: bold;
 padding: 0 2px;
@@ -300,17 +367,20 @@ a.tag:hover {
 color: var(--accent) !important;
 background: var(--bg-mid) !important;
 border-color: var(--accent) !important;
+border-radius: var(--radius-tag);
 text-decoration: none !important;
 }
 
 li.blurb {
-border: 1px solid var(--accent);
-box-shadow: var(--glow);
+background: var(--bg-deep) !important;
+border: none;
+box-shadow: none;
+border-radius: var(--radius-big);
 }
 
 li.blurb.group,
 li.blurb .group {
-background: var(--bg-dark) !important;
+background: var(--bg-card) !important;
 }
 
 .blurb h4 a,
@@ -326,20 +396,24 @@ text-decoration: none;
 h4.heading.byline {
 background: var(--accent);
 color: var(--bg-deep) !important;
+border-radius: var(--radius-small);
 }
 
 dl.meta {
 border: 1px solid var(--accent);
-box-shadow: var(--glow);
+box-shadow: none;
+border-radius: var(--radius-big);
 }
 
 li.comment {
 border: 1px solid var(--accent);
+border-radius: var(--radius-big);
 }
 
 .comment div.icon {
 border-bottom: 5px solid var(--accent);
 box-shadow: var(--glow);
+border-radius: var(--radius-mid);
 }
 
 .thread .even {
@@ -354,6 +428,7 @@ border: 5px dashed var(--accent) !important;
 span.unread {
 background: var(--accent);
 color: var(--bg-deep) !important;
+border-radius: var(--radius-small);
 }
 
 span.replied {
@@ -361,6 +436,7 @@ background: var(--bg-dark);
 color: var(--accent);
 border: 2px solid var(--accent);
 box-shadow: var(--glow);
+border-radius: var(--radius-small);
 }
 
 span.indicator::before {
@@ -380,6 +456,7 @@ background: var(--accent);
 box-shadow: var(--glow) !important;
 color: var(--bg-dark);
 border: none;
+border-radius: var(--radius-mid);
 }
 
 .notice a,
@@ -400,12 +477,20 @@ color: var(--accent);
 border-bottom: 2px solid var(--accent);
 }
 
+#dashboard .module h3,
+#dashboard h3 {
+background: var(--accent) !important;
+color: var(--bg-dark) !important;
+box-shadow: none !important;
+}
+
 .splash .favorite li:nth-of-type(2n+1) a {
 background: var(--accent);
 box-shadow: var(--glow);
 color: var(--bg-dark);
 font-weight: bold;
 font-variant: small-caps;
+border-radius: var(--radius-tag);
 }
 
 .splash .favorite li:nth-of-type(2n+2) a {
@@ -421,6 +506,7 @@ background: var(--bg-mid);
 color: var(--accent);
 font-weight: bold;
 font-variant: small-caps;
+border-radius: var(--radius-tag);
 }
 
 #stat_chart svg rect:first-of-type {
@@ -437,6 +523,7 @@ opacity: 80% !important;
 .statistics .index li:nth-of-type(2n) {
 background: var(--bg-dark);
 border: 1px solid var(--accent);
+border-radius: var(--radius-small);
 }
 
 .reading h4.viewed,
@@ -452,16 +539,19 @@ background: var(--bg-dark);
 color: var(--accent);
 border: 2px dashed var(--accent);
 box-shadow: var(--glow);
+border-radius: var(--radius-big);
 }
 
 .draft .wrapper {
 background: var(--bg-dark);
 border: 1px solid var(--accent);
+border-radius: var(--radius-mid);
 }
 
 .event .userstuff {
 background: var(--accent);
 border: 1px solid var(--accent);
+border-radius: var(--radius-mid);
 }
 
 #footer {
@@ -486,42 +576,16 @@ background: var(--bg-dark);
 color: var(--accent);
 border: 2px solid var(--accent);
 box-shadow: var(--glow);
+border-radius: var(--radius-big);
 }
 
-#main .filters,
-#main .filters fieldset,
-#main .filters .group,
-#main .filters dl,
-#main .filters dd,
-#main .filters dt,
-#main .filters legend,
-#main .filters label,
-#main .filters input,
-#main .filters select {
-background: var(--bg-dark) !important;
-color: var(--accent) !important;
-border-color: var(--accent) !important;
+* {
+scrollbar-color: var(--accent) var(--bg-deep);
+scrollbar-width: thin;
 }
 
-#main #filters,
-.filters-head,
-.sort-and-filter,
-#sort-and-filter {
-background: var(--bg-dark) !important;
-color: var(--accent) !important;
-border: 1px solid var(--accent) !important;
-box-shadow: var(--glow) !important;
-}
-
-#main .filters select option {
-background: var(--bg-dark) !important;
-color: var(--accent) !important;
-}
-
-#main .filters input[type="text"] {
-background: var(--bg-deep) !important;
-color: var(--accent) !important;
-border: 1px solid var(--accent) !important;
+form.filters:not(:hover) {
+scrollbar-color: transparent transparent;
 }
 
 ul.work.navigation.actions button,
@@ -534,10 +598,9 @@ background: transparent !important;
 border: 1px solid var(--accent) !important;
 color: var(--accent) !important;
 box-shadow: var(--glow-sm) !important;
-border-radius: 5px !important;
+border-radius: var(--radius-btn) !important;
 font-size: 1em !important;
 padding: 0.25em 0.75em !important;
-cursor: pointer !important;
 }
 
 ul#chapter_index.expandable.secondary {
@@ -545,6 +608,7 @@ background: var(--bg-dark) !important;
 border: 1px solid var(--accent) !important;
 box-shadow: var(--glow) !important;
 padding: 0.5em !important;
+border-radius: var(--radius-mid) !important;
 }
 
 ul#chapter_index select {
@@ -552,6 +616,7 @@ background: var(--bg-dark) !important;
 color: var(--accent) !important;
 border: 1px solid var(--accent) !important;
 box-shadow: var(--glow-sm) !important;
+border-radius: var(--radius-small) !important;
 }
 
 ul#chapter_index button {
@@ -559,7 +624,7 @@ background: transparent !important;
 border: 1px solid var(--accent) !important;
 color: var(--accent) !important;
 box-shadow: var(--glow-sm) !important;
-border-radius: 5px !important;
+border-radius: var(--radius-btn) !important;
 }
 
 form[action*="mark_as_read"] button[type="submit"] {
@@ -567,8 +632,126 @@ background: transparent !important;
 border: 1px solid var(--accent) !important;
 color: var(--accent) !important;
 box-shadow: var(--glow-sm) !important;
-border-radius: 5px !important;
+border-radius: var(--radius-btn) !important;
 font-size: 1em !important;
 padding: 0.25em 0.75em !important;
-cursor: pointer !important;
 }
+
+dl.stats {
+display: flex;
+flex-wrap: wrap;
+justify-content: right;
+column-gap: 0.9em;
+}
+
+dl.stats dt {
+display: none !important;
+}
+
+dl.stats dd {
+display: flex;
+align-items: center;
+position: relative;
+font-size: inherit;
+}
+
+dl.stats dd::before {
+display: inline-block;
+width: 1em;
+height: 1em;
+margin-right: 0.4em;
+background-position: center;
+background-size: contain;
+background-repeat: no-repeat;
+content: "";
+transform: translate(0, 1px);
+filter: brightness(0) saturate(100%) invert(79%) sepia(28%) saturate(500%) hue-rotate(185deg) brightness(105%) contrast(95%) opacity(85%);
+}
+
+dl.stats dd::after {
+display: none;
+position: absolute;
+top: 1.6em;
+left: 50%;
+transform: translateX(-50%);
+z-index: 99999;
+padding: 0.3em 0.5em;
+border: 1px solid var(--accent);
+border-radius: var(--radius-small);
+box-shadow: var(--glow-sm);
+background: var(--bg-dark);
+color: var(--accent);
+font-size: 0.75em;
+line-height: 1;
+white-space: nowrap;
+}
+
+dl.stats dd:hover::after {
+display: inline-block;
+}
+
+dl.stats dd.language::before {
+background-image: url("https://zerafinacss.github.io/ao3/stats-icons/language-01.png");
+}
+
+dl.stats dd.language::after {
+content: "Language";
+}
+
+dl.stats dd.words::before {
+background-image: url("https://zerafinacss.github.io/ao3/stats-icons/words-01.png");
+}
+
+dl.stats dd.words::after {
+content: "Words";
+}
+
+dl.stats dd.chapters::before {
+background-image: url("https://zerafinacss.github.io/ao3/stats-icons/chapters-01.png");
+}
+
+dl.stats dd.chapters::after {
+content: "Chapters";
+}
+
+dl.stats dd.collections::before {
+background-image: url("https://zerafinacss.github.io/ao3/stats-icons/collection-01.png");
+}
+
+dl.stats dd.collections::after {
+content: "Collections";
+}
+
+dl.stats dd.comments::before {
+background-image: url("https://zerafinacss.github.io/ao3/stats-icons/comments-01.png");
+}
+
+dl.stats dd.comments::after {
+content: "Comments";
+}
+
+dl.stats dd.kudos::before {
+background-image: url("https://zerafinacss.github.io/ao3/stats-icons/kudos-01.png");
+}
+
+dl.stats dd.kudos::after {
+content: "Kudos";
+}
+
+dl.stats dd.bookmarks::before {
+background-image: url("https://zerafinacss.github.io/ao3/stats-icons/bookmarks-01.png");
+}
+
+dl.stats dd.bookmarks::after {
+content: "Bookmarks";
+}
+
+dl.stats dd.hits::before {
+background-image: url("https://zerafinacss.github.io/ao3/stats-icons/hits-01.png");
+}
+
+dl.stats dd.hits::after {
+content: "Hits";
+}
+
+
