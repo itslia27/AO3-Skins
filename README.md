@@ -30,16 +30,16 @@ The glow on this skin can be changed in a few places.
 Globally (Everywhere):
 ```css
 /* Lines 26-27 */
---glow: 0px 0px 7px #a8c7f7;             /* the last value represents intenisty. 
---glow-sm: 0px 0px 3px #a8c7f7;          /* this can be changed to your liking. just make                                               sure that --glow is a larger value than --glow-sm
+--glow: 0px 0px 7px #a8c7f7;             /* the last value represents intenisty. this can be changed to your liking. */
+--glow-sm: 0px 0px 3px #a8c7f7;          /*  just make sure that --glow is a larger value than --glow-sm. */
 ```
 Specific Spots:
 Look for the line "text-shadow:" under the section you would like to change.
 For example, If I don't like the glow on the Relationship Tags, I would change this line -->
 ```css
 /* Line 373 */
-text-shadow: 0px 0px 3px var(--accent)  /* i would change the 3 to a 0 for no glow,
-                                           or a 3to a 5 if i want it to glow more!
+text-shadow: 0px 0px 3px var(--accent)  /* I would change the 3 to a 0 for no glow, 
+                                           or a 3 to a 5 if i want it to glow more! */
 ```
 The Tags section can be found starting at Line 354, if you would like to change any others!
 
