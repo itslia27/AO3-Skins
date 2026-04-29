@@ -33,7 +33,8 @@ Globally (Everywhere):
 --glow: 0px 0px 7px #a8c7f7;             /* the last value represents intenisty. this can be changed to your liking. */
 --glow-sm: 0px 0px 3px #a8c7f7;          /*  just make sure that --glow is a larger value than --glow-sm. */
 ```
-Specific Spots:
+<b>Specific Spots:</b>
+
 Look for the line "text-shadow:" under the section you would like to change.
 For example, If I don't like the glow on the Relationship Tags, I would change this line -->
 ```css
