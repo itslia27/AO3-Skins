@@ -1,20 +1,17 @@
 ---
 <div align="center">
  
- # AO3 Skins
+ # Starfall - AO3 Skin
  Custom AO3 site skins made by me!!
  
 </div>
 
 ### Welcome!
 This repository contains the CSS code for an AO3 skin I created.  
-It is heavily inspired by *Constellations* by thevalkyrieflies on Tumblr.
-
-To make customization easier, I’ve added comments for the variables, filter, and tags so you can customize it as you please!
-AO3 automatically removes these comments when applied (lucky us!!), so don't worry about removing them.
-
-**NOTE:** When mentioning line numbers, these are as they appear in GitHub before AO3 removes comments.  
-Keep in mind that the numbers will significantly decrease when added to AO3.
+It's inspired by:
+* 🌌🌌🌌 (as it appears on apple devices)
+* "Constellations" by thevalkyrieflies on Tumblr
+* "Neos" by ZerafinaCSS on AO3
 
 ---
 
@@ -27,24 +24,29 @@ Keep in mind that the numbers will significantly decrease when added to AO3.
 Below are a few elements you may want to tweak to better suit your preferences.  
 (These are things I mostly couldn’t decide on!)
 
-### ✦ Specific Glow
-You can adjust the glow effect by changing the last value here:
+### ✦ Glow
+The glow on this skin can be changed in a few places.
 
+Globally (Everywhere):
 ```css
-text-shadow: 0px 0px 3px var(--accent);   /* last number changes intensity (higher # = higher glow, lower # = less glow) */
+/* Lines 26-27 */
+--glow: 0px 0px 7px #a8c7f7;             /* the last value represents intenisty. 
+--glow-sm: 0px 0px 3px #a8c7f7;          /* this can be changed to your liking. just make                                               sure that --glow is a larger value than --glow-sm
 ```
-
-### ✦ Overall/Global Glow Intensity
-You can also customize the glow used throughout the skin! This can be changed in lines 15-16 by increasing/reducing the last value in the line.
-
+Specific Spots:
+Look for the line "text-shadow:" under the section you would like to change.
+For example, If I don't like the glow on the Relationship Tags, I would change this line -->
 ```css
---glow:    0px 0px 7px #a8c7f7;     /* Just make sure that --glow is a larger value than --glow-sm */
---glow-sm: 0px 0px 3px #a8c7f7;
+/* Line 373 */
+text-shadow: 0px 0px 3px var(--accent)  /* i would change the 3 to a 0 for no glow,
+                                           or a 3to a 5 if i want it to glow more!
 ```
+The Tags section can be found starting at Line 354, if you would like to change any others!
+
 
 ### ✦ Freeform Tag Colour
 Currently, the freeform tags are slightly darker so they aren’t overwhelming. However, this can make them harder to read.
-To increase contrast, you can edit their colour value in the TAGS section:
+To increase contrast, you can edit their colour value in the TAGS section (Line 381):
 
 ```css
 color: var(--accent-lite);   /* Replace "--accent-lite" with a HEX colour of your choice!
