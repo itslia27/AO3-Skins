@@ -24,17 +24,16 @@ It's inspired by:
 Below are a few elements you may want to tweak to better suit your preferences.  
 (These are things I mostly couldn’t decide on!)
 
-### ✦ Glow
+### ✦ Glow Intensity
 The glow on this skin can be changed in a few places.
 
-Globally (Everywhere):
+<b>Globally (Everywhere):</b>
 ```css
 /* Lines 26-27 */
 --glow: 0px 0px 7px #a8c7f7;             /* the last value represents intenisty. this can be changed to your liking. */
 --glow-sm: 0px 0px 3px #a8c7f7;          /*  just make sure that --glow is a larger value than --glow-sm. */
 ```
 <b>Specific Spots:</b>
-
 Look for the line "text-shadow:" under the section you would like to change.
 For example, If I don't like the glow on the Relationship Tags, I would change this line -->
 ```css
@@ -57,17 +56,14 @@ color: var(--accent-lite);   /* Replace "--accent-lite" with a HEX colour of you
 <div align="center">
   
 ## To Be Fixed 
-As Of April 8th, 2026 @ 10:41pm
+As Of April 29th 2026 @ 11:38am
 </div>
-- Comment Section ("Freeze Thread" Button is not in theme)
+- Nothing! Yay!
 
 <div align="center">
 
 ## To Impliment (Maybe??)
 </div>
-- Custom Archive Icons <br />
-- Replacement Icons for default profiles (someone who did that: https://archiveofourown.org/works/74722626/chapters/195165221)
-- Custom Stat Icons (Hits, Kudos, Language, etc - Pink Reversi does this)
-- Custom rating/warning/pairing icons??
+- TBD...
 
 
