@@ -14,7 +14,6 @@
                      "Neos" by ZerafinaCSS on AO3
 =========================================================================*/
 
-/*========= VARIABLES =========*/
 :root {
 --bg-dark: #0d0e1f;
 --bg-deep: #151726;
@@ -32,7 +31,6 @@
 --radius-tag: 6px;
 }
 
-/*========= Basic Layout =========*/
 #outer.wrapper {
 background: var(--bg-dark);
 color: var(--accent);
@@ -40,6 +38,11 @@ color: var(--accent);
 
 #main a {
 color: var(--accent-dim);
+}
+
+* {
+scrollbar-color: var(--accent) var(--bg-deep);
+scrollbar-width: thin;
 }
 
 #header {
@@ -141,7 +144,11 @@ display: block;
 border-radius: var(--radius-mid);
 }
 
-/*========= Dashboard =========*/
+.dropdown {
+background: var(--bg-dark);
+border-radius: var(--radius-mid);
+}
+
 #dashboard.own {
 border-top: 5px solid var(--accent);
 border-bottom: 5px solid var(--accent);
@@ -149,24 +156,38 @@ box-shadow: none;
 }
 
 #dashboard a {
-color: var(--accent);
+color: var(--accent-dim);
+display: block;
+padding: 0.3em 0.75em;
+border-left: 2px solid transparent;
+transition: border-color 0.2s, color 0.2s, padding-left 0.2s;
+text-decoration: none;
+font-size: 0.95em;
 }
 
 #dashboard ul li a {
 border: none !important;
 box-shadow: none !important;
-border-radius: var(--radius-small);
-transition: color 0.2s;
+border-radius: 0;
 }
 
 #dashboard a:hover,
 #dashboard ul li a:hover,
 #dashboard ul li a:focus {
-border-left: 2px solid var(--accent) !important;
+background: linear-gradient(135deg, #a8c7f733, #4a7abf55) !important;
+border-left: 3px solid var(--accent) !important;
 color: var(--accent) !important;
 box-shadow: none;
 text-decoration: none;
-padding-left: 0.4em;
+border-radius: var(--radius-small);
+padding-left: 1em;
+}
+
+#dashboard .module h3,
+#dashboard h3 {
+background: var(--accent) !important;
+color: var(--bg-dark) !important;
+box-shadow: none !important;
 }
 
 .current,
@@ -175,9 +196,11 @@ background: var(--accent) !important;
 color: var(--bg-dark) !important;
 box-shadow: var(--glow) !important;
 border-radius: var(--radius-small);
+font-weight: bold;
+border-left: none !important;
+padding-left: 0.75em !important;
 }
 
-/*========= Actions =========*/
 .actions a,
 .actions a:focus,
 .actions a:link,
@@ -213,20 +236,55 @@ color: var(--bg-dark) !important;
 font-weight: bold;
 }
 
-.dropdown {
-background: var(--bg-dark);
-border-radius: var(--radius-mid);
+ul.work.navigation.actions button,
+ul.work.navigation.actions button.collapsed,
+li.chapter button,
+li.mark button[type="submit"],
+li.download button,
+li.bookmark button {
+background: transparent !important;
+border: 1px solid var(--accent) !important;
+color: var(--accent) !important;
+box-shadow: var(--glow-sm) !important;
+border-radius: var(--radius-btn) !important;
+font-size: 1em !important;
+padding: 0.25em 0.75em !important;
 }
 
-.ui-sortable li,
-.dynamic form,
-div.dynamic {
-background: var(--bg-dark);
-border: 1px solid var(--accent);
-border-radius: var(--radius-mid);
+ul#chapter_index.expandable.secondary {
+background: var(--bg-dark) !important;
+border: 1px solid var(--accent) !important;
+box-shadow: var(--glow) !important;
+padding: 0.5em !important;
+border-radius: var(--radius-mid) !important;
 }
 
-/*========= Form =========*/
+ul#chapter_index select {
+background: var(--bg-dark) !important;
+color: var(--accent) !important;
+border: 1px solid var(--accent) !important;
+box-shadow: var(--glow-sm) !important;
+border-radius: var(--radius-small) !important;
+}
+
+ul#chapter_index button {
+background: transparent !important;
+border: 1px solid var(--accent) !important;
+color: var(--accent) !important;
+box-shadow: var(--glow-sm) !important;
+border-radius: var(--radius-btn) !important;
+}
+
+form[action*="mark_as_read"] button[type="submit"] {
+background: transparent !important;
+border: 1px solid var(--accent) !important;
+color: var(--accent) !important;
+box-shadow: var(--glow-sm) !important;
+border-radius: var(--radius-btn) !important;
+font-size: 1em !important;
+padding: 0.25em 0.75em !important;
+}
+
 form dl,
 fieldset,
 fieldset fieldset,
@@ -269,6 +327,14 @@ box-shadow: var(--glow);
 border-radius: var(--radius-small);
 }
 
+.ui-sortable li,
+.dynamic form,
+div.dynamic {
+background: var(--bg-dark);
+border: 1px solid var(--accent);
+border-radius: var(--radius-mid);
+}
+
 .listbox .index {
 background: var(--bg-dark);
 }
@@ -280,7 +346,6 @@ box-shadow: var(--glow);
 border-radius: var(--radius-big);
 }
 
-/*========= Filter =========*/
 form.filters {
 position: sticky;
 top: 2vh;
@@ -351,7 +416,6 @@ border: 1px solid var(--accent) !important;
 border-radius: var(--radius-small);
 }
 
-/*========= Tags =========*/
 .warnings .tag,
 .work .warning a.tag,
 dd.warning.tags a {
@@ -378,7 +442,7 @@ text-shadow: 0px 0px 3px var(--accent);
 dd.freeform.tags a,
 dd.character.tags a,
 .characters .tag {
-color: var(--accent-lite) !important; /* colour can be changed here to improve readability */
+color: var(--accent-lite) !important;
 }
 
 .tag:hover,
@@ -390,7 +454,6 @@ border-radius: var(--radius-tag);
 text-decoration: none !important;
 }
 
-/*========= Fic Content =========*/
 li.blurb {
 background: var(--bg-deep) !important;
 border: none;
@@ -425,239 +488,6 @@ box-shadow: none;
 border-radius: var(--radius-big);
 }
 
-li.comment {
-border: 1px solid var(--accent);
-border-radius: var(--radius-big);
-}
-
-.comment div.icon {
-border-bottom: 5px solid var(--accent);
-box-shadow: var(--glow);
-border-radius: var(--radius-mid);
-}
-
-.thread .even {
-background: var(--bg-mid);
-}
-
-.unread {
-background: var(--bg-dark);
-border: 5px dashed var(--accent) !important;
-}
-
-span.unread {
-background: var(--accent);
-color: var(--bg-deep) !important;
-border-radius: var(--radius-small);
-}
-
-span.replied {
-background: var(--bg-dark);
-color: var(--accent);
-border: 2px solid var(--accent);
-box-shadow: var(--glow);
-border-radius: var(--radius-small);
-}
-
-span.indicator::before {
-box-shadow: var(--glow);
-}
-
-.notice,
-.comment_notice,
-.kudos_notice,
-ul.notes,
-.caution,
-.error,
-.comment_error,
-.kudos_error,
-.alert.flash {
-background: var(--accent);
-box-shadow: var(--glow) !important;
-color: var(--bg-dark);
-border: none;
-border-radius: var(--radius-mid);
-}
-
-.notice a,
-.comment_notice a,
-.kudos_notice a,
-ul.notes a,
-.caution a,
-.error a,
-.comment_error a,
-.kudos_error a,
-.alert.flash a {
-color: var(--bg-mid) !important;
-font-weight: bold;
-}
-
-.splash .module h3 {
-color: var(--accent);
-border-bottom: 2px solid var(--accent);
-}
-
-#dashboard .module h3,
-#dashboard h3 {
-background: var(--accent) !important;
-color: var(--bg-dark) !important;
-box-shadow: none !important;
-}
-
-.splash .favorite li:nth-of-type(2n+1) a {
-background: var(--accent);
-box-shadow: var(--glow);
-color: var(--bg-dark);
-font-weight: bold;
-font-variant: small-caps;
-border-radius: var(--radius-tag);
-}
-
-.splash .favorite li:nth-of-type(2n+2) a {
-color: var(--accent);
-font-weight: bold;
-font-variant: small-caps;
-font-size: 110%;
-}
-
-.splash .favorite li:nth-of-type(2n+1) a:hover,
-.splash .favorite li:nth-of-type(2n+2) a:hover {
-background: var(--bg-mid);
-color: var(--accent);
-font-weight: bold;
-font-variant: small-caps;
-border-radius: var(--radius-tag);
-}
-
-#stat_chart svg rect:first-of-type {
-opacity: 60%;
-}
-
-#stat_chart g[clip-path^=url] > g:nth-of-type(2) rect,
-#stat_chart svg g:nth-of-type(2) > g rect:last-of-type,
-#stat_chart g[clip-path^=url] > g:nth-of-type(2) rect:first-of-type {
-filter: hue-rotate(140deg);
-opacity: 80% !important;
-}
-
-.statistics .index li:nth-of-type(2n) {
-background: var(--bg-dark);
-border: 1px solid var(--accent);
-border-radius: var(--radius-small);
-}
-
-.reading h4.viewed,
-dl.index dd,
-table,
-th,
-dt.child {
-background: var(--bg-dark);
-}
-
-.draft {
-background: var(--bg-dark);
-color: var(--accent);
-border: 2px dashed var(--accent);
-box-shadow: var(--glow);
-border-radius: var(--radius-big);
-}
-
-.draft .wrapper {
-background: var(--bg-dark);
-border: 1px solid var(--accent);
-border-radius: var(--radius-mid);
-}
-
-.event .userstuff {
-background: var(--accent);
-border: 1px solid var(--accent);
-border-radius: var(--radius-mid);
-}
-
-#footer {
-background: var(--bg-mid);
-color: var(--accent);
-border-top: 3px solid var(--accent);
-box-shadow: var(--glow);
-}
-
-#footer a,
-#footer .heading,
-#footer .heading a {
-background: transparent !important;
-border: none !important;
-box-shadow: none !important;
-color: var(--accent) !important;
-border-radius: 0 !important;
-}
-
-#modal {
-background: var(--bg-dark);
-color: var(--accent);
-border: 2px solid var(--accent);
-box-shadow: var(--glow);
-border-radius: var(--radius-big);
-}
-
-* {
-scrollbar-color: var(--accent) var(--bg-deep);
-scrollbar-width: thin;
-}
-
-form.filters:not(:hover) {
-scrollbar-color: transparent transparent;
-}
-
-ul.work.navigation.actions button,
-ul.work.navigation.actions button.collapsed,
-li.chapter button,
-li.mark button[type="submit"],
-li.download button,
-li.bookmark button {
-background: transparent !important;
-border: 1px solid var(--accent) !important;
-color: var(--accent) !important;
-box-shadow: var(--glow-sm) !important;
-border-radius: var(--radius-btn) !important;
-font-size: 1em !important;
-padding: 0.25em 0.75em !important;
-}
-
-ul#chapter_index.expandable.secondary {
-background: var(--bg-dark) !important;
-border: 1px solid var(--accent) !important;
-box-shadow: var(--glow) !important;
-padding: 0.5em !important;
-border-radius: var(--radius-mid) !important;
-}
-
-ul#chapter_index select {
-background: var(--bg-dark) !important;
-color: var(--accent) !important;
-border: 1px solid var(--accent) !important;
-box-shadow: var(--glow-sm) !important;
-border-radius: var(--radius-small) !important;
-}
-
-ul#chapter_index button {
-background: transparent !important;
-border: 1px solid var(--accent) !important;
-color: var(--accent) !important;
-box-shadow: var(--glow-sm) !important;
-border-radius: var(--radius-btn) !important;
-}
-
-form[action*="mark_as_read"] button[type="submit"] {
-background: transparent !important;
-border: 1px solid var(--accent) !important;
-color: var(--accent) !important;
-box-shadow: var(--glow-sm) !important;
-border-radius: var(--radius-btn) !important;
-font-size: 1em !important;
-padding: 0.25em 0.75em !important;
-}
-
-/*========= Fic Stat Icons =========*/
 dl.stats {
 display: flex;
 flex-wrap: wrap;
@@ -773,4 +603,187 @@ background-image: url("https://zerafinacss.github.io/ao3/stats-icons/hits-01.png
 
 dl.stats dd.hits::after {
 content: "Hits";
+}
+
+dl.stats dd.published::before {
+background-image: url("https://zerafinacss.github.io/ao3/stats-icons/published-01.png");
+}
+
+dl.stats dd.published::after {
+content: "Published";
+}
+
+dl.stats dd.status::before {
+background-image: url("https://zerafinacss.github.io/ao3/stats-icons/updated-01.png");
+}
+
+dl.stats dd.status::after {
+content: "Updated";
+}
+
+li.comment {
+border: 1px solid var(--accent);
+border-radius: var(--radius-big);
+}
+
+.comment div.icon {
+border-bottom: 5px solid var(--accent);
+box-shadow: var(--glow);
+border-radius: var(--radius-mid);
+}
+
+.thread .even {
+background: var(--bg-mid);
+}
+
+.unread {
+background: var(--bg-dark);
+border: 5px dashed var(--accent) !important;
+}
+
+span.unread {
+background: var(--accent);
+color: var(--bg-deep) !important;
+border-radius: var(--radius-small);
+}
+
+span.replied {
+background: var(--bg-dark);
+color: var(--accent);
+border: 2px solid var(--accent);
+box-shadow: var(--glow);
+border-radius: var(--radius-small);
+}
+
+span.indicator::before {
+box-shadow: var(--glow);
+}
+
+.notice,
+.comment_notice,
+.kudos_notice,
+ul.notes,
+.caution,
+.error,
+.comment_error,
+.kudos_error,
+.alert.flash {
+background: var(--accent);
+box-shadow: var(--glow) !important;
+color: var(--bg-dark);
+border: none;
+border-radius: var(--radius-mid);
+}
+
+.notice a,
+.comment_notice a,
+.kudos_notice a,
+ul.notes a,
+.caution a,
+.error a,
+.comment_error a,
+.kudos_error a,
+.alert.flash a {
+color: var(--bg-mid) !important;
+font-weight: bold;
+}
+
+.splash .module h3 {
+color: var(--accent);
+border-bottom: 2px solid var(--accent);
+}
+
+.splash .favorite li:nth-of-type(2n+1) a {
+background: var(--accent);
+box-shadow: var(--glow);
+color: var(--bg-dark);
+font-weight: bold;
+font-variant: small-caps;
+border-radius: var(--radius-tag);
+}
+
+.splash .favorite li:nth-of-type(2n+2) a {
+color: var(--accent);
+font-weight: bold;
+font-variant: small-caps;
+font-size: 110%;
+}
+
+.splash .favorite li:nth-of-type(2n+1) a:hover,
+.splash .favorite li:nth-of-type(2n+2) a:hover {
+background: var(--bg-mid);
+color: var(--accent);
+font-weight: bold;
+font-variant: small-caps;
+border-radius: var(--radius-tag);
+}
+
+#stat_chart svg rect:first-of-type {
+opacity: 60%;
+}
+
+#stat_chart g[clip-path^=url] > g:nth-of-type(2) rect,
+#stat_chart svg g:nth-of-type(2) > g rect:last-of-type,
+#stat_chart g[clip-path^=url] > g:nth-of-type(2) rect:first-of-type {
+filter: hue-rotate(140deg);
+opacity: 80% !important;
+}
+
+.statistics .index li:nth-of-type(2n) {
+background: var(--bg-dark);
+border: 1px solid var(--accent);
+border-radius: var(--radius-small);
+}
+
+.reading h4.viewed,
+dl.index dd,
+table,
+th,
+dt.child {
+background: var(--bg-dark);
+}
+
+.draft {
+background: var(--bg-dark);
+color: var(--accent);
+border: 2px dashed var(--accent);
+box-shadow: var(--glow);
+border-radius: var(--radius-big);
+}
+
+.draft .wrapper {
+background: var(--bg-dark);
+border: 1px solid var(--accent);
+border-radius: var(--radius-mid);
+}
+
+.event .userstuff {
+background: var(--accent);
+border: 1px solid var(--accent);
+border-radius: var(--radius-mid);
+}
+
+#footer {
+background: var(--bg-mid);
+color: var(--accent);
+border-top: 3px solid var(--accent);
+box-shadow: var(--glow);
+}
+
+#footer a,
+#footer .heading,
+#footer .heading a {
+background: transparent !important;
+border: none !important;
+box-shadow: none !important;
+color: var(--accent) !important;
+border-radius: 0 !important;
+}
+
+#modal {
+background: var(--bg-dark);
+color: var(--accent);
+border: 2px solid var(--accent);
+box-shadow: var(--glow);
+border-radius: var(--radius-big);
 }
