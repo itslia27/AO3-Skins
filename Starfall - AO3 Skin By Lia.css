@@ -21,7 +21,7 @@
   --bg-mid: #424c5e;
   --accent: #a8c7f7;
   --accent-dim: #76859b;
-  --accent-lite: #677487;
+  --accent-freeform: #677487;
   --glow: 0px 0px 7px #a8c7f7;
   --glow-sm: 0px 0px 3px #a8c7f7;
   --radius-small: 4px;
@@ -438,7 +438,7 @@ dd.relationship.tags a {
 dd.freeform.tags a,
 dd.character.tags a,
 .characters .tag {
-  color: var(--accent-lite) !important;
+  color: var(--accent-freeform) !important;
 }
 
 .tag:hover,
@@ -455,6 +455,11 @@ li.blurb {
   border: none;
   box-shadow: none;
   border-radius: var(--radius-big);
+}
+
+li.blurb:hover {
+  box-shadow: var(--glow) !important;
+  transition: box-shadow 0.2s ease;
 }
 
 li.blurb.group,
