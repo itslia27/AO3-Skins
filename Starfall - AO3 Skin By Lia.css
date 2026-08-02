@@ -1,19 +1,14 @@
-/*=======================================================================
-                      Starfall - AO3 Skin By Lia
+/*============================
+              Starfall - AO3 Skin By Lia
 
 - Skin:              Starfall
-- File:              Starfall - AO3 Skin By Lia.css
-- Author:            Lia
-- Tumblr & GitHub:   itslia27
+- Author:            Lia (she/her)
 - AO3 Profile:       im_lia
 - Posted:            March 9th, 2026
-- Updated:           April 29th, 2026
+- Updated:           August 1st, 2026
+============================*/
 
-- Inspired By:       🌌🌌🌌 (as it appears on apple devices)
-                     "Constellations" by thevalkyrieflies on Tumblr
-                     "Neos" by ZerafinaCSS on AO3
-=========================================================================*/
-
+/* ========= Variables ========= */
 :root {
   --bg-dark: #0d0e1f;
   --bg-deep: #151726;
@@ -21,7 +16,7 @@
   --bg-mid: #424c5e;
   --accent: #a8c7f7;
   --accent-dim: #76859b;
-  --accent-freeform: #677487;
+  --accent-freeform: #829bc2;
   --glow: 0px 0px 7px #a8c7f7;
   --glow-sm: 0px 0px 3px #a8c7f7;
   --radius-small: 4px;
@@ -31,6 +26,12 @@
   --radius-tag: 6px;
 }
 
+/* ========= Global ========= */
+html, body {
+  background: var(--bg-dark) !important;
+}
+
+#outer,
 #outer.wrapper {
   background: var(--bg-dark);
   color: var(--accent);
@@ -45,6 +46,15 @@
   scrollbar-width: thin;
 }
 
+h3 {
+  border-bottom-color: #a8c7f7 !important;
+}
+
+hr {
+  color: #a8c7f7;
+}
+
+/* ========= Header ========= */
 #header {
   background-image: url("https://i.pinimg.com/736x/93/5a/33/935a33b7fe78da207ed8fc3ca90fdcc4.jpg");
   background-repeat: no-repeat;
@@ -89,10 +99,6 @@
   display: none;
 }
 
-span.submit.actions input.button {
-  display: none;
-}
-
 #header .primary .actions a,
 #header .primary .actions li a,
 #header ul.navigation.actions li a,
@@ -109,9 +115,15 @@ span.submit.actions input.button {
 #header .dropdown:hover a {
   background: var(--bg-dark);
   box-shadow: var(--glow);
+  border-radius: var(--radius-btn);
+}
+
+.dropdown {
+  background: var(--bg-dark);
   border-radius: var(--radius-mid);
 }
 
+/* Search */
 #header li.search {
   position: relative;
   display: flex;
@@ -144,11 +156,43 @@ form.search input[type=submit],
   border-radius: var(--radius-mid);
 }
 
-.dropdown {
-  background: var(--bg-dark);
-  border-radius: var(--radius-mid);
+/* Mobile header */
+@media (max-width: 600px) {
+  .primary.header.module {
+    position: relative !important;
+    padding-top: 50px !important;
+  }
+
+  .primary .icon {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+
+  .primary.header.module ul.navigation.actions {
+    float: none !important;
+    display: block !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    margin: 0.5em 0 0 0 !important;
+    text-align: left !important;
+  }
+
+  .primary.header.module ul.navigation.actions li {
+    display: inline-block !important;
+    float: none !important;
+    margin: 0.2em !important;
+  }
+
+  .primary.header.module ul.navigation.actions li a,
+  .primary.header.module ul.navigation.actions li input[type="submit"] {
+    font-size: 100% !important;
+    padding: 0.2em 0.5em !important;
+  }
 }
 
+/* ========= Dashboard ========= */
+#dashboard,
 #dashboard.own {
   border-top: 5px solid var(--accent);
   border-bottom: 5px solid var(--accent);
@@ -164,19 +208,19 @@ form.search input[type=submit],
 #dashboard ul li a {
   border: none !important;
   box-shadow: none !important;
-  border-radius: var(--radius-small);
-  transition: color 0.2s;
+  border-radius: var(--radius-btn);
+  transition: color 0.5s;
 }
 
 #dashboard a:hover,
 #dashboard ul li a:hover,
 #dashboard ul li a:focus {
-  background: linear-gradient(135deg, #a8c7f733, #4a7abf55) !important;
-  border-left: 3px solid var(--accent) !important;
+  background: var(--bg-mid) !important;
+  border: 1px solid var(--accent) !important;
   color: var(--accent) !important;
   box-shadow: none;
   text-decoration: none;
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-btn);
 }
 
 #dashboard .module h3,
@@ -191,12 +235,43 @@ form.search input[type=submit],
   background: var(--accent) !important;
   color: var(--bg-dark) !important;
   box-shadow: var(--glow) !important;
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-btn);
   font-weight: bold;
   border-left: none !important;
   padding-left: 0.75em !important;
 }
 
+/* Listbox (dashboard modules) */
+.listbox .index {
+  background: var(--bg-dark);
+  box-shadow: 0px 0px 3px var(--accent);
+}
+
+.listbox,
+fieldset fieldset.listbox {
+  background: var(--bg-card);
+  box-shadow: var(--glow);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius-big);
+}
+
+.listbox h3 {
+  padding: 0.5em 0.75em !important;
+}
+
+.listbox h3,
+.listbox h3 a {
+  color: var(--accent) !important;
+}
+
+.bookmark .user {
+  border: 1px solid var(--accent);
+  margin-top: 0.643em;
+  padding: 0.429em 0.75em;
+  overflow: hidden;
+}
+
+/* ========= Buttons & Actions ========= */
 .actions a,
 .actions a:focus,
 .actions a:link,
@@ -221,6 +296,10 @@ a.action {
   text-decoration: none !important;
 }
 
+span.submit.actions input.button {
+  display: none;
+}
+
 span.delete {
   background: var(--accent);
   box-shadow: var(--glow);
@@ -232,12 +311,14 @@ span.delete a {
   font-weight: bold;
 }
 
+/* Work/chapter buttons */
 ul.work.navigation.actions button,
 ul.work.navigation.actions button.collapsed,
 li.chapter button,
 li.mark button[type="submit"],
 li.download button,
-li.bookmark button {
+li.bookmark button,
+form[action*="mark_as_read"] button[type="submit"] {
   background: transparent !important;
   border: 1px solid var(--accent) !important;
   color: var(--accent) !important;
@@ -247,6 +328,7 @@ li.bookmark button {
   padding: 0.25em 0.75em !important;
 }
 
+/* Chapter index */
 ul#chapter_index.expandable.secondary {
   background: var(--bg-dark) !important;
   border: 1px solid var(--accent) !important;
@@ -271,16 +353,17 @@ ul#chapter_index button {
   border-radius: var(--radius-btn) !important;
 }
 
-form[action*="mark_as_read"] button[type="submit"] {
-  background: transparent !important;
-  border: 1px solid var(--accent) !important;
-  color: var(--accent) !important;
-  box-shadow: var(--glow-sm) !important;
-  border-radius: var(--radius-btn) !important;
-  font-size: 1em !important;
-  padding: 0.25em 0.75em !important;
+/* Pagination */
+ol.pagination li.current,
+ol.pagination li.current a,
+ol.pagination .current {
+  background: var(--accent) !important;
+  color: var(--bg-dark) !important;
+  box-shadow: var(--glow) !important;
+  font-weight: bold;
 }
 
+/* ========= Forms & Fields ========= */
 form dl,
 fieldset,
 fieldset fieldset,
@@ -298,6 +381,19 @@ span.symbol.question {
   border: 1px solid var(--accent);
   box-shadow: var(--glow);
   border-radius: var(--radius-mid);
+}
+
+fieldset dl,
+fieldset.actions,
+fieldset dl fieldset dl {
+  clear: right;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+form dd.required {
+  color: #a8c7f7;
 }
 
 .own {
@@ -331,17 +427,7 @@ div.dynamic {
   border-radius: var(--radius-mid);
 }
 
-.listbox .index {
-  background: var(--bg-dark);
-}
-
-.listbox,
-fieldset fieldset.listbox {
-  background: var(--accent);
-  box-shadow: var(--glow);
-  border-radius: var(--radius-big);
-}
-
+/* Filters */
 form.filters {
   position: sticky;
   top: 2vh;
@@ -412,6 +498,7 @@ form.filters:not(:hover) {
   border-radius: var(--radius-small);
 }
 
+/* ========= Tags ========= */
 .warnings .tag,
 .work .warning a.tag,
 dd.warning.tags a {
@@ -450,6 +537,7 @@ a.tag:hover {
   text-decoration: none !important;
 }
 
+/* ========= Work Blurbs ========= */
 li.blurb {
   background: var(--bg-deep) !important;
   border: none;
@@ -489,6 +577,7 @@ dl.meta {
   border-radius: var(--radius-big);
 }
 
+/* Stats Icons */
 dl.stats {
   display: flex;
   flex-wrap: wrap;
@@ -542,86 +631,46 @@ dl.stats dd:hover::after {
   display: inline-block;
 }
 
-dl.stats dd.language::before {
-  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/language-01.png");
+dl.stats dd.language::before { background-image: url("https://zerafinacss.github.io/ao3/stats-icons/language-01.png"); }
+dl.stats dd.language::after  { content: "Language"; }
+dl.stats dd.words::before    { background-image: url("https://zerafinacss.github.io/ao3/stats-icons/words-01.png"); }
+dl.stats dd.words::after     { content: "Words"; }
+dl.stats dd.chapters::before { background-image: url("https://zerafinacss.github.io/ao3/stats-icons/chapters-01.png"); }
+dl.stats dd.chapters::after  { content: "Chapters"; }
+dl.stats dd.collections::before { background-image: url("https://zerafinacss.github.io/ao3/stats-icons/collection-01.png"); }
+dl.stats dd.collections::after  { content: "Collections"; }
+dl.stats dd.comments::before { background-image: url("https://zerafinacss.github.io/ao3/stats-icons/comments-01.png"); }
+dl.stats dd.comments::after  { content: "Comments"; }
+dl.stats dd.kudos::before    { background-image: url("https://zerafinacss.github.io/ao3/stats-icons/kudos-01.png"); }
+dl.stats dd.kudos::after     { content: "Kudos"; }
+dl.stats dd.bookmarks::before { background-image: url("https://zerafinacss.github.io/ao3/stats-icons/bookmarks-01.png"); }
+dl.stats dd.bookmarks::after  { content: "Bookmarks"; }
+dl.stats dd.hits::before     { background-image: url("https://zerafinacss.github.io/ao3/stats-icons/hits-01.png"); }
+dl.stats dd.hits::after      { content: "Hits"; }
+dl.stats dd.published::before { background-image: url("https://zerafinacss.github.io/ao3/stats-icons/published-01.png"); }
+dl.stats dd.published::after  { content: "Published"; }
+dl.stats dd.status::before   { background-image: url("https://zerafinacss.github.io/ao3/stats-icons/updated-01.png"); }
+dl.stats dd.status::after    { content: "Updated"; }
+
+/* Stats */
+#stat_chart svg rect:first-of-type {
+  opacity: 60%;
 }
 
-dl.stats dd.language::after {
-  content: "Language";
+#stat_chart g[clip-path^=url] > g:nth-of-type(2) rect,
+#stat_chart svg g:nth-of-type(2) > g rect:last-of-type,
+#stat_chart g[clip-path^=url] > g:nth-of-type(2) rect:first-of-type {
+  filter: hue-rotate(140deg);
+  opacity: 80% !important;
 }
 
-dl.stats dd.words::before {
-  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/words-01.png");
+.statistics .index li:nth-of-type(2n) {
+  background: var(--bg-dark);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-small);
 }
 
-dl.stats dd.words::after {
-  content: "Words";
-}
-
-dl.stats dd.chapters::before {
-  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/chapters-01.png");
-}
-
-dl.stats dd.chapters::after {
-  content: "Chapters";
-}
-
-dl.stats dd.collections::before {
-  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/collection-01.png");
-}
-
-dl.stats dd.collections::after {
-  content: "Collections";
-}
-
-dl.stats dd.comments::before {
-  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/comments-01.png");
-}
-
-dl.stats dd.comments::after {
-  content: "Comments";
-}
-
-dl.stats dd.kudos::before {
-  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/kudos-01.png");
-}
-
-dl.stats dd.kudos::after {
-  content: "Kudos";
-}
-
-dl.stats dd.bookmarks::before {
-  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/bookmarks-01.png");
-}
-
-dl.stats dd.bookmarks::after {
-  content: "Bookmarks";
-}
-
-dl.stats dd.hits::before {
-  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/hits-01.png");
-}
-
-dl.stats dd.hits::after {
-  content: "Hits";
-}
-
-dl.stats dd.published::before {
-  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/published-01.png");
-}
-
-dl.stats dd.published::after {
-  content: "Published";
-}
-
-dl.stats dd.status::before {
-  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/updated-01.png");
-}
-
-dl.stats dd.status::after {
-  content: "Updated";
-}
-
+/* ========= Comments ========= */
 li.comment {
   border: 1px solid var(--accent);
   border-radius: var(--radius-big);
@@ -660,6 +709,7 @@ span.indicator::before {
   box-shadow: var(--glow);
 }
 
+/* ========= Notices & Alerts ========= */
 .notice,
 .comment_notice,
 .kudos_notice,
@@ -689,6 +739,7 @@ ul.notes a,
   font-weight: bold;
 }
 
+/* ========= Splash / Home ========= */
 .splash .module h3 {
   color: var(--accent);
   border-bottom: 2px solid var(--accent);
@@ -719,29 +770,21 @@ ul.notes a,
   border-radius: var(--radius-tag);
 }
 
-#stat_chart svg rect:first-of-type {
-  opacity: 60%;
-}
-
-#stat_chart g[clip-path^=url] > g:nth-of-type(2) rect,
-#stat_chart svg g:nth-of-type(2) > g rect:last-of-type,
-#stat_chart g[clip-path^=url] > g:nth-of-type(2) rect:first-of-type {
-  filter: hue-rotate(140deg);
-  opacity: 80% !important;
-}
-
-.statistics .index li:nth-of-type(2n) {
-  background: var(--bg-dark);
-  border: 1px solid var(--accent);
-  border-radius: var(--radius-small);
-}
-
+/* ========= Misc ========= */
 .reading h4.viewed,
 dl.index dd,
 table,
 th,
 dt.child {
   background: var(--bg-dark);
+}
+
+.picture .header {
+  border-bottom: 1px solid var(--accent);
+}
+
+li:has(a.rss) { /* hides RSS button */
+  display: none;
 }
 
 .draft {
@@ -764,6 +807,7 @@ dt.child {
   border-radius: var(--radius-mid);
 }
 
+/* ========= Footer ========= */
 #footer {
   background: var(--bg-mid);
   color: var(--accent);
@@ -781,6 +825,7 @@ dt.child {
   border-radius: 0 !important;
 }
 
+/* ========= Modal ========= */
 #modal {
   background: var(--bg-dark);
   color: var(--accent);
