@@ -47,6 +47,10 @@ html, body {
   scrollbar-width: thin;
 }
 
+h2 {
+  color: var(--accent) !important; 
+}
+
 h3 {
   border-bottom-color: #a8c7f7 !important;
 }
