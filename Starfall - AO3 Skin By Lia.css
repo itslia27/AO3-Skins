@@ -17,7 +17,7 @@ Starfall - AO3 Skin By Lia
   --bg-mid: #424c5e;
   --accent: #a8c7f7;
   --accent-dim: #76859b;
-  --accent-freeform: #6d82a3;
+  --accent-freeform: #5c6a81;
   --glow: 0px 0px 7px #a8c7f7;
   --glow-sm: 0px 0px 3px #a8c7f7;
   --radius-small: 4px;
@@ -540,6 +540,91 @@ a.tag:hover {
   border-color: var(--accent) !important;
   border-radius: var(--radius-tag);
   text-decoration: none !important;
+}
+
+/* ========= Overall Tag Styling ========= */
+/* Moves each tag category (warnings, relationships, characters, freeforms) to the left */
+ul.tags li.warnings,
+ul.tags li.relationships,
+ul.tags li.characters,
+ul.tags li.freeforms {
+    float: left !important;
+}
+
+/* Forces a new line whenever one category follows another, so each category gets its own row */
+li.warnings+li.relationships,
+li.relationships+li.characters,
+li.characters+li.freeforms,
+li.warnings+li.characters,
+li.warnings+li.freeforms,
+li.relationships+li.freeforms {
+    clear: left;
+}
+
+/* Removes the default spacing around each tag item */
+ul.tags li {
+    margin: 0;
+}
+
+/* Adds more vertical room inside each tag link */
+ul.tags li a.tag {
+    line-height: 1.7;
+}
+
+/* Styles the text of every row label */
+ul.tags li.warnings:first-child:before,
+li.warnings+li.relationships:before,
+li.relationships+li.characters:before,
+li.characters+li.freeforms:before,
+li.warnings+li.characters:before,
+li.warnings+li.freeforms:before,
+li.relationships+li.freeforms:before {
+    color: var(--accent);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 700;
+    font-size: 1.15em;
+    font-variant: small-caps;
+    letter-spacing: 0.08em;
+    text-shadow: 0 0 6px rgba(168, 199, 247, 0.7);
+    margin-right: 0.25em;
+}
+
+/* Label for the warnings row, only when warnings are the first category */
+ul.tags li.warnings:first-child:before {
+    content: "Archive Warnings: ";
+}
+
+/* Label for the relationships row when it comes right after warnings */
+li.warnings+li.relationships:before {
+    content: "Relationships: ";
+}
+
+/* Label for the characters row when it comes right after relationships */
+li.relationships+li.characters:before {
+    content: "Characters: ";
+}
+
+/* Label for the additional tags row when it comes right after characters */
+li.characters+li.freeforms:before {
+    content: "Additional Tags: ";
+}
+
+/* Fallback: characters label when there are no relationship tags
+   (characters comes directly after warnings) */
+li.warnings+li.characters:before {
+    content: "Characters: ";
+}
+
+/* Fallback: additional tags label when there are no relationship or
+   character tags (freeforms comes directly after warnings) */
+li.warnings+li.freeforms:before {
+    content: "Additional Tags: ";
+}
+
+/* Fallback: additional tags label when there are no character tags
+   (freeforms comes directly after relationships) */
+li.relationships+li.freeforms:before {
+    content: "Additional Tags: ";
 }
 
 /* ========= Work Blurbs ========= */
