@@ -5,7 +5,7 @@ Starfall - AO3 Skin By Lia
 - Author:            Lia (she/her)
 - AO3 Profile:       im_lia [https://archiveofourown.org/users/im_lia/profile]
 - Posted:            March 9th, 2026
-- Updated:           August 1st, 2026
+- Updated:           October 15th, 2026
 ============================*/
 
 
@@ -29,12 +29,19 @@ Starfall - AO3 Skin By Lia
 
 /* ========= Global ========= */
 html, body {
-  background: var(--bg-dark) !important;
+  background-color: var(--bg-dark) !important;
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, #fff, transparent),
+    radial-gradient(1px 1px at 90px 120px, #a8c7f7, transparent),
+    radial-gradient(1.5px 1.5px at 160px 60px, #fff, transparent),
+    radial-gradient(1px 1px at 230px 170px, #a8c7f7, transparent),
+    radial-gradient(1px 1px at 60px 180px, #fff, transparent) !important;
+  background-size: 250px 200px !important;
 }
 
 #outer,
 #outer.wrapper {
-  background: var(--bg-dark);
+  background: transparent;
   color: var(--accent);
 }
 
@@ -165,7 +172,7 @@ form.search input[type=submit],
 @media (max-width: 600px) {
   .primary.header.module {
     position: relative !important;
-    padding-top: 50px !important;
+    padding-top: 65px !important;
   }
 
   .primary .icon {
@@ -543,6 +550,11 @@ a.tag:hover {
 }
 
 /* ========= Overall Tag Styling ========= */
+h5.fandoms.heading a.tag {
+    border: none !important;
+    box-shadow: none !important;
+}
+
 /* Moves each tag category (warnings, relationships, characters, freeforms) to the left */
 ul.tags li.warnings,
 ul.tags li.relationships,
@@ -580,7 +592,7 @@ li.warnings+li.characters:before,
 li.warnings+li.freeforms:before,
 li.relationships+li.freeforms:before {
     color: var(--accent);
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: Georgia, serif;
     font-weight: 700;
     font-size: 1.15em;
     font-variant: small-caps;
@@ -890,6 +902,24 @@ dt.child {
   background: var(--accent);
   border: 1px solid var(--accent);
   border-radius: var(--radius-mid);
+}
+
+.home .primary .icon {
+  position: relative;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  background: linear-gradient(var(--bg-dark), var(--bg-dark)) padding-box,
+        linear-gradient(135deg, #f5f7fa, #a8c7f7, #e6d8ff, #9aa5b8, #d8b4f0) border-box;
+  box-shadow: 0 0 8px rgba(192, 200, 216, 0.6), 0 0 22px rgba(168, 199, 247, 0.35);
+  outline: 2px dotted var(--accent-dim);
+  outline-offset: 6px;
+}
+
+.home .primary .icon img {
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  background: none;
 }
 
 /* ========= Footer ========= */
