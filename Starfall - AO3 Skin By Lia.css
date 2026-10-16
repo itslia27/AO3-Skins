@@ -45,6 +45,17 @@ html, body {
   color: var(--accent);
 }
 
+#main {
+  background-color: var(--bg-dark);
+  width: 100%;
+  max-width: 70em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em 0.5em;
+  box-sizing: border-box;
+  float: none;
+}
+
 #main a {
   color: var(--accent-dim);
 }
@@ -667,12 +678,6 @@ li.blurb h4 {
   text-decoration: none;
 }
 
-h4.heading.byline {
-  background: var(--accent);
-  color: var(--bg-deep) !important;
-  border-radius: var(--radius-small);
-}
-
 dl.meta {
   border: 1px solid var(--accent);
   box-shadow: none;
@@ -774,17 +779,43 @@ dl.stats dd.status::after    { content: "Updated"; }
 
 /* ========= Comments ========= */
 li.comment {
-  border: 1px solid var(--accent);
+  border: none;
+  border-radius: var(--radius-big);
 }
 
 .comment div.icon {
-  border-bottom: 5px solid var(--accent);
+  margin: 0.5em;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
   box-shadow: var(--glow);
-  border-radius: var(--radius-mid);
+  overflow: hidden;
+}
+
+.comment div.icon img {
+  border-radius: 50%;
+  border: none;
+}
+
+h4.heading.byline {
+  background: var(--accent);
+  color: var(--bg-deep) !important;
+  border-radius: var(--radius-small);
+}
+
+h4.heading.byline a {
+  font-size: 1em !important;
+  position: absolute;
+  left: 0.5em;
+  color: var(--bg-dark) !important;
+  font-family: monospace;
 }
 
 .thread .even {
   background: var(--bg-mid);
+}
+
+.thread .odd {
+  background: var(--bg-deep);
 }
 
 .unread {
@@ -809,6 +840,24 @@ span.replied {
 span.indicator::before {
   box-shadow: var(--glow);
 }
+
+.post.comment,
+.post.comment form,
+.post.comment fieldset,
+.post.comment textarea,
+.post.comment input,
+.post.comment p {
+  box-shadow: none !important;
+}
+
+.post.comment,
+.post.comment form,
+.post.comment fieldset {
+  border: transparent;
+  border-radius: var(--radius-big);
+  background: var(--bg-deep) !important;
+}
+
 
 /* ========= Notices & Alerts ========= */
 .notice,
@@ -1248,18 +1297,21 @@ img[src$="/images/skins/iconsets/default/bookmark-hidden.png"] {
 /* hide old kudos icon */
 p.kudos {
   background: none;
+  margin-bottom: 5em !important;
 }
 
 /* new kudos icon */
 div:has(> p.kudos)::before {
-  position: absolute;
-  width: 55px;
-  height: 55px;
-  background: url("https://zerafinacss.github.io/ao3/icons/kudos-01.png"); /* url of new icon */
-  background-size: cover;
-  content: "";
-  filter: invert(62%) sepia(14%) saturate(1799%) hue-rotate(172deg) brightness(90%) contrast(86%); /* adjust filter values to change color */
+  content: "♥ kudos ♥" !important;
+  display: block !important;
+  margin-top: 5em;
+  margin-bottom: 0 !important;
+  color: var(--accent) !important;
+  font-size: 0.95em !important;
+  text-shadow: 0 0 16px !important;
+  text-align: center !important;
 }
+
 
 /*============================
   END OF CSS CODE
