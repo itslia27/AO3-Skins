@@ -603,10 +603,8 @@ li.warnings+li.characters:before,
 li.warnings+li.freeforms:before,
 li.relationships+li.freeforms:before {
     color: var(--accent);
-    font-family: Georgia, serif;
     font-weight: 700;
     font-size: 1.15em;
-    font-variant: small-caps;
     letter-spacing: 0.08em;
     text-shadow: 0 0 6px rgba(168, 199, 247, 0.7);
     margin-right: 0.25em;
@@ -895,29 +893,25 @@ ul.notes a,
   border-bottom: 2px solid var(--accent);
 }
 
-.splash .favorite li:nth-of-type(2n+1) a {
-  background: var(--accent);
-  box-shadow: var(--glow);
-  color: var(--bg-dark) !important;
+.splash .favorite a {
+  background-color: transparent !important;
+  color: var(--accent) !important;
   font-weight: bold;
-  font-variant: small-caps;
-  border-radius: var(--radius-tag);
-}
-
-.splash .favorite li:nth-of-type(2n+2) a {
-  color: var(--accent);
-  font-weight: bold;
-  font-variant: small-caps;
   font-size: 110%;
 }
 
-.splash .favorite li:nth-of-type(2n+1) a:hover,
-.splash .favorite li:nth-of-type(2n+2) a:hover {
-  background: var(--bg-mid);
-  color: var(--accent);
-  font-weight: bold;
-  font-variant: small-caps;
+.splash .favorite li:nth-of-type(2n+1) a:before {
+  content: "✦ ";
+}
+
+.splash .favorite li:nth-of-type(2n+2) a:before {
+  content: "☆ ";
+}
+
+.splash .favorite a:hover{
+  background: var(--bg-mid) !important;
   border-radius: var(--radius-tag);
+  text-shadow: 0px 0px 3px;
 }
 
 /* ========= Misc ========= */
@@ -1302,7 +1296,7 @@ p.kudos {
 
 /* new kudos icon */
 div:has(> p.kudos)::before {
-  content: "♥ kudos ♥" !important;
+  content: "✦ kudos ✦" !important;
   display: block !important;
   margin-top: 5em;
   margin-bottom: 0 !important;
