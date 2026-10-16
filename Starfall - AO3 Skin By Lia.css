@@ -5,7 +5,7 @@ Starfall - AO3 Skin By Lia
 - Author:            Lia (she/her)
 - AO3 Profile:       im_lia [https://archiveofourown.org/users/im_lia/profile]
 - Posted:            March 9th, 2026
-- Updated:           October 15th, 2026
+- Updated:           October 16th, 2026
 ============================*/
 
 
@@ -28,7 +28,8 @@ Starfall - AO3 Skin By Lia
 }
 
 /* ========= Global ========= */
-html, body {
+html,
+body {
   background-color: var(--bg-dark) !important;
   background-image:
     radial-gradient(1px 1px at 20px 30px, #fff, transparent),
@@ -66,7 +67,7 @@ html, body {
 }
 
 h2 {
-  color: var(--accent) !important; 
+  color: var(--accent) !important;
 }
 
 h3 {
@@ -562,8 +563,8 @@ a.tag:hover {
 
 /* ========= Overall Tag Styling ========= */
 h5.fandoms.heading a.tag {
-    border: none !important;
-    box-shadow: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* Moves each tag category (warnings, relationships, characters, freeforms) to the left */
@@ -571,7 +572,7 @@ ul.tags li.warnings,
 ul.tags li.relationships,
 ul.tags li.characters,
 ul.tags li.freeforms {
-    float: left !important;
+  float: left !important;
 }
 
 /* Forces a new line whenever one category follows another, so each category gets its own row */
@@ -581,17 +582,17 @@ li.characters+li.freeforms,
 li.warnings+li.characters,
 li.warnings+li.freeforms,
 li.relationships+li.freeforms {
-    clear: left;
+  clear: left;
 }
 
 /* Removes the default spacing around each tag item */
 ul.tags li {
-    margin: 0;
+  margin: 0;
 }
 
 /* Adds more vertical room inside each tag link */
 ul.tags li a.tag {
-    line-height: 1.7;
+  line-height: 1.7;
 }
 
 /* Styles the text of every row label */
@@ -602,50 +603,55 @@ li.characters+li.freeforms:before,
 li.warnings+li.characters:before,
 li.warnings+li.freeforms:before,
 li.relationships+li.freeforms:before {
-    color: var(--accent);
-    font-weight: 700;
-    font-size: 1.15em;
-    letter-spacing: 0.08em;
-    text-shadow: 0 0 6px rgba(168, 199, 247, 0.7);
-    margin-right: 0.25em;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.15em;
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 6px rgba(168, 199, 247, 0.7);
+  margin-right: 0.25em;
+  font-variant: small-caps;
 }
 
 /* Label for the warnings row, only when warnings are the first category */
 ul.tags li.warnings:first-child:before {
-    content: "Archive Warnings: ";
+  content: "Archive Warnings: ";
+  font-variant: small-caps;
 }
 
 /* Label for the relationships row when it comes right after warnings */
 li.warnings+li.relationships:before {
-    content: "Relationships: ";
+  content: "Relationships: ";
+  font-variant: small-caps;
 }
 
 /* Label for the characters row when it comes right after relationships */
 li.relationships+li.characters:before {
-    content: "Characters: ";
+  content: "Characters: ";
+  font-variant: small-caps;
 }
 
 /* Label for the additional tags row when it comes right after characters */
 li.characters+li.freeforms:before {
-    content: "Additional Tags: ";
+  content: "Additional Tags: ";
+  font-variant: small-caps;
 }
 
-/* Fallback: characters label when there are no relationship tags
-   (characters comes directly after warnings) */
+/* Fallback: characters label when there are no relationship tags (characters comes directly after warnings) */
 li.warnings+li.characters:before {
-    content: "Characters: ";
+  content: "Characters: ";
+  font-variant: small-caps;
 }
 
-/* Fallback: additional tags label when there are no relationship or
-   character tags (freeforms comes directly after warnings) */
+/* Fallback: additional tags label when there are no relationship or character tags (freeforms comes directly after warnings) */
 li.warnings+li.freeforms:before {
-    content: "Additional Tags: ";
+  content: "Additional Tags: ";
+  font-variant: small-caps;
 }
 
-/* Fallback: additional tags label when there are no character tags
-   (freeforms comes directly after relationships) */
+/* Fallback: additional tags label when there are no character tags (freeforms comes directly after relationships) */
 li.relationships+li.freeforms:before {
-    content: "Additional Tags: ";
+  content: "Additional Tags: ";
+  font-variant: small-caps;
 }
 
 /* ========= Work Blurbs ========= */
@@ -736,35 +742,94 @@ dl.stats dd:hover::after {
   display: inline-block;
 }
 
-dl.stats dd.language::before { background-image: url("https://zerafinacss.github.io/ao3/stats-icons/language-01.png"); }
-dl.stats dd.language::after  { content: "Language"; }
-dl.stats dd.words::before    { background-image: url("https://zerafinacss.github.io/ao3/stats-icons/words-01.png"); }
-dl.stats dd.words::after     { content: "Words"; }
-dl.stats dd.chapters::before { background-image: url("https://zerafinacss.github.io/ao3/stats-icons/chapters-01.png"); }
-dl.stats dd.chapters::after  { content: "Chapters"; }
-dl.stats dd.collections::before { background-image: url("https://zerafinacss.github.io/ao3/stats-icons/collection-01.png"); }
-dl.stats dd.collections::after  { content: "Collections"; }
-dl.stats dd.comments::before { background-image: url("https://zerafinacss.github.io/ao3/stats-icons/comments-01.png"); }
-dl.stats dd.comments::after  { content: "Comments"; }
-dl.stats dd.kudos::before    { background-image: url("https://zerafinacss.github.io/ao3/stats-icons/kudos-01.png"); }
-dl.stats dd.kudos::after     { content: "Kudos"; }
-dl.stats dd.bookmarks::before { background-image: url("https://zerafinacss.github.io/ao3/stats-icons/bookmarks-01.png"); }
-dl.stats dd.bookmarks::after  { content: "Bookmarks"; }
-dl.stats dd.hits::before     { background-image: url("https://zerafinacss.github.io/ao3/stats-icons/hits-01.png"); }
-dl.stats dd.hits::after      { content: "Hits"; }
-dl.stats dd.published::before { background-image: url("https://zerafinacss.github.io/ao3/stats-icons/published-01.png"); }
-dl.stats dd.published::after  { content: "Published"; }
-dl.stats dd.status::before   { background-image: url("https://zerafinacss.github.io/ao3/stats-icons/updated-01.png"); }
-dl.stats dd.status::after    { content: "Updated"; }
+dl.stats dd.language::before {
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/language-01.png");
+}
+
+dl.stats dd.language::after {
+  content: "Language";
+}
+
+dl.stats dd.words::before {
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/words-01.png");
+}
+
+dl.stats dd.words::after {
+  content: "Words";
+}
+
+dl.stats dd.chapters::before {
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/chapters-01.png");
+}
+
+dl.stats dd.chapters::after {
+  content: "Chapters";
+}
+
+dl.stats dd.collections::before {
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/collection-01.png");
+}
+
+dl.stats dd.collections::after {
+  content: "Collections";
+}
+
+dl.stats dd.comments::before {
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/comments-01.png");
+}
+
+dl.stats dd.comments::after {
+  content: "Comments";
+}
+
+dl.stats dd.kudos::before {
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/kudos-01.png");
+}
+
+dl.stats dd.kudos::after {
+  content: "Kudos";
+}
+
+dl.stats dd.bookmarks::before {
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/bookmarks-01.png");
+}
+
+dl.stats dd.bookmarks::after {
+  content: "Bookmarks";
+}
+
+dl.stats dd.hits::before {
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/hits-01.png");
+}
+
+dl.stats dd.hits::after {
+  content: "Hits";
+}
+
+dl.stats dd.published::before {
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/published-01.png");
+}
+
+dl.stats dd.published::after {
+  content: "Published";
+}
+
+dl.stats dd.status::before {
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/updated-01.png");
+}
+
+dl.stats dd.status::after {
+  content: "Updated";
+}
 
 /* Stats */
 #stat_chart svg rect:first-of-type {
   opacity: 60%;
 }
 
-#stat_chart g[clip-path^=url] > g:nth-of-type(2) rect,
-#stat_chart svg g:nth-of-type(2) > g rect:last-of-type,
-#stat_chart g[clip-path^=url] > g:nth-of-type(2) rect:first-of-type {
+#stat_chart g[clip-path^=url]>g:nth-of-type(2) rect,
+#stat_chart svg g:nth-of-type(2)>g rect:last-of-type,
+#stat_chart g[clip-path^=url]>g:nth-of-type(2) rect:first-of-type {
   filter: hue-rotate(140deg);
   opacity: 80% !important;
 }
@@ -908,7 +973,7 @@ ul.notes a,
   content: "☆ ";
 }
 
-.splash .favorite a:hover{
+.splash .favorite a:hover {
   background: var(--bg-mid) !important;
   border-radius: var(--radius-tag);
   text-shadow: 0px 0px 3px;
@@ -952,7 +1017,7 @@ dt.child {
   border-radius: 50%;
   border: 3px solid transparent;
   background: linear-gradient(var(--bg-dark), var(--bg-dark)) padding-box,
-        linear-gradient(135deg, #f5f7fa, #a8c7f7, #e6d8ff, #9aa5b8, #d8b4f0) border-box;
+    linear-gradient(135deg, #f5f7fa, #a8c7f7, #e6d8ff, #9aa5b8, #d8b4f0) border-box;
   box-shadow: 0 0 8px rgba(192, 200, 216, 0.6), 0 0 22px rgba(168, 199, 247, 0.35);
   outline: 2px dotted var(--accent-dim);
   outline-offset: 6px;
@@ -1005,12 +1070,12 @@ ul.required-tags,
 /* default collection icon */
 img[src$="/images/skins/iconsets/default/icon_collection.png"] {
   box-sizing: border-box;
-  border: 1.5px solid #00000025; /* change border width and color here */
+  border: 1.5px solid #00000025;
   background:
-    linear-gradient(transparent, #ffffff50 45% 55%, transparent), /* subtle gradient */
-    #616c90 /* change background color here */
+    linear-gradient(transparent, #ffffff50 45% 55%, transparent),
+    #616c90
     border-box;
-  content: url("https://i.postimg.cc/0Q6gM2Md/IMG-6673.jpg"); /* url of new icon */
+  content: url("https://i.postimg.cc/0Q6gM2Md/IMG-6673.jpg");
 }
 
 /* tag icons */
@@ -1018,11 +1083,11 @@ img[src$="/images/skins/iconsets/default/icon_collection.png"] {
 .tag .primary .icon,
 .index .tagset .icon {
   box-sizing: border-box;
-  border: 1.5px solid #00000025; /* change border width and color here */
+  border: 1.5px solid #00000025;
   background:
-    url("https://i.postimg.cc/0Q6gM2Md/IMG-6673.jpg"), /* url of new icon */
-    linear-gradient(transparent, #ffffff50 45% 55%, transparent), /* subtle gradient */
-    #5998d6 /* change background color here */
+    url("https://i.postimg.cc/0Q6gM2Md/IMG-6673.jpg"),
+    linear-gradient(transparent, #ffffff50 45% 55%, transparent),
+    #5998d6
     border-box;
   background-size: cover;
 }
@@ -1030,12 +1095,12 @@ img[src$="/images/skins/iconsets/default/icon_collection.png"] {
 /* icon for unrevealed works */
 .index .mystery .icon {
   box-sizing: border-box;
-  border: 1.5px solid #ddd; /* change width and color of outer border here */
-  box-shadow: inset 0 0 0 3px #fff; /* change width and color of inner border here */
+  border: 1.5px solid #ddd;
+  box-shadow: inset 0 0 0 3px #fff;
   background:
-    url("https://i.postimg.cc/0Q6gM2Md/IMG-6673.jpg"), /* url of new icon */
-    linear-gradient(transparent, #ffffff50 45% 55%, transparent) /* subtle gradient */
-    #616c90 /* change background color here */
+    url("https://i.postimg.cc/0Q6gM2Md/IMG-6673.jpg"),
+    linear-gradient(transparent, #ffffff50 45% 55%, transparent)
+    #616c90
     content-box;
   background-size: cover;
 }
@@ -1075,8 +1140,8 @@ img[src$="/images/skins/iconsets/default/icon_collection.png"] {
 }
 
 /* sizing and borders for content symbols */
-.blurb ul.required-tags li a > span,
-.bookmark p.status a > span,
+.blurb ul.required-tags li a>span,
+.bookmark p.status a>span,
 .bookmark p.status .count,
 #symbols-key dl img,
 #bookmark-symbols-key img {
@@ -1107,7 +1172,7 @@ You can replace the border color with any other rgb, rgba, or hex color, transpa
 /*>>========== Rating ==========<<*/
 /* General Audiences */
 .required-tags .rating-general-audience,
-img[src$="/images/skins/iconsets/default/rating-general-audience.png"] { 
+img[src$="/images/skins/iconsets/default/rating-general-audience.png"] {
   color: #0000001a; /* change border color here */
   background:
     url("https://zerafinacss.github.io/ao3/icons/rating-gen-01.png"), /* url of new icon */
@@ -1126,56 +1191,56 @@ img[src$="/images/skins/iconsets/default/rating-teen.png"] {
 /* Mature */
 .required-tags .rating-mature,
 img[src$="/images/skins/iconsets/default/rating-mature.png"] {
-  color: #0000001a; /* change border color here */
+  color: #0000001a;
   background:
-    url("https://zerafinacss.github.io/ao3/icons/rating-mature-01.png"), /* url of new icon */
-    #343995; /* change background color here */
+    url("https://zerafinacss.github.io/ao3/icons/rating-mature-01.png"),
+    #343995;
 }
 
 /* Explicit */
 .required-tags .rating-explicit,
 img[src$="/images/skins/iconsets/default/rating-explicit.png"] {
-  color: #0000001a; /* change border color here */
+  color: #0000001a;
   background:
-    url("https://zerafinacss.github.io/ao3/icons/rating-explicit-01.png"), /* url of new icon */
-    #343995; /* change background color here */
+    url("https://zerafinacss.github.io/ao3/icons/rating-explicit-01.png"),
+    #343995;
 }
 
 /*>>========== Relationships, pairings, orientations ==========<<*/
 /* F/F */
 .required-tags .category-femslash,
 img[src$="/images/skins/iconsets/default/category-femslash.png"] {
-  color: #0000001a; /* change border color here */
+  color: #0000001a;
   background:
-    url("https://zerafinacss.github.io/ao3/icons/category-ff-01.png"), /* url of new icon */
-    #a8c7f7; /* change background color here */
+    url("https://zerafinacss.github.io/ao3/icons/category-ff-01.png"),
+    #a8c7f7;
 }
 
 /* F/M */
 .required-tags .category-het,
 img[src$="/images/skins/iconsets/default/category-het.png"] {
-  color: #0000001a; /* change border color here */
+  color: #0000001a;
   background:
-    url("https://zerafinacss.github.io/ao3/icons/category-mf-01.png"), /* url of new icon */
-    #616c90; /* change background color here */
+    url("https://zerafinacss.github.io/ao3/icons/category-mf-01.png"),
+    #616c90;
 }
 
 /* Gen */
 .required-tags .category-gen,
 img[src$="/images/skins/iconsets/default/category-gen.png"] {
-  color: #0000001a; /* change border color here */
+  color: #0000001a;
   background:
-    url("https://zerafinacss.github.io/ao3/icons/category-gen-01.png"), /* url of new icon */
-    #829bc2; /* change background color here */
+    url("https://zerafinacss.github.io/ao3/icons/category-gen-01.png"),
+    #829bc2;
 }
 
 /* M/M */
 .required-tags .category-slash,
 img[src$="/images/skins/iconsets/default/category-slash.png"] {
-  color: #0000001a; /* change border color here */
+  color: #0000001a;
   background:
-    url("https://zerafinacss.github.io/ao3/icons/category-mm-01.png"), /* url of new icon */
-    #343995; /* change background color here */
+    url("https://zerafinacss.github.io/ao3/icons/category-mm-01.png"),
+    #343995;
 }
 
 /* Multi */
@@ -1219,7 +1284,7 @@ img[src$="/images/skins/iconsets/default/warning-yes.png"] {
 img[src$="/images/skins/iconsets/default/warning-external-work.png"] {
   color: #0000001a; /* change border color here */
   background:
-    url("https://zerafinacss.github.io/ao3/icons/warning-external-work-01.png"), /* url of new icon */
+    url("https://zerafinacss.github.io/ao3/icons/warning-external-work-01.png"),  /* url of new icon */
     #5998d6; /* change background color here */
 }
 
@@ -1253,16 +1318,16 @@ img[src$="/images/skins/iconsets/default/bookmark-rec.png"] {
 }
 
 /* Public bookmark */
-.status .public, 
+.status .public,
 img[src$="/images/skins/iconsets/default/bookmark-public.png"] {
   color: #0000001a; /* change border color here */
   background:
-    url("https://zerafinacss.github.io/ao3/icons/bookmark-public-01.png"), /* url of new icon */
+    url("https://zerafinacss.github.io/ao3/icons/bookmark-public-01.png"),/* url of new icon */
     #5998d6; /* change background color here */
 }
 
 /* Private bookmark */
-.status .private, 
+.status .private,
 img[src$="/images/skins/iconsets/default/bookmark-private.png"] {
   color: #0000001a; /* change border color here */
   background:
@@ -1281,10 +1346,10 @@ img[src$="/images/skins/iconsets/default/bookmark-private.png"] {
 /* Hidden bookmark */
 .status .hidden,
 img[src$="/images/skins/iconsets/default/bookmark-hidden.png"] {
-  color: #0000001a; /* change border color here */
+  color: #0000001a;
   background:
-    url("https://zerafinacss.github.io/ao3/icons/bookmark-locked-01.png"), /* url of new icon */
-    #a8c7f7; /* change lock color here */
+    url("https://zerafinacss.github.io/ao3/icons/bookmark-locked-01.png"),
+    #a8c7f7;
 }
 
 /*>========== KUDOS ICON ==========<*/
