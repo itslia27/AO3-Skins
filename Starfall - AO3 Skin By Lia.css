@@ -5,7 +5,7 @@ Starfall - AO3 Skin By Lia
 - Author:            Lia (she/her)
 - AO3 Profile:       im_lia [https://archiveofourown.org/users/im_lia/profile]
 - Posted:            March 9th, 2026
-- Updated:           October 16th, 2026
+- Updated:           October 15th, 2026
 ============================*/
 
 
@@ -1012,22 +1012,86 @@ dt.child {
   border-radius: var(--radius-mid);
 }
 
-.home .primary .icon {
+/* ========= Dashboard Planet Icon ========= */
+/* the wrapper (p.icon), not the image */
+.home .primary.header .icon:not(img) {
   position: relative;
+  overflow: visible; /* lets the ring stick out */
+  z-index: 0;
+  width: 100px;
+  height: 100px;
+  margin: 0.5em 1.4em 0.5em 0.6em;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
   border-radius: 50%;
-  border: 3px solid transparent;
-  background: linear-gradient(var(--bg-dark), var(--bg-dark)) padding-box,
-    linear-gradient(135deg, #f5f7fa, #a8c7f7, #e6d8ff, #9aa5b8, #d8b4f0) border-box;
-  box-shadow: 0 0 8px rgba(192, 200, 216, 0.6), 0 0 22px rgba(168, 199, 247, 0.35);
-  outline: 2px dotted var(--accent-dim);
-  outline-offset: 6px;
+  box-shadow: 0 0 0 1px rgba(168, 199, 247, 0.4),
+    0 0 22px -4px rgba(168, 199, 247, 0.55);
 }
 
-.home .primary .icon img {
+/* make the link fill the wrapper so the moon positions correctly */
+.home .primary.header .icon:not(img)>a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* the planet */
+.home .primary.header .icon img {
+  display: block;
+  width: 100px;
+  height: 100px;
   border: none;
-  border-radius: 50%;
   padding: 0;
   background: none;
+  border-radius: 50%;
+}
+
+/* ring: two copies of the same tilted ellipse */
+.home .primary.header .icon:not(img):before,
+.home .primary.header .icon:not(img):after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 50%;
+  margin: -25% 0 0 -75%; /* half of height / half of width, to center it */
+  border: none;
+  border-radius: 50%;
+  transform: rotate(-24deg);
+}
+
+/* back half of the ring, behind the planet */
+.home .primary.header .icon:not(img):before {
+  border-top: 2px solid rgba(168, 199, 247, 0.55);
+  z-index: -1;
+}
+
+/* front half of the ring, in front of the planet */
+.home .primary.header .icon:not(img):after {
+  border-bottom: 2px solid rgba(168, 199, 247, 0.55);
+  z-index: 2;
+}
+
+/* a little glowing moon */
+.home .primary.header .icon:not(img)>a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 114%;
+  top: 30%;
+  width: 12%;
+  height: 12%;
+  margin: -6% 0 0 -6%;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px rgba(168, 199, 247, 0.9),
+    0 0 22px rgba(168, 199, 247, 0.4);
+  z-index: 3;
 }
 
 /* ========= Footer ========= */
