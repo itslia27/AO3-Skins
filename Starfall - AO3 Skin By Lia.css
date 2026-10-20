@@ -16,7 +16,7 @@ Starfall - AO3 Skin By Lia
   --bg-card: #1e2235;
   --bg-mid: #424c5e;
   --accent: #a8c7f7;
-  --accent-dim: #76859b;
+  --accent-link: #76859b;
   --accent-freeform: #5c6a81;
   --glow: 0px 0px 7px #a8c7f7;
   --glow-sm: 0px 0px 3px #a8c7f7;
@@ -25,6 +25,12 @@ Starfall - AO3 Skin By Lia
   --radius-big: 12px;
   --radius-btn: 20px;
   --radius-tag: 6px;
+  --rating-1: #a8c7f7;
+  --rating-2: #6f98d6;
+  --rating-3: #4a6da1;
+  --rating-4: #2c3f78;
+  --icon-bright: #5998d6;
+  --icon-deep: #343995;
 }
 
 /* ========= Global ========= */
@@ -33,9 +39,9 @@ body {
   background-color: var(--bg-dark) !important;
   background-image:
     radial-gradient(1px 1px at 20px 30px, #fff, transparent),
-    radial-gradient(1px 1px at 90px 120px, #a8c7f7, transparent),
+    radial-gradient(1px 1px at 90px 120px, var(--accent), transparent),
     radial-gradient(1.5px 1.5px at 160px 60px, #fff, transparent),
-    radial-gradient(1px 1px at 230px 170px, #a8c7f7, transparent),
+    radial-gradient(1px 1px at 230px 170px, var(--accent), transparent),
     radial-gradient(1px 1px at 60px 180px, #fff, transparent) !important;
   background-size: 250px 200px !important;
 }
@@ -58,7 +64,7 @@ body {
 }
 
 #main a {
-  color: var(--accent-dim);
+  color: var(--accent-link);
 }
 
 * {
@@ -71,11 +77,11 @@ h2 {
 }
 
 h3 {
-  border-bottom-color: #a8c7f7 !important;
+  border-bottom-color: var(--accent) !important;
 }
 
 hr {
-  color: #a8c7f7;
+  color: var(--accent);
 }
 
 /* ========= Header ========= */
@@ -224,13 +230,13 @@ form.search input[type=submit],
 }
 
 #dashboard a {
-  color: var(--accent-dim);
+  color: var(--accent-link);
   transition: color 0.2s;
   text-decoration: none;
 }
 
 #dashboard ul li a {
-  border: none !important;
+  border: 1px solid transparent !important;
   box-shadow: none !important;
   border-radius: var(--radius-btn);
   transition: color 0.5s;
@@ -417,7 +423,7 @@ fieldset dl fieldset dl {
 }
 
 form dd.required {
-  color: #a8c7f7;
+  color: var(--accent);
 }
 
 .own {
@@ -523,7 +529,7 @@ form.filters:not(:hover) {
 }
 
 /* ========= Tags ========= */
-.warnings .tag,
+/*.warnings .tag,
 .work .warning a.tag,
 dd.warning.tags a {
   background: var(--accent);
@@ -533,15 +539,18 @@ dd.warning.tags a {
   font-weight: bold;
   padding: 0 2px;
   box-shadow: var(--glow-sm);
-}
+}*/
 
+.warnings .tag,
+.work .warning a.tag,
+dd.warning.tags a,
 .relationships .tag,
 .work .relationships a.tag,
 dd.relationship.tags a {
   background: none;
-  color: var(--accent) !important;
+  color: var(--rating-2) !important;
   font-weight: bold;
-  text-shadow: 0px 0px 3px var(--accent);
+  text-shadow: 0px 0px 3px var(--rating-2);
 }
 
 .freeforms .tag,
@@ -567,35 +576,22 @@ h5.fandoms.heading a.tag {
   box-shadow: none !important;
 }
 
-/* Moves each tag category (warnings, relationships, characters, freeforms) to the left */
 ul.tags li.warnings,
 ul.tags li.relationships,
 ul.tags li.characters,
 ul.tags li.freeforms {
-  float: left !important;
+  float: none !important;
+  display: inline;
 }
 
-/* Forces a new line whenever one category follows another, so each category gets its own row */
-li.warnings+li.relationships,
-li.relationships+li.characters,
-li.characters+li.freeforms,
-li.warnings+li.characters,
-li.warnings+li.freeforms,
-li.relationships+li.freeforms {
-  clear: left;
-}
-
-/* Removes the default spacing around each tag item */
 ul.tags li {
   margin: 0;
 }
 
-/* Adds more vertical room inside each tag link */
 ul.tags li a.tag {
   line-height: 1.7;
 }
 
-/* Styles the text of every row label */
 ul.tags li.warnings:first-child:before,
 li.warnings+li.relationships:before,
 li.relationships+li.characters:before,
@@ -603,56 +599,23 @@ li.characters+li.freeforms:before,
 li.warnings+li.characters:before,
 li.warnings+li.freeforms:before,
 li.relationships+li.freeforms:before {
+  display: block;
+  margin: 0.6em 0 0.15em 0;
   color: var(--accent);
   font-weight: 700;
   font-size: 1.15em;
   letter-spacing: 0.08em;
   text-shadow: 0 0 6px rgba(168, 199, 247, 0.7);
-  margin-right: 0.25em;
   font-variant: small-caps;
 }
 
-/* Label for the warnings row, only when warnings are the first category */
-ul.tags li.warnings:first-child:before {
-  content: "Archive Warnings: ";
-  font-variant: small-caps;
-}
-
-/* Label for the relationships row when it comes right after warnings */
-li.warnings+li.relationships:before {
-  content: "Relationships: ";
-  font-variant: small-caps;
-}
-
-/* Label for the characters row when it comes right after relationships */
-li.relationships+li.characters:before {
-  content: "Characters: ";
-  font-variant: small-caps;
-}
-
-/* Label for the additional tags row when it comes right after characters */
-li.characters+li.freeforms:before {
-  content: "Additional Tags: ";
-  font-variant: small-caps;
-}
-
-/* Fallback: characters label when there are no relationship tags (characters comes directly after warnings) */
-li.warnings+li.characters:before {
-  content: "Characters: ";
-  font-variant: small-caps;
-}
-
-/* Fallback: additional tags label when there are no relationship or character tags (freeforms comes directly after warnings) */
-li.warnings+li.freeforms:before {
-  content: "Additional Tags: ";
-  font-variant: small-caps;
-}
-
-/* Fallback: additional tags label when there are no character tags (freeforms comes directly after relationships) */
-li.relationships+li.freeforms:before {
-  content: "Additional Tags: ";
-  font-variant: small-caps;
-}
+ul.tags li.warnings:first-child:before { content: "✦ Archive Warnings ✦"; }
+li.warnings+li.relationships:before { content: "✦ Relationships ✦"; }
+li.relationships+li.characters:before { content: "✦ Characters ✦"; }
+li.characters+li.freeforms:before { content: "✦ Additional Tags ✦"; }
+li.warnings+li.characters:before { content: "✦ Characters ✦"; }
+li.warnings+li.freeforms:before { content: "✦ Additional Tags ✦"; }
+li.relationships+li.freeforms:before { content: "✦ Additional Tags ✦"; }
 
 /* ========= Work Blurbs ========= */
 li.blurb {
@@ -979,6 +942,18 @@ ul.notes a,
   text-shadow: 0px 0px 3px;
 }
 
+.resp-sharing-button {
+  color: #ddd;
+}
+
+.resp-sharing-button--bluesky {
+  background-color: var(--rating-3) !important;
+}
+
+.resp-sharing-button--bluesky:hover {
+  background-color: var(--rating-4) !important;
+}
+
 /* ========= Misc ========= */
 .reading h4.viewed,
 dl.index dd,
@@ -1013,7 +988,6 @@ dt.child {
 }
 
 /* ========= Dashboard Planet Icon ========= */
-/* the wrapper (p.icon), not the image */
 .home .primary.header .icon:not(img) {
   position: relative;
   overflow: visible; /* lets the ring stick out */
@@ -1030,7 +1004,6 @@ dt.child {
     0 0 22px -4px rgba(168, 199, 247, 0.55);
 }
 
-/* make the link fill the wrapper so the moon positions correctly */
 .home .primary.header .icon:not(img)>a {
   position: relative;
   display: block;
@@ -1059,25 +1032,23 @@ dt.child {
   left: 50%;
   width: 150%;
   height: 50%;
-  margin: -25% 0 0 -75%; /* half of height / half of width, to center it */
+  margin: -25% 0 0 -75%;
   border: none;
   border-radius: 50%;
   transform: rotate(-24deg);
 }
 
-/* back half of the ring, behind the planet */
 .home .primary.header .icon:not(img):before {
   border-top: 2px solid rgba(168, 199, 247, 0.55);
   z-index: -1;
 }
 
-/* front half of the ring, in front of the planet */
 .home .primary.header .icon:not(img):after {
   border-bottom: 2px solid rgba(168, 199, 247, 0.55);
   z-index: 2;
 }
 
-/* a little glowing moon */
+/* moon */
 .home .primary.header .icon:not(img)>a:before {
   content: "";
   display: block;
@@ -1137,7 +1108,7 @@ img[src$="/images/skins/iconsets/default/icon_collection.png"] {
   border: 1.5px solid #00000025;
   background:
     linear-gradient(transparent, #ffffff50 45% 55%, transparent),
-    #616c90
+    var(--rating-3)
     border-box;
   content: url("https://i.postimg.cc/0Q6gM2Md/IMG-6673.jpg");
 }
@@ -1151,7 +1122,7 @@ img[src$="/images/skins/iconsets/default/icon_collection.png"] {
   background:
     url("https://i.postimg.cc/0Q6gM2Md/IMG-6673.jpg"),
     linear-gradient(transparent, #ffffff50 45% 55%, transparent),
-    #5998d6
+    var(--icon-bright)
     border-box;
   background-size: cover;
 }
@@ -1164,7 +1135,7 @@ img[src$="/images/skins/iconsets/default/icon_collection.png"] {
   background:
     url("https://i.postimg.cc/0Q6gM2Md/IMG-6673.jpg"),
     linear-gradient(transparent, #ffffff50 45% 55%, transparent)
-    #616c90
+    var(--rating-3)
     content-box;
   background-size: cover;
 }
@@ -1177,7 +1148,7 @@ img[src$="/images/skins/iconsets/default/icon_collection.png"] {
     url("https://i.postimg.cc/0Q6gM2Md/IMG-6673.jpg") /* url of new icon */
     no-repeat,
     linear-gradient(#ffffff40, transparent) /* subtle gradient */
-    #5998d6 /* change background color here */
+    var(--icon-bright) /* change background color here */
     border-box;
   background-size: cover;
 }
@@ -1209,8 +1180,7 @@ img[src$="/images/skins/iconsets/default/icon_collection.png"] {
 .bookmark p.status .count,
 #symbols-key dl img,
 #bookmark-symbols-key img {
-  box-sizing: border-box;
-  border: 1px solid; /* change border width here or delete this if you don't want the borders */
+  box-sizing: border-box; /* change border width here or delete this if you don't want the borders */
   background-size: cover;
   background-origin: border-box;
 }
@@ -1219,12 +1189,11 @@ img[src$="/images/skins/iconsets/default/icon_collection.png"] {
 .required-tags .rating-notrated,
 .required-tags .category-none,
 .required-tags .warning-no,
-.bookmark p.status .count,
 img[src$="/images/skins/iconsets/default/rating-notrated.png"],
 img[src$="/images/skins/iconsets/default/category-none.png"],
 img[src$="/images/skins/iconsets/default/warning-no.png"] {
   color: #00000040; /* change border color here */
-  background: #9cb4d7; /* change background color here */
+  background: #c3cfe0; /* change background color here */
 }
 
 /*
@@ -1240,7 +1209,7 @@ img[src$="/images/skins/iconsets/default/rating-general-audience.png"] {
   color: #0000001a; /* change border color here */
   background:
     url("https://zerafinacss.github.io/ao3/icons/rating-gen-01.png"), /* url of new icon */
-    #5998d6; /* change background color here */
+    var(--rating-1); /* change background color here */
 }
 
 /* Teen And Up Audiences */
@@ -1249,7 +1218,7 @@ img[src$="/images/skins/iconsets/default/rating-teen.png"] {
   color: #0000001a; /* change border color here */
   background:
     url("https://zerafinacss.github.io/ao3/icons/rating-teen-01.png"), /* url of new icon */
-    #5998d6; /* change background color here */
+    var(--rating-2); /* change background color here */
 }
 
 /* Mature */
@@ -1258,7 +1227,7 @@ img[src$="/images/skins/iconsets/default/rating-mature.png"] {
   color: #0000001a;
   background:
     url("https://zerafinacss.github.io/ao3/icons/rating-mature-01.png"),
-    #343995;
+    var(--rating-3);
 }
 
 /* Explicit */
@@ -1267,7 +1236,7 @@ img[src$="/images/skins/iconsets/default/rating-explicit.png"] {
   color: #0000001a;
   background:
     url("https://zerafinacss.github.io/ao3/icons/rating-explicit-01.png"),
-    #343995;
+    var(--rating-4);
 }
 
 /*>>========== Relationships, pairings, orientations ==========<<*/
@@ -1277,7 +1246,7 @@ img[src$="/images/skins/iconsets/default/category-femslash.png"] {
   color: #0000001a;
   background:
     url("https://zerafinacss.github.io/ao3/icons/category-ff-01.png"),
-    #a8c7f7;
+    var(--accent);
 }
 
 /* F/M */
@@ -1286,7 +1255,7 @@ img[src$="/images/skins/iconsets/default/category-het.png"] {
   color: #0000001a;
   background:
     url("https://zerafinacss.github.io/ao3/icons/category-mf-01.png"),
-    #616c90;
+    var(--icon-bright);
 }
 
 /* Gen */
@@ -1295,7 +1264,7 @@ img[src$="/images/skins/iconsets/default/category-gen.png"] {
   color: #0000001a;
   background:
     url("https://zerafinacss.github.io/ao3/icons/category-gen-01.png"),
-    #829bc2;
+    #4a6da1;
 }
 
 /* M/M */
@@ -1304,7 +1273,7 @@ img[src$="/images/skins/iconsets/default/category-slash.png"] {
   color: #0000001a;
   background:
     url("https://zerafinacss.github.io/ao3/icons/category-mm-01.png"),
-    #343995;
+    var(--icon-deep);
 }
 
 /* Multi */
@@ -1312,7 +1281,7 @@ img[src$="/images/skins/iconsets/default/category-slash.png"] {
 img[src$="/images/skins/iconsets/default/category-multi.png"] {
   color: #0000001a; /* change border color here */
   background:
-    conic-gradient(from 270deg, #343995 25%, #4a6da1 25% 50%, #9cb4d7 50% 75%, #454884 75%); /* conic gradient with the colors of the relationship icons */
+    conic-gradient(from 270deg, var(--icon-deep) 25%, #4a6da1 25% 50%, var(--accent) 50% 75%, #454884 75%); /* conic gradient with the colors of the relationship icons */
 }
 
 /* Other relationships */
@@ -1321,7 +1290,7 @@ img[src$="/images/skins/iconsets/default/category-other.png"] {
   color: #0000001a; /* change border color here */
   background:
     url("https://zerafinacss.github.io/ao3/icons/category-other-01.png"), /* url of new icon */
-    #6e6e6e; /* change background color here */
+    var(--accent-freeform); /* change background color here */
 }
 
 /*>>========== Content warnings ==========<<*/
@@ -1331,7 +1300,7 @@ img[src$="/images/skins/iconsets/default/warning-choosenotto.png"] {
   color: #0000001a; /* change border color here */
   background:
     url("https://zerafinacss.github.io/ao3/icons/warning-choosenotto-01.png"), /* url of new icon */
-    #a8c7f7; /* change background color here */
+    var(--rating-1); /* change background color here */
 }
 
 /* Warnings apply */
@@ -1340,7 +1309,7 @@ img[src$="/images/skins/iconsets/default/warning-yes.png"] {
   color: #0000001a; /* change border color here */
   background:
     url("https://zerafinacss.github.io/ao3/icons/warning-yes-01.png"), /* url of new icon */
-    #829bc2; /* change background color here */
+    var(--rating-4);
 }
 
 /* External work */
@@ -1349,7 +1318,7 @@ img[src$="/images/skins/iconsets/default/warning-external-work.png"] {
   color: #0000001a; /* change border color here */
   background:
     url("https://zerafinacss.github.io/ao3/icons/warning-external-work-01.png"),  /* url of new icon */
-    #5998d6; /* change background color here */
+    var(--accent-freeform); /* change background color here */
 }
 
 /*>>========== Completion status ==========<<*/
@@ -1359,7 +1328,7 @@ img[src$="/images/skins/iconsets/default/complete-no.png"] {
   color: #0000001a; /* change border color here */
   background:
     url("https://zerafinacss.github.io/ao3/icons/complete-no-01.png"), /* url of new icon */
-    #343995; /* change background color here */
+    var(--icon-deep); /* change background color here */
 }
 
 /* completed/filled */
@@ -1368,7 +1337,7 @@ img[src$="/images/skins/iconsets/default/complete-yes.png"] {
   color: #0000001a; /* change border color here */
   background:
     url("https://zerafinacss.github.io/ao3/icons/complete-yes-01.png"), /* url of new icon */
-    #454884; /* change background color here */
+    var(--icon-bright); /* change background color here */
 }
 
 /*>>========== Bookmark symbols ==========<<*/
@@ -1378,7 +1347,7 @@ img[src$="/images/skins/iconsets/default/bookmark-rec.png"] {
   color: #0000001a; /* change border color here */
   background:
     url("https://zerafinacss.github.io/ao3/icons/bookmark-rec-01.png"), /* url of new icon */
-    #5998d6; /* change background color here */
+    var(--icon-bright); /* change background color here */
 }
 
 /* Public bookmark */
@@ -1387,7 +1356,7 @@ img[src$="/images/skins/iconsets/default/bookmark-public.png"] {
   color: #0000001a; /* change border color here */
   background:
     url("https://zerafinacss.github.io/ao3/icons/bookmark-public-01.png"),/* url of new icon */
-    #5998d6; /* change background color here */
+    var(--icon-bright); /* change background color here */
 }
 
 /* Private bookmark */
@@ -1396,8 +1365,34 @@ img[src$="/images/skins/iconsets/default/bookmark-private.png"] {
   color: #0000001a; /* change border color here */
   background:
     url("https://zerafinacss.github.io/ao3/icons/bookmark-locked-01.png"), /* url of new icon */
-    #000; /* change lock color here */
+    var(--icon-deep); /* change lock color here */
   font-size: 0;
+}
+
+/* See All Bookmarks on this Fic (Button that looks like this ---> [*]) */
+.bookmark p.status .count {
+  background: var(--icon-deep);
+  width: auto !important;
+  min-width: 1.5em;
+  padding: 0 0.25em;
+  text-align: center;
+}
+
+.bookmark p.status .count a {
+  font-size: 0;
+  color: var(--accent);
+  display: block;
+}
+
+.bookmark p.status .count a::before {
+  content: "See\A All";
+  color: white;
+  white-space: pre;
+  display: block;
+  font-size: 11px;
+  font-weight: bolder;
+  line-height: 1.1;
+  text-align: center;
 }
 
 /* fix private bookmark */
@@ -1413,7 +1408,7 @@ img[src$="/images/skins/iconsets/default/bookmark-hidden.png"] {
   color: #0000001a;
   background:
     url("https://zerafinacss.github.io/ao3/icons/bookmark-locked-01.png"),
-    #a8c7f7;
+    var(--bg-deep);
 }
 
 /*>========== KUDOS ICON ==========<*/
