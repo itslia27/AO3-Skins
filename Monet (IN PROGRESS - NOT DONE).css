@@ -1,0 +1,258 @@
+/*============================
+NAME GOES HERE - AO3 Skin By Lia
+
+- Skin:              NAME GOES HERE
+- Author:            Lia (she/her)
+- AO3 Profile:       im_lia [https://archiveofourown.org/users/im_lia/profile]
+- Posted:            ND
+- Updated:           ND
+
+this is genuienly not even close to being done, i'm just saving it here for storage reasons!!
+please please please pleaseeeeee ignore <3 thanks divas
+============================*/
+
+
+/* ========= VARIABLES ========= */
+:root {
+    /* --- Blues --- */
+    --deep-water: #2C3659;
+    --water-blue: #405F80;
+    --misty-blue: #6296AF;
+    --mist: #C1D6DD;
+    --mist-link: #99b1b9;
+    --aqua: #78B7BD;
+
+    /* --- Greens --- */
+    --sage: #6D9692;
+    --lily-green: #5F9487;
+
+    /* --- Pinks --- */
+    --rose: #C0779D;
+    --water-lily-pink: #DB94B8;
+    --blush: #E3A8C0;
+    --baby-pink: #ffdbe9;
+
+    /* --- Effects --- */
+    --glow: 0px 0px 5px;
+}
+
+
+/* ========= GLOBAL ========= */
+/* --- Page sizing --- */
+html,
+body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+}
+
+/* --- Main background & text --- */
+body {
+    background-color: var(--deep-water);
+    color: var(--mist); /* -text colour- */
+}
+
+#outer,
+#outer.wrapper {
+    background: var(--deep-water);
+    color: var(--mist);
+}
+
+/* --- Main links --- */
+#main a {
+    color: var(--mist-link);
+}
+
+#main a:hover,
+#main a:focus {
+    color: var(--water-lily-pink);
+}
+
+/* --- Scrollbar --- */
+* {
+    scrollbar-color: var(--rose) var(--baby-pink);
+    scrollbar-width: thin;
+}
+
+/* --- Text selection --- */
+::selection {
+    background: var(--water-lily-pink);
+    color: var(--deep-water);
+}
+
+
+/* ========= HEADER ========= */
+/* --- Header layout --- */
+#header,
+#header.region {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0.8em 1.5em !important;
+    margin: 0 auto 1em !important;
+    text-align: center !important;
+    text-transform: lowercase !important;
+}
+
+#header .heading {
+    height: 15em;
+}
+
+/* --- Header background --- */
+#header {
+    background-image: url("https://i.postimg.cc/d1S1DSxj/waterlilies.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: var(--bg);
+    border-bottom: 8px solid var(--baby-pink);
+}
+
+/* --- Header logo --- */
+#header .logo,
+#header .heading sup {
+    display: none;
+}
+
+/* --- Header title --- */
+#header h1,
+#header h1 a {
+    color: var(--baby-pink) !important;
+    font-weight: bold;
+    text-shadow: 0 2px 8px rgba(24, 40, 43, 0.9);
+    -webkit-text-stroke: 0.02em rgba(24, 40, 43, 0.35);
+}
+
+/* --- Greeting --- */
+#greeting img.icon { /* -hides profile pic, delete to show- */
+    display: none;
+}
+
+#greeting a.dropdown-toggle,
+#header .user a,
+#header .user a:visited,
+#header .user a:hover,
+#header .user a:focus,
+#header .primary .open a,
+#header .primary .dropdown:hover a,
+#header .primary .dropdown a:focus { /* -targets hi, [user], post, log out- */
+    color: white !important;
+    background: none !important;
+    font-weight: bold;
+    text-shadow: 0 2px 8px var(--rose);
+}
+
+/* --- Navigation --- */
+#header .primary { /* -targets fandoms, browse, search, about bar- */
+    background: #DB94B8cc;
+    box-shadow: 0 0 1em #DB94B8cc;
+    border-radius: 3em;
+}
+
+#header ul.primary.navigation {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+/* --- Search button --- */
+#header #search input[type="submit"] {
+    display: none;
+}
+
+/* --- Navigation Dropdown --- */
+#header .dropdown .menu {
+    background: var(--sage);
+    border-radius: 0.75em;
+}
+
+#header .dropdown .menu a {
+    color: white !important;
+}
+
+#header .dropdown .menu a:hover {
+    background: var(--baby-pink) !important;
+    color: var(--deep-water) !important;
+    text-shadow: none !important;
+    border-radius: 2em;
+}
+
+/* --- Header link transitions --- */
+#header a {
+    transition: all 0.2s ease;
+}
+
+
+/* ========= BANNERS ========= */
+/* --- Site banners & notices --- */
+#header .donate,
+#header .banner,
+#outer #admin-banner,
+#outer .admin-banner,
+#outer .banner {
+    background: rgba(109, 150, 146, 0.12) !important;
+    background-image: none !important;
+    border: 1px solid rgba(109, 150, 146, 0.3) !important;
+    border-radius: 0.75em !important;
+    color: var(--mist) !important;
+    box-shadow: none !important;
+}
+
+
+/* ========= HOMEPAGE ========= */
+#outer #main .news,
+#outer #main.home .news,
+#outer #main ul.news,
+#outer #main .social,
+#outer #main .follow,
+#outer #main p.muted.notice,
+#outer p.muted.notice,
+#outer #main .notice.muted { /* -removes unnecessary boxes- */
+    display: none !important;
+}
+
+/* --- Homepage layout --- */
+#outer #main .splash {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+}
+
+/* --- Find your favorites --- */
+#outer #main .splash > .favorite,
+#outer #main .splash > .module.favorite {
+    order: 1 !important;
+    float: none !important;
+    box-sizing: border-box !important;
+    width: 48% !important;
+    margin: 0 0 2.5em 0 !important;
+}
+
+/* --- Unread messages --- */
+#outer #main .splash > .latest,
+#outer #main .splash > .latest.messages,
+#outer #main .splash > .messages,
+#outer #main .splash > .module.messages {
+    order: 2 !important;
+    float: none !important;
+    box-sizing: border-box !important;
+    width: 48% !important;
+    margin: 0 0 2.5em 0 !important;
+}
+
+/* --- Is it later already? --- */
+#outer #main .splash > .random,
+#outer #main .splash > .random.readings,
+#outer #main .splash > .readings {
+    order: 3 !important;
+    float: none !important;
+    clear: both !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
