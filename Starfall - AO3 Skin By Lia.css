@@ -5,7 +5,7 @@ Starfall - AO3 Skin By Lia
 - Author:            Lia (she/her)
 - AO3 Profile:       im_lia [https://archiveofourown.org/users/im_lia/profile]
 - Posted:            March 9th, 2026
-- Updated:           October 15th, 2026
+- Updated:           October 25th, 2026
 ============================*/
 
 
@@ -32,6 +32,7 @@ Starfall - AO3 Skin By Lia
   --icon-bright: #5998d6;
   --icon-deep: #343995;
 }
+
 
 /* ========= Global ========= */
 html,
@@ -83,6 +84,7 @@ h3 {
 hr {
   color: var(--accent);
 }
+
 
 /* ========= Header ========= */
 #header {
@@ -221,6 +223,7 @@ form.search input[type=submit],
   }
 }
 
+
 /* ========= Dashboard ========= */
 #dashboard,
 #dashboard.own {
@@ -300,6 +303,7 @@ fieldset fieldset.listbox {
   padding: 0.429em 0.75em;
   overflow: hidden;
 }
+
 
 /* ========= Buttons & Actions ========= */
 .actions a,
@@ -392,6 +396,7 @@ ol.pagination .current {
   box-shadow: var(--glow) !important;
   font-weight: bold;
 }
+
 
 /* ========= Forms & Fields ========= */
 form dl,
@@ -528,19 +533,68 @@ form.filters:not(:hover) {
   border-radius: var(--radius-small);
 }
 
-/* ========= Tags ========= */
-/*.warnings .tag,
-.work .warning a.tag,
-dd.warning.tags a {
-  background: var(--accent);
-  border: 1px solid var(--accent);
-  border-radius: var(--radius-tag);
-  color: var(--bg-deep) !important;
-  font-weight: bold;
-  padding: 0 2px;
-  box-shadow: var(--glow-sm);
-}*/
 
+/* ========= Posting/Editing Works ========= */
+fieldset.work.meta,
+fieldset.preface,
+#associations,
+fieldset.privacy,
+fieldset.work.text,
+#work-form input,
+#work-form textarea,
+#work-form select {
+  box-shadow: none;
+}
+
+/* Main section containers */
+fieldset.work.meta,
+fieldset.preface,
+#associations,
+fieldset.privacy,
+fieldset.work.text,
+fieldset:has(input[name="update_button"]) {
+  border: 1px solid transparent !important;
+  border-radius: var(--radius-big) !important;
+  background: var(--bg-deep) !important;
+  color: var(--text-normal) !important;
+}
+
+/* Keep nested fieldsets consistent */
+fieldset.work.meta fieldset,
+fieldset.preface fieldset,
+#associations fieldset,
+fieldset.privacy fieldset,
+fieldset.work.text fieldset {
+  box-shadow: none !important;
+  border-color: transparent !important;
+  border-radius: var(--radius-big) !important;
+  background: var(--bg-deep) !important;
+}
+
+/* Text fields */
+fieldset.work.meta input,
+fieldset.preface input,
+fieldset.preface textarea,
+#associations input,
+#associations textarea,
+#associations select,
+fieldset.privacy input,
+fieldset.work.text textarea {
+  box-shadow: none !important;
+  border-radius: var(--radius-big) !important;
+}
+
+/* Paragraphs and notices */
+fieldset.work.meta p,
+fieldset.preface p,
+#associations p,
+fieldset.privacy p,
+fieldset.work.text p {
+  box-shadow: none !important;
+}
+
+
+/* ========= Tags ========= */
 .warnings .tag,
 .work .warning a.tag,
 dd.warning.tags a,
@@ -569,6 +623,7 @@ a.tag:hover {
   border-radius: var(--radius-tag);
   text-decoration: none !important;
 }
+
 
 /* ========= Overall Tag Styling ========= */
 h5.fandoms.heading a.tag {
@@ -616,6 +671,7 @@ li.characters+li.freeforms:before { content: "✦ Additional Tags ✦"; }
 li.warnings+li.characters:before { content: "✦ Characters ✦"; }
 li.warnings+li.freeforms:before { content: "✦ Additional Tags ✦"; }
 li.relationships+li.freeforms:before { content: "✦ Additional Tags ✦"; }
+
 
 /* ========= Work Blurbs ========= */
 li.blurb {
@@ -803,6 +859,7 @@ dl.stats dd.status::after {
   border-radius: var(--radius-small);
 }
 
+
 /* ========= Comments ========= */
 li.comment {
   border: none;
@@ -915,6 +972,7 @@ ul.notes a,
   font-weight: bold;
 }
 
+
 /* ========= Splash / Home ========= */
 .splash .module h3 {
   color: var(--accent);
@@ -953,6 +1011,7 @@ ul.notes a,
 .resp-sharing-button--bluesky:hover {
   background-color: var(--rating-4) !important;
 }
+
 
 /* ========= Homepage Laylout ========= */
 #outer #main .social,
@@ -1016,6 +1075,7 @@ ul.notes a,
     padding-top: 3em;
 }
 
+
 /* ========= Misc ========= */
 .reading h4.viewed,
 dl.index dd,
@@ -1048,6 +1108,7 @@ dt.child {
   border: 1px solid var(--accent);
   border-radius: var(--radius-mid);
 }
+
 
 /* ========= Dashboard Planet Icon ========= */
 .home .primary.header .icon:not(img) {
@@ -1127,6 +1188,7 @@ dt.child {
   z-index: 3;
 }
 
+
 /* ========= Footer ========= */
 #footer {
   background: var(--bg-mid);
@@ -1145,6 +1207,7 @@ dt.child {
   border-radius: 0 !important;
 }
 
+
 /* ========= Modal ========= */
 #modal {
   background: var(--bg-dark);
@@ -1153,6 +1216,7 @@ dt.child {
   box-shadow: var(--glow);
   border-radius: var(--radius-big);
 }
+
 
 /*============================
   CUSTOM ICONS - Made by ZerafinaCSS on Tumblr & AO3 
