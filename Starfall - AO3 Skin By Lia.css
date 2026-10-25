@@ -826,12 +826,12 @@ h4.heading.byline {
   background: var(--accent);
   color: var(--bg-deep) !important;
   border-radius: var(--radius-small);
+  padding-left: 0.5em !important;
 }
 
 h4.heading.byline a {
   font-size: 1em !important;
-  position: absolute;
-  left: 0.5em;
+  left: 1em;
   color: var(--bg-dark) !important;
   font-family: monospace;
 }
