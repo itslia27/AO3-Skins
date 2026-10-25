@@ -954,6 +954,68 @@ ul.notes a,
   background-color: var(--rating-4) !important;
 }
 
+/* ========= Homepage Laylout ========= */
+#outer #main .social,
+#outer #main .follow,
+#outer #main p.muted.notice,
+#outer p.muted.notice,
+#outer #main .notice.muted { /* -removes unnecessary boxes- */
+    display: none !important;
+}
+
+#outer #main .splash {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+}
+
+/* --- Find your favorites --- */
+#outer #main .splash > .favorite,
+#outer #main .splash > .module.favorite {
+    order: 1 !important;
+    float: none !important;
+    box-sizing: border-box !important;
+    flex: 1 1 350px !important;
+    margin: 0 10px 2.5em 10px !important;
+}
+
+/* --- Unread messages --- */
+#outer #main .splash > .latest,
+#outer #main .splash > .latest.messages,
+#outer #main .splash > .messages,
+#outer #main .splash > .module.messages {
+    order: 2 !important;
+    float: none !important;
+    box-sizing: border-box !important;
+    flex: 1 1 350px !important;
+    margin: 0 10px 2.5em 10px !important;
+}
+
+/* --- Is it later already? --- */
+#outer #main .splash > .random,
+#outer #main .splash > .random.readings,
+#outer #main .splash > .readings {
+    order: 3 !important;
+    float: none !important;
+    clear: both !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* --- News --- */
+#outer #main .splash > .news,
+#outer #main .splash > ul.news {
+    order: 4 !important;
+    float: none !important;
+    clear: both !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding-top: 3em;
+}
+
 /* ========= Misc ========= */
 .reading h4.viewed,
 dl.index dd,
